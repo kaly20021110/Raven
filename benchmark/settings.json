@@ -1,0 +1,20 @@
+{
+    "key": {
+        "name": "tockowl",
+        "path": "/root/.ssh/Aliyun",
+        "accesskey": "/root/.aliyun/access.json"
+    },
+    "ports": {
+        "consensus": 8000,
+        "mempool": 7000
+    },
+    "instances": {
+        "type": "ecs.g6e.xlarge",
+        "regions": [
+            "eu-central-1",
+            "eu-west-1",
+            "ap-northeast-2",
+            "us-west-1"
+        ]
+    }
+}
