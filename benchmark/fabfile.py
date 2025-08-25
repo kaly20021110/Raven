@@ -17,7 +17,7 @@ def local(ctx):
         'rate': 5_000,                  # tx send rate
         'batch_size': 512,              # the max number of tx that can be hold 
         'log_level': 0b1111,            # 0x1 infolevel 0x2 debuglevel 0x4 warnlevel 0x8 errorlevel
-        'protocol': "sMVBA"
+        'protocol': "Raven"
     }
     node_params = {
         "pool": {
@@ -33,7 +33,7 @@ def local(ctx):
             "ddos": False,              # DDOS attack
             "faults": 0,                # the number of byzantine node
             "retry_delay": 5_000,       # request block period
-            'protocol': "sMVBA",
+            'protocol': "Raven",
             "max_payload_size": 32,
             "max_queen_size": 10_000,
             "min_Payload_delay": 0,

@@ -32,7 +32,7 @@ This command may take a long time the first time you run it (compiling golang co
 ```
 Starting local benchmark
 Setting up testbed...
-Running sMVBA
+Running Raven
 0 byzantine nodes
 tx_size 256 byte, batch_size 512, rate 5000 tx/s
 DDOS attack False
@@ -46,7 +46,7 @@ Parsing logs...
  SUMMARY:
 -----------------------------------------
  + CONFIG:
- Protocol: sMVBA 
+ Protocol: Raven 
  DDOS attack: False 
  Committee size: 4 nodes
  Input rate: 5,000 tx/s
