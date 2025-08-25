@@ -7,7 +7,7 @@
 
 This repo provides a minimal implementation of the Raven protocol. The codebase has been designed to be small, efficient, and easy to benchmark and modify. It has not been designed to run in production but uses real cryptography (kyber), networking(native), and storage (nutsdb).
 
-Say something about bft-mvba...
+Say something about Raven...
 
 ## Quick Start
 
