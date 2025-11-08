@@ -64,5 +64,5 @@ func (e *Elector) AddShareVote(share *ElectShare) (map[int]core.NodeID, bool, er
 }
 
 func (e *Elector) judgeSkip(epoch int64, leader core.NodeID) bool {
-	return e.electAggreators[epoch].NoCount[leader] >= e.committee.HightThreshold()
+	return e.electAggreators[epoch].ValueNoCount[leader] >= e.committee.HightThreshold()
 }

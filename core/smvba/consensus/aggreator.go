@@ -11,22 +11,24 @@ import (
 )
 
 type Aggreator struct {
-	committee        core.Committee
-	sigService       *crypto.SigService
-	finishAggreator  map[int64]*FinishAggreator
-	coins            map[int64]map[int64]map[int64]*CoinAggreator //epoch-leader-inround
-	QCAggreator      map[int64]map[int8]*qcAggreator              //epoch phase
-	PrepareAggreator map[int64]map[int64]*prepareAggreator        //epoch - index
+	committee           core.Committee
+	sigService          *crypto.SigService
+	finishAggreator     map[int64]*FinishAggreator
+	coins               map[int64]map[int64]map[int64]*CoinAggreator //epoch-leader-inround
+	QCAggreator         map[int64]map[int8]*qcAggreator              //epoch phase
+	PrepareAggreator    map[int64]map[int64]*prepareAggreator        //epoch - index
+	PrepareAUXAggreator map[int64]map[int64]*prepareAUXAggreator
 }
 
 func NewAggreator(committee core.Committee, sigService *crypto.SigService) *Aggreator {
 	return &Aggreator{
-		committee:        committee,
-		sigService:       sigService,
-		finishAggreator:  make(map[int64]*FinishAggreator),
-		coins:            make(map[int64]map[int64]map[int64]*CoinAggreator),
-		QCAggreator:      make(map[int64]map[int8]*qcAggreator),
-		PrepareAggreator: make(map[int64]map[int64]*prepareAggreator),
+		committee:           committee,
+		sigService:          sigService,
+		finishAggreator:     make(map[int64]*FinishAggreator),
+		coins:               make(map[int64]map[int64]map[int64]*CoinAggreator),
+		QCAggreator:         make(map[int64]map[int8]*qcAggreator),
+		PrepareAggreator:    make(map[int64]map[int64]*prepareAggreator),
+		PrepareAUXAggreator: make(map[int64]map[int64]*prepareAUXAggreator),
 	}
 }
 
@@ -40,6 +42,21 @@ func (a *Aggreator) AddPrepare(p *Prepare) (uint8, uint8, error) {
 		return item.Append(a.committee, a.sigService, p)
 	} else {
 		item = newprepareAggreator()
+		items[p.Index] = item
+		return item.Append(a.committee, a.sigService, p)
+	}
+}
+
+func (a *Aggreator) AddPrepareAUX(p *PrepareAUX) (uint8, uint8, error) {
+	items, ok := a.PrepareAUXAggreator[p.Epoch]
+	if !ok {
+		items = make(map[int64]*prepareAUXAggreator)
+		a.PrepareAUXAggreator[p.Epoch] = items
+	}
+	if item, ok := items[p.Index]; ok {
+		return item.Append(a.committee, a.sigService, p)
+	} else {
+		item = newprepareAUXAggreator()
 		items[p.Index] = item
 		return item.Append(a.committee, a.sigService, p)
 	}
@@ -188,7 +205,76 @@ func newprepareAggreator() *prepareAggreator {
 	}
 }
 
+// PrepareAppend这个函数需要再好好看一下
 func (p *prepareAggreator) Append(committee core.Committee, sigService *crypto.SigService, pre *Prepare) (uint8, uint8, error) {
+	//这种写法会让好多消息收不到并且重复计算很多消息
+	// if _, ok := p.authors[pre.Author]; ok {
+	// 	return uint8(0), uint8(2), core.ErrOneMoreMessage(pre.MsgType(), pre.Epoch, pre.Author)
+	// }
+	// p.authors[pre.Author] = struct{}{}
+	if _, ok := p.zerocount[pre.Author]; ok {
+		return uint8(0), uint8(2), core.ErrOneMoreMessage(pre.MsgType(), pre.Epoch, pre.Author)
+	}
+	if _, ok := p.onecount[pre.Author]; ok {
+		return uint8(0), uint8(2), core.ErrOneMoreMessage(pre.MsgType(), pre.Epoch, pre.Author)
+	}
+	p.authors[pre.Author] = struct{}{}
+	if pre.Flag == uint8(0) {
+		p.zerocount[pre.Author] = struct{}{}
+	} else {
+		p.onecount[pre.Author] = struct{}{}
+	}
+
+	//VAL阶段
+	if len(p.onecount) != committee.HightThreshold() && len(p.zerocount) == committee.LowThreshold() {
+		return Prepare_LowThreshold, uint8(0), nil
+	}
+	if len(p.zerocount) != committee.HightThreshold() && len(p.onecount) == committee.LowThreshold() {
+		return Prepare_LowThreshold, uint8(1), nil
+	}
+
+	//保证了只会广播一次AUX
+	if len(p.zerocount) == committee.HightThreshold() {
+		if len(p.onecount) < committee.HightThreshold() {
+			return Prepare_HightThreshold, uint8(0), nil
+		}
+	}
+	if len(p.onecount) == committee.HightThreshold() {
+		if len(p.zerocount) < committee.HightThreshold() {
+			return Prepare_HightThreshold, uint8(1), nil
+		}
+	}
+	//如果收到2f+1个VAL
+
+	// if len(p.authors) == committee.HightThreshold() {
+	// 	if len(p.onecount) >= committee.LowThreshold() {
+	// 		falg = uint8(1)
+	// 	}
+	// 	return Prepare_HightThreshold, falg, nil
+	// } else if len(p.authors) == committee.Size() {
+	// 	return Prepare_FullThreshold, pre.Flag, nil
+	// } else {
+	// 	return uint8(0), uint8(2), nil
+	// }
+	return uint8(0), uint8(2), nil
+}
+
+type prepareAUXAggreator struct {
+	authors   map[core.NodeID]struct{}
+	zerocount map[core.NodeID]struct{}
+	onecount  map[core.NodeID]struct{}
+}
+
+func newprepareAUXAggreator() *prepareAUXAggreator {
+	return &prepareAUXAggreator{
+		authors:   make(map[core.NodeID]struct{}),
+		zerocount: make(map[core.NodeID]struct{}),
+		onecount:  make(map[core.NodeID]struct{}),
+	}
+}
+
+func (p *prepareAUXAggreator) Append(committee core.Committee, sigService *crypto.SigService, pre *PrepareAUX) (uint8, uint8, error) {
+
 	if _, ok := p.authors[pre.Author]; ok {
 		return uint8(0), uint8(2), core.ErrOneMoreMessage(pre.MsgType(), pre.Epoch, pre.Author)
 	}
@@ -199,31 +285,37 @@ func (p *prepareAggreator) Append(committee core.Committee, sigService *crypto.S
 		p.onecount[pre.Author] = struct{}{}
 	}
 	falg := uint8(0)
-	if len(p.authors) == committee.HightThreshold() {
-		if len(p.onecount) >= committee.LowThreshold() {
-			falg = uint8(1)
+	if len(p.authors) >= committee.HightThreshold() {
+		if len(p.zerocount) == committee.HightThreshold() {
+			return Prepare_FullThreshold, falg, nil //代表可以直接退出 2f+1个AUX全是0
 		}
-		return Prepare_HightThreshold, falg, nil
-	} else if len(p.authors) == committee.Size() {
-		return Prepare_FullThreshold, pre.Flag, nil
-	} else {
-		return uint8(0), uint8(2), nil
+		if len(p.zerocount) >= 1 {
+			return Prepare_HightThreshold, falg, nil
+		} else {
+			falg = uint8(1)
+			return Prepare_HightThreshold, falg, nil
+		}
 	}
+	return uint8(0), uint8(2), nil
 }
 
 const RANDOM_LEN = 3
 
 type ElectAggreator struct {
-	shares  []crypto.SignatureShare
-	authors map[core.NodeID]struct{}
-	NoCount map[core.NodeID]int
+	shares       []crypto.SignatureShare
+	authors      map[core.NodeID]struct{}
+	ValueNoCount map[core.NodeID]int
+	QCCount      map[core.NodeID]int //mq=1
+	QCNoCount    map[core.NodeID]int //mq=0
 }
 
 func NewElectAggreator() *ElectAggreator {
 	return &ElectAggreator{
-		shares:  make([]crypto.SignatureShare, 0),
-		authors: make(map[core.NodeID]struct{}),
-		NoCount: make(map[core.NodeID]int),
+		shares:       make([]crypto.SignatureShare, 0),
+		authors:      make(map[core.NodeID]struct{}),
+		ValueNoCount: make(map[core.NodeID]int),
+		QCCount:      make(map[core.NodeID]int),
+		QCNoCount:    make(map[core.NodeID]int),
 	}
 }
 func hash(rand, index int) uint64 {
@@ -240,7 +332,7 @@ func (e *ElectAggreator) Append(committee core.Committee, sigService *crypto.Sig
 	e.authors[elect.Author] = struct{}{}
 	e.shares = append(e.shares, elect.SigShare)
 	for i := range elect.Noproposalset { //更新no-proposal的具体值
-		e.NoCount[i] = e.NoCount[i] + 1
+		e.ValueNoCount[i] = e.ValueNoCount[i] + 1
 	}
 	if len(e.shares) == committee.HightThreshold() {
 		coin, err := crypto.CombineIntactTSPartial(e.shares, sigService.ShareKey, elect.Hash())
@@ -256,7 +348,7 @@ func (e *ElectAggreator) Append(committee core.Committee, sigService *crypto.Sig
 			}
 		}
 		//set priority
-		index := make([]int, committee.Size()+1)
+		index := make([]int, committee.Size())
 		for i := 0; i < committee.Size(); i++ {
 			index[i] = i
 		}

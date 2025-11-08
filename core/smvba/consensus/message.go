@@ -30,6 +30,7 @@ const (
 const (
 	Prepare_HightThreshold uint8 = 1
 	Prepare_FullThreshold  uint8 = 2
+	Prepare_LowThreshold   uint8 = 3
 )
 
 type Validator interface {
@@ -304,6 +305,55 @@ func (*Prepare) MsgType() int {
 }
 
 func (*Prepare) Module() string {
+	return "consensus"
+}
+
+type PrepareAUX struct {
+	Author    core.NodeID
+	Leader    core.NodeID
+	Index     int64
+	Epoch     int64
+	Flag      uint8
+	Signature crypto.Signature
+}
+
+func NewPrepareAUX(Author, Leader core.NodeID, Index int64, epoch int64, flag uint8, sigService *crypto.SigService) (*PrepareAUX, error) {
+	prepare := &PrepareAUX{
+		Author: Author,
+		Leader: Leader,
+		Index:  Index,
+		Epoch:  epoch,
+		Flag:   flag,
+	}
+	sig, err := sigService.RequestSignature(prepare.Hash())
+	if err != nil {
+		return nil, err
+	}
+	prepare.Signature = sig
+	return prepare, err
+}
+
+func (p *PrepareAUX) Verify(committee core.Committee) bool {
+	pub := committee.Name(p.Author)
+	return p.Signature.Verify(pub, p.Hash())
+}
+
+func (p *PrepareAUX) Hash() crypto.Digest {
+	hasher := crypto.NewHasher()
+	hasher.Add(strconv.AppendInt(nil, int64(p.Author), 2))
+	hasher.Add(strconv.AppendInt(nil, int64(p.Leader), 2))
+	hasher.Add(strconv.AppendInt(nil, p.Index, 2))
+	hasher.Add(strconv.AppendInt(nil, p.Epoch, 2))
+	hasher.Add(strconv.AppendInt(nil, int64(p.Flag), 2))
+
+	return hasher.Sum256(nil)
+}
+
+func (*PrepareAUX) MsgType() int {
+	return PrepareAUXType
+}
+
+func (*PrepareAUX) Module() string {
 	return "consensus"
 }
 
@@ -686,6 +736,7 @@ const (
 	HaltType
 	HelpSkipType
 	PrepareType
+	PrepareAUXType
 	ABAValType
 	ABAMuxType
 	CoinShareType
@@ -701,6 +752,7 @@ var DefaultMessageTypeMap = map[int]reflect.Type{
 	HaltType:        reflect.TypeOf(Halt{}),
 	HelpSkipType:    reflect.TypeOf(HelpSkip{}),
 	PrepareType:     reflect.TypeOf(Prepare{}),
+	PrepareAUXType:  reflect.TypeOf(PrepareAUX{}),
 	ABAValType:      reflect.TypeOf(ABAVal{}),
 	ABAMuxType:      reflect.TypeOf(ABAMux{}),
 	CoinShareType:   reflect.TypeOf(CoinShare{}),

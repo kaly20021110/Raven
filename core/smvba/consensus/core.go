@@ -24,23 +24,26 @@ type Core struct {
 	loopBackChannel chan crypto.Digest //从mempool部分获取到区块
 	connectChannel  chan core.Messgae
 
-	FinishFlags         map[int64]map[core.NodeID]crypto.Digest // finish? map[epoch][node] = blockHash 完成了spb的两阶段的证明
-	SPbInstances        map[int64]map[core.NodeID]*SPB          // map[epoch][node]
-	abaInstances        map[int64]map[int64]*ABA                //map[epoch]map[index] index可以计算出leader
-	LockSetMap          map[int64]map[core.NodeID]bool          //epoch -node lock 是否已经收到了lock
-	LockFlag            map[int64]map[core.NodeID]struct{}      //SPB里面的第一轮投票需要停掉
-	Lockmu              sync.RWMutex
-	FinishFlag          map[int64]map[core.NodeID]struct{} //SPB里面的第二轮投票需要停掉
-	Finishmu            sync.RWMutex
-	SkipFlag            map[int64]map[core.NodeID]struct{} //这个leader已经被跳过了，如果需要抉择下一个leader必须等前面所有的leader都完成
-	Skipmu              sync.RWMutex
-	abaInvokeFlag       map[int64]map[int64]map[int64]map[uint8]struct{} //aba invoke flag
-	Epoch               int64
-	CommitEpoch         int64
-	BlocksWaitforCommit map[int64]*ConsensusBlock
-	ParallelABAResult   map[int64]map[int]uint8 //epoch - index -ABA结果
-	ParallelABAIndex    map[int64]int           //每一轮都要记录最后一个并行序列
-	abaCallBack         chan *ABABack
+	FinishFlags   map[int64]map[core.NodeID]crypto.Digest // finish? map[epoch][node] = blockHash 完成了spb的两阶段的证明
+	SPbInstances  map[int64]map[core.NodeID]*SPB          // map[epoch][node]
+	abaInstances  map[int64]map[int64]*ABA                //map[epoch]map[index] index可以计算出leader
+	LockSetMap    map[int64]map[core.NodeID]bool          //epoch -node lock 是否已经收到了lock
+	LockFlag      map[int64]map[core.NodeID]struct{}      //SPB里面的第一轮投票需要停掉
+	Lockmu        sync.RWMutex
+	FinishFlag    map[int64]map[core.NodeID]struct{} //SPB里面的第二轮投票需要停掉
+	Finishmu      sync.RWMutex
+	SkipFlag      map[int64]map[core.NodeID]struct{} //这个leader已经被跳过了，如果需要抉择下一个leader必须等前面所有的leader都完成
+	Skipmu        sync.RWMutex
+	abaInvokeFlag map[int64]map[int64]map[int64]map[uint8]struct{} //aba invoke flag
+	preparedValue map[int64]map[core.NodeID][]int                  //对应论文中的FABA中的VAL消息的判断
+
+	Epoch                       int64
+	CommitEpoch                 int64
+	BlocksWaitforCommit         map[int64]*ConsensusBlock
+	ParallelABAResult           map[int64]map[int]uint8 //epoch - index -ABA结果
+	ParallelABAResultRoundCount map[int64]map[int]int64 //记录每个ABA的运行轮次
+	ParallelABAIndex            map[int64]int           //每一轮都要记录最后一个并行序列
+	abaCallBack                 chan *ABABack
 
 	blockhashlock      sync.RWMutex
 	ConsensusBlockHash map[int64]map[core.NodeID]crypto.Digest //存储每个块的哈希值
@@ -60,33 +63,35 @@ func NewCore(
 	pool *mempool.Mempool,
 ) *Core {
 	c := &Core{
-		Name:                Name,
-		Committee:           Committee,
-		Parameters:          Parameters,
-		SigService:          SigService,
-		Store:               Store,
-		TxPool:              TxPool,
-		Transimtor:          Transimtor,
-		Epoch:               0,
-		CommitEpoch:         0,
-		BlocksWaitforCommit: make(map[int64]*ConsensusBlock),
-		Aggreator:           NewAggreator(Committee, SigService),
-		Elector:             NewElector(SigService, Committee),
-		Commitor:            NewCommittor(callBack, pool),
-		loopBackChannel:     loopBackchannel,
-		connectChannel:      mconnectchannel,
-		FinishFlags:         make(map[int64]map[core.NodeID]crypto.Digest),
-		SPbInstances:        make(map[int64]map[core.NodeID]*SPB),
-		abaInstances:        make(map[int64]map[int64]*ABA), //针对index序列的ABA
-		LockFlag:            make(map[int64]map[core.NodeID]struct{}),
-		FinishFlag:          make(map[int64]map[core.NodeID]struct{}),
-		SkipFlag:            make(map[int64]map[core.NodeID]struct{}),
-		LockSetMap:          make(map[int64]map[core.NodeID]bool),
-		abaInvokeFlag:       make(map[int64]map[int64]map[int64]map[uint8]struct{}),
-		ParallelABAResult:   make(map[int64]map[int]uint8),
-		ParallelABAIndex:    make(map[int64]int),
-		abaCallBack:         make(chan *ABABack, 1000),
-		ConsensusBlockHash:  make(map[int64]map[core.NodeID]crypto.Digest),
+		Name:                        Name,
+		Committee:                   Committee,
+		Parameters:                  Parameters,
+		SigService:                  SigService,
+		Store:                       Store,
+		TxPool:                      TxPool,
+		Transimtor:                  Transimtor,
+		Epoch:                       0,
+		CommitEpoch:                 0,
+		BlocksWaitforCommit:         make(map[int64]*ConsensusBlock),
+		Aggreator:                   NewAggreator(Committee, SigService),
+		Elector:                     NewElector(SigService, Committee),
+		Commitor:                    NewCommittor(callBack, pool),
+		loopBackChannel:             loopBackchannel,
+		connectChannel:              mconnectchannel,
+		FinishFlags:                 make(map[int64]map[core.NodeID]crypto.Digest),
+		SPbInstances:                make(map[int64]map[core.NodeID]*SPB),
+		abaInstances:                make(map[int64]map[int64]*ABA), //针对index序列的ABA
+		LockFlag:                    make(map[int64]map[core.NodeID]struct{}),
+		FinishFlag:                  make(map[int64]map[core.NodeID]struct{}),
+		SkipFlag:                    make(map[int64]map[core.NodeID]struct{}),
+		LockSetMap:                  make(map[int64]map[core.NodeID]bool),
+		abaInvokeFlag:               make(map[int64]map[int64]map[int64]map[uint8]struct{}),
+		ParallelABAResult:           make(map[int64]map[int]uint8),
+		ParallelABAResultRoundCount: make(map[int64]map[int]int64),
+		ParallelABAIndex:            make(map[int64]int),
+		preparedValue:               make(map[int64]map[core.NodeID][]int),
+		abaCallBack:                 make(chan *ABABack, 1000),
+		ConsensusBlockHash:          make(map[int64]map[core.NodeID]crypto.Digest),
 	}
 
 	return c
@@ -99,10 +104,29 @@ func (c *Core) initParallelABAResult(epoch int64) {
 	for i := 0; i < c.Committee.Size(); i++ {
 		c.ParallelABAResult[epoch][i] = uint8(2)
 	}
+
+	if _, ok := c.ParallelABAResultRoundCount[epoch]; !ok {
+		c.ParallelABAResultRoundCount[epoch] = make(map[int]int64)
+	}
+	for i := 0; i < c.Committee.Size(); i++ {
+		c.ParallelABAResultRoundCount[epoch][i] = 0
+	}
 }
 
 func (c *Core) messageFilter(epoch int64) bool {
 	return epoch < c.Epoch
+}
+
+func (c *Core) ensurePreparedValue(epoch int64, leader core.NodeID) {
+	if c.preparedValue == nil {
+		c.preparedValue = make(map[int64]map[core.NodeID][]int)
+	}
+	if c.preparedValue[epoch] == nil {
+		c.preparedValue[epoch] = make(map[core.NodeID][]int)
+	}
+	if c.preparedValue[epoch][leader] == nil {
+		c.preparedValue[epoch][leader] = make([]int, 2)
+	}
 }
 
 func (c *Core) storeConsensusBlock(block *ConsensusBlock) error {
@@ -204,6 +228,7 @@ func (c *Core) hasFinish(epoch int64, node core.NodeID) (bool, crypto.Digest) {
 		return false, crypto.Digest{}
 	} else {
 		d, ok := items[node]
+		//logger.Info.Printf("The check node is %d in epoch %d the finshflags is %t\n", node, epoch, ok)
 		return ok, d
 	}
 }
@@ -212,7 +237,10 @@ func (c *Core) hasFinish(epoch int64, node core.NodeID) (bool, crypto.Digest) {
 func (c *Core) getABAStopInstance(epoch int64) (int, core.NodeID) {
 	for i := 0; i < c.Committee.Size(); i++ {
 		leader := c.Elector.GetLeader(epoch, i)
+		// logger.Info.Printf("In Epoch %d,check the leader index %d and leader is %dif finished\n", c.Epoch, i, leader)
 		if check, _ := c.hasFinish(epoch, leader); check {
+			//打印，在第几个epoch，FABA调用的最大次数是几次
+			logger.Info.Printf("In Epoch %d,the MAX FABA invoke counts is %d\n", c.Epoch, i)
 			if i == 0 {
 				return -1, leader //直接commit
 			} else {
@@ -354,8 +382,15 @@ func (c *Core) handleFinish(f *Finish) error {
 			c.FinishFlags[f.Epoch] = rF
 		}
 		rF[f.Author] = f.BlockHash
-		if flag { //2f+1 finish?
+
+		// if len(rF) == c.Aggreator.committee.HightThreshold() {
+		//return c.invokeReadyandShare(f.Epoch)
+		// }
+		if flag { //2f+1 finish对的没错
+			logger.Debug.Printf("Finsh Count is %d in epoch %d\n", len(rF), c.Epoch)
 			return c.invokeReadyandShare(f.Epoch)
+			//这里貌似写错了，需要判断是不是已经收到了2f+1个finish的投票
+
 		}
 	}
 	return nil
@@ -405,6 +440,9 @@ func (c *Core) invokeReadyandShare(epoch int64) error {
 	logger.Debug.Printf("Processing invoke Ready and Share epoch %d\n", epoch)
 	ID := c.generateNoProposalSet(epoch)
 	LockID := c.generateLockSet(epoch)
+
+	//logger.Info.Printf("the count of finished blocks %d in epoch %d\n", len(c.FinishFlag[epoch]), epoch)
+	//logger.Info.Printf("the count of finished flags %d in epoch %d\n", len(c.FinishFlags[epoch]), epoch)
 	//广播electshare消息
 	share, _ := NewElectShare(c.Name, epoch, ID, LockID, c.SigService)
 	c.Transimtor.Send(c.Name, core.NONE, share)
@@ -447,20 +485,14 @@ func (c *Core) processLeader(epoch int64) error {
 	//处理可以直接commit的部分
 	if index == -1 && leaderid != core.NONE {
 		if check, value := c.hasFinish(epoch, leaderid); check {
+			//这个位置代表的是第一个
 			logger.Debug.Printf("Processing Leader for epoch %d and leader %d has finish and can commit\n", epoch, leaderid)
 			if b, err := c.getConsensusBlock(value); err != nil {
 				return err
 			} else if b != nil {
 				c.BlocksWaitforCommit[b.Epoch] = b
+				logger.Info.Printf("In Epoch %d,the block commit at the 6 round\n", epoch)
 				c.CommitAllBlocks()
-				// if ok := c.verifyConsensusBlock(b); !ok {
-				// 	logger.Error.Printf("processLeader 1 checkreferrence error and try to retriver Author %d Epoch %d lenof Reference %d\n", b.Proposer, b.Epoch, len(b.PayLoads))
-				// 	c.BlocksWaitforCommit[b.Epoch] = b
-				// 	return nil
-				// } else {
-				// 	c.BlocksWaitforCommit[b.Epoch] = b
-				// 	c.CommitAllBlocks()
-				// }
 				logger.Debug.Printf("help commit message leader %d epoch %d \n", leaderid, epoch)
 				help, _ := NewHelpCommit(c.Name, leaderid, epoch, b, c.SigService)
 				c.Transimtor.Send(c.Name, core.NONE, help)
@@ -477,6 +509,7 @@ func (c *Core) processLeader(epoch int64) error {
 		return nil
 	}
 
+	//这里就打印了FABA的最大调用次数
 	logger.Debug.Printf("ParallelABA Processing Leader for epoch %d and index id  %d \n", epoch, index)
 	//处理并行ABA的部分
 	c.ParallelABAIndex[epoch] = index
@@ -489,7 +522,7 @@ func (c *Core) processLeader(epoch int64) error {
 				c.SkipFlag[epoch] = make(map[core.NodeID]struct{})
 			}
 			c.SkipFlag[epoch][abaleader] = struct{}{}
-			//ERROR 修改之处 这个地方修改了会出现空指针
+
 			if c.ParallelABAResult == nil {
 				c.ParallelABAResult = make(map[int64]map[int]uint8)
 			}
@@ -497,21 +530,35 @@ func (c *Core) processLeader(epoch int64) error {
 			if _, ok := c.ParallelABAResult[epoch]; !ok {
 				c.ParallelABAResult[epoch] = make(map[int]uint8)
 			}
+
+			if c.ParallelABAResultRoundCount == nil {
+				c.ParallelABAResultRoundCount = make(map[int64]map[int]int64)
+			}
+
+			if _, ok := c.ParallelABAResultRoundCount[epoch]; !ok {
+				c.ParallelABAResultRoundCount[epoch] = make(map[int]int64)
+			}
+
 			c.ParallelABAResult[epoch][i] = uint8(0)
+			c.ParallelABAResultRoundCount[epoch][i] = 0
 			//帮助所有人skip
 			skip, _ := NewHelpSkip(c.Name, abaleader, epoch, int(i), c.SigService)
 			c.Transimtor.Send(c.Name, core.NONE, skip)
 			c.Transimtor.RecvChannel() <- skip
 		} else {
+			logger.Info.Printf("In Epoch %d,invoke the %d FABA\n", epoch, i)
 			if c.LockSetMap[epoch][abaleader] {
 				//以1调用prepareABA
 				prepare, _ := NewPrepare(c.Name, abaleader, int64(i), epoch, uint8(1), c.SigService)
+				c.ensurePreparedValue(epoch, abaleader)
+				c.preparedValue[epoch][abaleader][1] = 1
 				c.Transimtor.Send(c.Name, core.NONE, prepare)
 				c.Transimtor.RecvChannel() <- prepare
-
 			} else {
 				//以0调用prepareABA
 				prepare, _ := NewPrepare(c.Name, abaleader, int64(i), epoch, uint8(0), c.SigService)
+				c.ensurePreparedValue(epoch, abaleader)
+				c.preparedValue[epoch][abaleader][0] = 1
 				c.Transimtor.Send(c.Name, core.NONE, prepare)
 				c.Transimtor.RecvChannel() <- prepare
 			}
@@ -519,22 +566,15 @@ func (c *Core) processLeader(epoch int64) error {
 	}
 
 	//如果发现都已经skip掉了前一项，那么现在就可以直接提交finish的这一项
-	if c.judgeCommit(epoch, index) {
+	if check, counts := c.judgeCommit(epoch, index); check {
 		if check1, value1 := c.hasFinish(epoch, leaderid); check1 {
+			logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", epoch, counts+6)
 			logger.Debug.Printf("Processing Leader for epoch %d and leader %d has finish and can commit\n", epoch, leaderid)
 			if b1, err1 := c.getConsensusBlock(value1); err1 != nil {
 				return err1
 			} else if b1 != nil {
 				c.BlocksWaitforCommit[b1.Epoch] = b1
 				c.CommitAllBlocks()
-				// if ok1 := c.verifyConsensusBlock(b1); !ok1 {
-				// 	logger.Error.Printf("processLeader 2 checkreferrence error and try to retriver Author %d Epoch %d lenof Reference %d\n", b1.Proposer, b1.Epoch, len(b1.PayLoads))
-				// 	c.BlocksWaitforCommit[b1.Epoch] = b1
-				// 	return nil
-				// } else {
-				// 	c.BlocksWaitforCommit[b1.Epoch] = b1
-				// 	c.CommitAllBlocks()
-				// }
 				logger.Debug.Printf("help commit message leader %d epoch %d \n", leaderid, epoch)
 				help, _ := NewHelpCommit(c.Name, leaderid, epoch, b1, c.SigService)
 				c.Transimtor.Send(c.Name, core.NONE, help)
@@ -552,14 +592,13 @@ func (c *Core) processLeader(epoch int64) error {
 	return nil
 }
 
-func (c *Core) handlePrepare(p *Prepare) error {
-	logger.Debug.Printf("handle prepare message epoch %d leader%d author %d value %d\n", p.Epoch, p.Leader, p.Author, p.Flag)
-	flag, value, err := c.Aggreator.AddPrepare(p)
+func (c *Core) handlePrepareAUX(p *PrepareAUX) error {
+	flag, value, err := c.Aggreator.AddPrepareAUX(p)
 	if flag == Prepare_FullThreshold {
-		//直接结束ABA，发送ABAHalt
+		//直接结束ABA，发送ABAHalt 直接以0结束
 		c.ParallelABAResult[p.Epoch][int(p.Index)] = uint8(p.Flag)
-
-		temp, _ := NewABAHalt(c.Name, p.Leader, p.Epoch, p.Index, 0, p.Flag, c.SigService)
+		c.ParallelABAResultRoundCount[p.Epoch][int(p.Index)] = 2
+		temp, _ := NewABAHalt(c.Name, p.Leader, p.Epoch, p.Index, 0, uint8(0), c.SigService)
 		c.Transimtor.Send(c.Name, core.NONE, temp)
 		c.Transimtor.RecvChannel() <- temp
 
@@ -569,6 +608,34 @@ func (c *Core) handlePrepare(p *Prepare) error {
 		abaVal, _ := NewABAVal(c.Name, p.Leader, p.Epoch, p.Index, 0, value, c.SigService)
 		c.Transimtor.Send(c.Name, core.NONE, abaVal)
 		c.Transimtor.RecvChannel() <- abaVal
+	}
+	return err
+
+}
+
+func (c *Core) handlePrepare(p *Prepare) error {
+	logger.Debug.Printf("handle prepare message epoch %d leader%d author %d value %d\n", p.Epoch, p.Leader, p.Author, p.Flag)
+	flag, value, err := c.Aggreator.AddPrepare(p)
+	//额外广播 f+1的VAL消息
+	if flag == Prepare_LowThreshold {
+		c.ensurePreparedValue(p.Epoch, p.Leader)
+		if value == uint8(0) && c.preparedValue[p.Epoch][p.Leader][0] == 0 {
+			prepare, _ := NewPrepare(c.Name, p.Leader, p.Index, p.Epoch, value, c.SigService)
+			c.Transimtor.Send(c.Name, core.NONE, prepare)
+			c.Transimtor.RecvChannel() <- prepare
+		}
+		if value == uint8(1) && c.preparedValue[p.Epoch][p.Leader][0] == 1 {
+			prepare, _ := NewPrepare(c.Name, p.Leader, p.Index, p.Epoch, value, c.SigService)
+			c.Transimtor.Send(c.Name, core.NONE, prepare)
+			c.Transimtor.RecvChannel() <- prepare
+		}
+	}
+
+	//如果达到阈值时FullThreshold，广播AUX消息
+	if flag == Prepare_HightThreshold {
+		prepareAUX, _ := NewPrepareAUX(c.Name, p.Leader, p.Index, p.Epoch, value, c.SigService)
+		c.Transimtor.Send(c.Name, core.NONE, prepareAUX)
+		c.Transimtor.RecvChannel() <- prepareAUX
 	}
 	return err
 }
@@ -717,13 +784,21 @@ func (c *Core) invokeABAVal(leader core.NodeID, epoch, round, inRound int64, fla
 }
 
 // 判断是否可以提交当前块 前面所有的ABA的输出是0，这个块是最新的ABA输出值1的块
-func (c *Core) judgeCommit(epoch int64, index int) bool {
+func (c *Core) judgeCommit(epoch int64, index int) (bool, int64) {
+	allcount := int64(0)
 	for i := 0; i < index; i++ {
 		if c.ParallelABAResult[epoch][i] != uint8(0) {
-			return false
+			return false, int64(0)
 		}
 	}
-	return true
+	for i := 0; i <= index; i++ {
+		allcount += c.ParallelABAResultRoundCount[epoch][i]
+	}
+	//说明在第几轮，真实提交是在第几次FABA
+	if index != 0 {
+		logger.Info.Printf("IN Epoch %d,actually commit the block in the %d FABA\n", epoch, index)
+	}
+	return true, allcount
 }
 
 func (c *Core) processABABack(back *ABABack) error {
@@ -736,7 +811,9 @@ func (c *Core) processABABack(back *ABABack) error {
 	} else if back.Typ == ABA_HALT {
 		if back.Flag == FLAG_NO { //next leader 选择下一个leader去判断
 			c.ParallelABAResult[back.Epoch][int(back.ExRound)] = uint8(0)
-			if c.judgeCommit(back.Epoch, c.ParallelABAIndex[back.Epoch]+1) {
+			c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] = 3 * back.InRound
+			if check, counts := c.judgeCommit(back.Epoch, c.ParallelABAIndex[back.Epoch]+1); check {
+				logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", back.Epoch, counts+6)
 				leader := c.Elector.GetLeader(back.Epoch, c.ParallelABAIndex[back.Epoch]+1)
 				blockHash, exist := c.GetConsensusBlockHash(back.Epoch, leader)
 				if !exist {
@@ -749,7 +826,9 @@ func (c *Core) processABABack(back *ABABack) error {
 			//return c.invokeNextLeader(back.Epoch, back.ExRound)
 		} else if back.Flag == FLAG_YES { //如果可以提交直接提交，//nextepoch
 			c.ParallelABAResult[back.Epoch][int(back.ExRound)] = uint8(1)
-			if c.judgeCommit(back.Epoch, int(back.ExRound)) {
+			c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] = 3 * back.InRound
+			if check, counts := c.judgeCommit(back.Epoch, int(back.ExRound)); check {
+				logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", back.Epoch, counts+6)
 				blockHash, exist := c.GetConsensusBlockHash(back.Epoch, back.Leader)
 				if !exist {
 					//impossible
@@ -773,8 +852,10 @@ func (c *Core) handleHelpSkip(skip *HelpSkip) error {
 	logger.Debug.Printf("handleHelpSkip from %d epoch %d round %d\n", skip.Author, skip.Epoch, skip.Index)
 
 	c.ParallelABAResult[skip.Epoch][skip.Index] = uint8(0)
+	c.ParallelABAResultRoundCount[skip.Epoch][skip.Index] = 0
 	//检查前面所有的值
-	if c.judgeCommit(skip.Epoch, c.ParallelABAIndex[skip.Epoch]+1) {
+	if check, counts := c.judgeCommit(skip.Epoch, c.ParallelABAIndex[skip.Epoch]+1); check {
+		logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", skip.Epoch, counts+6)
 		leader := c.Elector.GetLeader(skip.Epoch, c.ParallelABAIndex[skip.Epoch]+1)
 		blockHash, exist := c.GetConsensusBlockHash(skip.Epoch, leader)
 		if !exist {
@@ -930,6 +1011,8 @@ func (c *Core) Run() {
 					err = c.handleHelpCommit(msg.(*HelpCommit))
 				case PrepareType:
 					err = c.handlePrepare(msg.(*Prepare))
+				case PrepareAUXType:
+					err = c.handlePrepareAUX(msg.(*PrepareAUX))
 				case ABAValType:
 					err = c.handleABAVal(msg.(*ABAVal))
 				case ABAMuxType:
