@@ -30,7 +30,7 @@ class LogParser:
                 results = p.map(self._parse_nodes, nodes)
         except (ValueError, IndexError) as e:
             raise ParseError(f'Failed to parse node logs: {e}')
-        nocounts,epochcounts,batchs,proposals, commits,proposalcommits,configs,faba_results = zip(*results)
+        nocounts,epochcounts,batchs,proposals, commits,proposalcommits,configs,faba_results,round_stats = zip(*results)
         self.nocounts=self._merge_results([x.items() for x in nocounts])
         self.epochcounts=self._merge_results([x.items() for x in epochcounts])
         self.proposals = self._merge_results([x.items() for x in proposals])
@@ -40,6 +40,7 @@ class LogParser:
         self.configs = configs[0]
         
         self.faba_stats=self._process_faba_stats(faba_results)
+        self.round_stats=self._process_round_stats(round_stats)
         
     def _process_faba_stats(self, faba_results):
         """合并所有节点的FABA统计结果"""
@@ -54,8 +55,25 @@ class LogParser:
                     if stats['invokes_before_commit'] > merged_stats[epoch]['invokes_before_commit']:
                         merged_stats[epoch] = stats.copy()
         
-        return dict(merged_stats)        
+        return dict(merged_stats)      
+      
+    def _process_round_stats(self, round_results):
+        """合并所有节点的round统计结果 - 修正：对epoch去重并取最大round"""
+        # 首先收集所有epoch的最大round值
+        epoch_max_round = defaultdict(int)
         
+        for node_round_stats in round_results:
+            for epoch, round_num in node_round_stats.items():
+                if round_num > epoch_max_round[epoch]:
+                    epoch_max_round[epoch] = round_num
+        
+        # 然后统计每个round有多少个不同的epoch
+        round_count = defaultdict(int)
+        for epoch, max_round in epoch_max_round.items():
+            round_count[max_round] += 1
+        
+        return dict(round_count)
+              
 
 
     def _merge_results(self, input):
@@ -118,8 +136,19 @@ class LogParser:
                 'invokes_before_commit': count_before_commit,
                 'total_invokes': len(invoke_list),
                 'invoke_list': sorted(invoke_list)
-            }       
-
+            }     
+            
+        #统计每一个epoch需要多少轮才能结束  
+        # 修正：解析round提交统计 - 记录每个epoch的最大round
+        round_commits = findall(r'\[INFO] .* In Epoch (\d+),the block commit at the (\d+) round', log)
+        round_stats = defaultdict(int)  # epoch -> max_round
+        
+        for epoch_str, round_str in round_commits:
+            epoch = int(epoch_str)
+            round_num = int(round_str)
+            # 对于同一个epoch，记录最大的round值
+            if round_num > round_stats[epoch]:
+                round_stats[epoch] = round_num
 
         configs = {
             'consensus': {
@@ -140,7 +169,7 @@ class LogParser:
             }
         }
 
-        return nocounts,epochcounts,batchs,proposals, commits,proposalcommits,configs,faba_stats
+        return nocounts,epochcounts,batchs,proposals, commits,proposalcommits,configs,faba_stats,round_stats
 
     def _to_posix(self, string):
         # 解析时间字符串为 datetime 对象
@@ -200,6 +229,42 @@ class LogParser:
         
         return result    
     
+    def _round_statistics(self):
+        """生成round提交统计信息 - 修正：基于去重后的epoch统计"""
+        if not self.round_stats:
+            return "No round commit statistics available\n"
+        
+        result = "Round Commit Statistics:\n"
+        result += "========================\n"
+        
+        total_epochs = sum(self.round_stats.values())
+        
+        # 按round数排序输出
+        for round_num in sorted(self.round_stats.keys()):
+            count = self.round_stats[round_num]
+            percentage = (count / total_epochs) * 100 if total_epochs > 0 else 0
+            result += f"Round {round_num}: {count}个epoch ({percentage:.1f}%)\n"
+        
+        result += f"\nSummary:\n"
+        result += f"Total distinct epochs with commit records: {total_epochs}\n"
+        
+        if self.round_stats:
+            # 计算平均round（加权平均）
+            total_rounds = sum(round_num * count for round_num, count in self.round_stats.items())
+            avg_round = total_rounds / total_epochs
+            max_round = max(self.round_stats.keys())
+            min_round = min(self.round_stats.keys())
+            
+            result += f"Average commit round: {avg_round:.2f}\n"
+            result += f"Minimum commit round: {min_round}\n"
+            result += f"Maximum commit round: {max_round}\n"
+            # 添加分布信息
+            result += f"\nDistribution:\n"
+            for round_num in sorted(self.round_stats.keys()):
+                count = self.round_stats[round_num]
+                result += f"  Round {round_num}: {count} epochs\n"
+        
+        return result
     
 
     def result(self):        
@@ -213,6 +278,8 @@ class LogParser:
         tx_size = self.configs['pool']['tx_size']
         batch_size = self.configs['pool']['batch_size']
         rate = self.configs['pool']['rate']
+        
+        round_stats = self._round_statistics()
         return (
             '\n'
             '-----------------------------------------\n'
@@ -237,6 +304,9 @@ class LogParser:
             f' The epoch count can not commit block: {round(nocounts):,}\n'
             f' The all epoch counts : {round(epochcounts):,}\n'
             f' The all epoch count commit block: {round(commitcount):,}\n'
+            '\n'
+            ' + ROUND STATISTICS:\n'
+            f'{round_stats}'
             '-----------------------------------------\n'
         )
           
@@ -248,6 +318,10 @@ class LogParser:
         faba_filename = filename.replace('.log', '_faba_stats.txt')
         with open(faba_filename, 'a') as f:
             f.write(self._faba_statistics())
+         # 新增：生成round统计文件
+        round_filename = filename.replace('.log', '_round_stats.txt')
+        with open(round_filename, 'a') as f:
+            f.write(self._round_statistics())
 
     @classmethod
     def process(cls, directory, faults=0, protocol="", ddos=False):

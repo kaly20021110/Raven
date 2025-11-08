@@ -113,9 +113,9 @@ def remote(ctx):
     ''' Run benchmarks on AWS '''
     bench_params = {
         'nodes': [4],
-        'node_instance': 3,               # the number of running instance for a node  (max = 4)
-        'duration': 60,
-        'rate': [5000,5500],                    # tx send rate  1000,2000,3000,4000,5000,6000
+        'node_instance': 1,               # the number of running instance for a node  (max = 4)
+        'duration': 100,
+        'rate': [12000,14000],                    # tx send rate  1000,2000,3000,4000,5000,6000
         'batch_size': [1024],              # the max number of tx that can be hold 
         'log_level': 0b1111,              # 0x1 infolevel 0x2 debuglevel 0x4 warnlevel 0x8 errorlevel
         'protocol': "sMVBA",
@@ -124,7 +124,7 @@ def remote(ctx):
     node_params = {
         "pool": {
             # "rate": 1_000,              # ignore: tx send rate 
-            "tx_size": 16,               # tx size
+            "tx_size": 128,               # tx size
             # "batch_size": 200,          # ignore: the max number of tx that can be hold 
             "max_tx_queue_size": 10_000 
 	    },
