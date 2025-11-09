@@ -225,14 +225,6 @@ func (p *prepareAggreator) Append(committee core.Committee, sigService *crypto.S
 		p.onecount[pre.Author] = struct{}{}
 	}
 
-	//VAL阶段
-	if len(p.onecount) != committee.HightThreshold() && len(p.zerocount) == committee.LowThreshold() {
-		return Prepare_LowThreshold, uint8(0), nil
-	}
-	if len(p.zerocount) != committee.HightThreshold() && len(p.onecount) == committee.LowThreshold() {
-		return Prepare_LowThreshold, uint8(1), nil
-	}
-
 	//保证了只会广播一次AUX
 	if len(p.zerocount) == committee.HightThreshold() {
 		if len(p.onecount) < committee.HightThreshold() {
@@ -244,6 +236,15 @@ func (p *prepareAggreator) Append(committee core.Committee, sigService *crypto.S
 			return Prepare_HightThreshold, uint8(1), nil
 		}
 	}
+
+	//VAL阶段
+	if len(p.zerocount) == committee.LowThreshold() {
+		return Prepare_LowThreshold, uint8(0), nil
+	}
+	if len(p.onecount) == committee.LowThreshold() {
+		return Prepare_LowThreshold, uint8(1), nil
+	}
+
 	//如果收到2f+1个VAL
 
 	// if len(p.authors) == committee.HightThreshold() {

@@ -1,0 +1,1881 @@
+[INFO] 2025/11/08 20:30:44.002662 pool.go:124: Transaction pool queue capacity set to 10000 
+[INFO] 2025/11/08 20:30:44.002699 pool.go:128: Transaction pool tx size set to 128 
+[INFO] 2025/11/08 20:30:44.002703 pool.go:132: Transaction pool batch size set to 1024 
+[INFO] 2025/11/08 20:30:44.002705 pool.go:136: Transaction pool tx rate set to 4000 
+[INFO] 2025/11/08 20:30:44.005537 mempool.go:71: Waiting for all mempool nodes to be online...
+[INFO] 2025/11/08 20:30:44.364681 network.go:107: Incoming connection established with 47.245.147.233:43072 
+[INFO] 2025/11/08 20:30:47.199555 network.go:107: Incoming connection established with 47.87.128.178:49454 
+[INFO] 2025/11/08 20:30:50.264943 network.go:107: Incoming connection established with 47.87.130.152:45180 
+[INFO] 2025/11/08 20:30:52.997522 network.go:107: Incoming connection established with 47.87.130.9:48668 
+[INFO] 2025/11/08 20:30:55.258490 network.go:107: Incoming connection established with 8.221.136.178:37562 
+[INFO] 2025/11/08 20:30:56.644858 network.go:107: Incoming connection established with 8.221.141.51:54320 
+[INFO] 2025/11/08 20:30:57.862953 network.go:107: Incoming connection established with 8.216.66.24:51356 
+[INFO] 2025/11/08 20:31:00.223785 network.go:107: Incoming connection established with 8.220.222.28:32922 
+[INFO] 2025/11/08 20:31:02.696355 network.go:107: Incoming connection established with 8.220.222.120:42406 
+[INFO] 2025/11/08 20:31:05.072896 network.go:107: Incoming connection established with 8.220.223.146:39684 
+[INFO] 2025/11/08 20:31:07.419335 network.go:107: Incoming connection established with 8.213.156.154:39594 
+[INFO] 2025/11/08 20:31:08.873109 consensus.go:30: Consensus Node ID: 4
+[INFO] 2025/11/08 20:31:08.873143 consensus.go:34: Consensus DDos: false, Faults: 0 
+[INFO] 2025/11/08 20:31:08.873147 consensus.go:38: Protocol: Improved TockOwl
+[INFO] 2025/11/08 20:31:08.873151 consensus.go:42: Honest Node
+[INFO] 2025/11/08 20:31:08.873215 consensus.go:54: Waiting for all nodes to be online...
+[INFO] 2025/11/08 20:31:10.324381 network.go:107: Incoming connection established with 47.253.86.255:36852 
+[INFO] 2025/11/08 20:31:13.177383 network.go:107: Incoming connection established with 47.252.75.107:46198 
+[INFO] 2025/11/08 20:31:15.922176 network.go:107: Incoming connection established with 47.253.196.77:54718 
+[INFO] 2025/11/08 20:31:18.763618 network.go:107: Incoming connection established with 8.221.141.51:42360 
+[INFO] 2025/11/08 20:31:18.773662 network.go:107: Incoming connection established with 8.221.136.178:55840 
+[INFO] 2025/11/08 20:31:18.802575 network.go:107: Incoming connection established with 8.216.66.24:51886 
+[INFO] 2025/11/08 20:31:18.875153 network.go:107: Incoming connection established with 8.220.223.146:60390 
+[INFO] 2025/11/08 20:31:18.913117 network.go:107: Incoming connection established with 47.253.98.157:43138 
+[INFO] 2025/11/08 20:31:18.945334 network.go:107: Incoming connection established with 8.213.156.154:55066 
+[INFO] 2025/11/08 20:31:18.964292 network.go:107: Incoming connection established with 8.220.222.28:44508 
+[INFO] 2025/11/08 20:31:18.993238 network.go:107: Incoming connection established with 47.87.130.152:54944 
+[INFO] 2025/11/08 20:31:18.996866 network.go:107: Incoming connection established with 8.220.222.120:44932 
+[INFO] 2025/11/08 20:31:19.022299 network.go:107: Incoming connection established with 47.87.128.178:40882 
+[INFO] 2025/11/08 20:31:19.031956 network.go:107: Incoming connection established with 47.87.130.9:37264 
+[INFO] 2025/11/08 20:31:19.061682 network.go:107: Incoming connection established with 47.245.147.233:58330 
+[INFO] 2025/11/08 20:31:19.074404 node.go:76: Node 4 successfully booted 
+[INFO] 2025/11/08 20:31:19.076401 core.go:264: create ConsensusBlock epoch 0 node 4
+[INFO] 2025/11/08 20:31:19.076993 network.go:62: Outgoing connection established with 8.221.141.51:8000 
+[INFO] 2025/11/08 20:31:19.097541 network.go:107: Incoming connection established with 8.220.223.146:39376 
+[INFO] 2025/11/08 20:31:19.111991 network.go:62: Outgoing connection established with 8.220.222.28:8000 
+[INFO] 2025/11/08 20:31:19.192705 network.go:107: Incoming connection established with 8.216.66.24:51900 
+[INFO] 2025/11/08 20:31:19.192775 network.go:107: Incoming connection established with 8.220.222.28:34722 
+[INFO] 2025/11/08 20:31:19.244730 network.go:62: Outgoing connection established with 47.253.98.157:7000 
+[INFO] 2025/11/08 20:31:19.279716 network.go:62: Outgoing connection established with 8.220.223.146:7000 
+[INFO] 2025/11/08 20:31:19.284526 network.go:62: Outgoing connection established with 47.253.86.255:8000 
+[INFO] 2025/11/08 20:31:19.339534 network.go:107: Incoming connection established with 47.87.130.9:37268 
+[INFO] 2025/11/08 20:31:19.349300 network.go:107: Incoming connection established with 8.216.66.24:53480 
+[INFO] 2025/11/08 20:31:19.375039 pool.go:64: Received Batch 4
+[INFO] 2025/11/08 20:31:19.375640 mempool.go:282: create Block node 4 batch_id 4 
+[INFO] 2025/11/08 20:31:19.479636 network.go:62: Outgoing connection established with 47.252.75.107:7000 
+[INFO] 2025/11/08 20:31:19.485765 network.go:62: Outgoing connection established with 47.245.147.233:8000 
+[INFO] 2025/11/08 20:31:19.486089 network.go:62: Outgoing connection established with 8.216.66.24:8000 
+[INFO] 2025/11/08 20:31:19.506726 network.go:107: Incoming connection established with 8.221.136.178:60808 
+[INFO] 2025/11/08 20:31:19.524379 network.go:62: Outgoing connection established with 8.213.156.154:8000 
+[INFO] 2025/11/08 20:31:19.560773 network.go:107: Incoming connection established with 8.221.141.51:47260 
+[INFO] 2025/11/08 20:31:19.624869 pool.go:64: Received Batch 20
+[INFO] 2025/11/08 20:31:19.625449 mempool.go:282: create Block node 4 batch_id 20 
+[INFO] 2025/11/08 20:31:19.677322 network.go:62: Outgoing connection established with 47.87.130.9:7000 
+[INFO] 2025/11/08 20:31:19.677651 network.go:62: Outgoing connection established with 8.221.136.178:7000 
+[INFO] 2025/11/08 20:31:19.678037 network.go:62: Outgoing connection established with 8.221.141.51:7000 
+[INFO] 2025/11/08 20:31:19.709629 network.go:62: Outgoing connection established with 8.220.222.28:7000 
+[INFO] 2025/11/08 20:31:19.725255 network.go:62: Outgoing connection established with 47.87.130.9:8000 
+[INFO] 2025/11/08 20:31:19.725558 network.go:62: Outgoing connection established with 8.221.136.178:8000 
+[INFO] 2025/11/08 20:31:19.806673 network.go:107: Incoming connection established with 47.87.128.178:54204 
+[INFO] 2025/11/08 20:31:19.863948 network.go:107: Incoming connection established with 8.213.156.154:55072 
+[INFO] 2025/11/08 20:31:19.875295 pool.go:64: Received Batch 36
+[INFO] 2025/11/08 20:31:19.876528 mempool.go:282: create Block node 4 batch_id 36 
+[INFO] 2025/11/08 20:31:19.890534 network.go:62: Outgoing connection established with 47.253.86.255:7000 
+[INFO] 2025/11/08 20:31:19.905660 network.go:62: Outgoing connection established with 47.253.196.77:8000 
+[INFO] 2025/11/08 20:31:19.917675 network.go:107: Incoming connection established with 47.87.130.9:36282 
+[INFO] 2025/11/08 20:31:19.940643 network.go:62: Outgoing connection established with 8.220.222.120:8000 
+[INFO] 2025/11/08 20:31:19.949374 network.go:107: Incoming connection established with 8.220.223.146:60404 
+[INFO] 2025/11/08 20:31:19.975527 network.go:107: Incoming connection established with 8.213.156.154:58512 
+[INFO] 2025/11/08 20:31:19.986341 network.go:107: Incoming connection established with 47.87.128.178:46424 
+[INFO] 2025/11/08 20:31:20.091702 network.go:62: Outgoing connection established with 47.245.147.233:7000 
+[INFO] 2025/11/08 20:31:20.092079 network.go:62: Outgoing connection established with 8.216.66.24:7000 
+[INFO] 2025/11/08 20:31:20.115017 network.go:107: Incoming connection established with 47.87.130.152:42664 
+[INFO] 2025/11/08 20:31:20.123699 network.go:62: Outgoing connection established with 8.213.156.154:7000 
+[INFO] 2025/11/08 20:31:20.125090 pool.go:64: Received Batch 52
+[INFO] 2025/11/08 20:31:20.125927 mempool.go:282: create Block node 4 batch_id 52 
+[INFO] 2025/11/08 20:31:20.138070 network.go:62: Outgoing connection established with 47.87.130.152:8000 
+[INFO] 2025/11/08 20:31:20.140381 network.go:107: Incoming connection established with 47.87.130.152:54956 
+[INFO] 2025/11/08 20:31:20.141171 network.go:107: Incoming connection established with 8.221.141.51:40960 
+[INFO] 2025/11/08 20:31:20.304842 network.go:107: Incoming connection established with 8.220.222.120:44938 
+[INFO] 2025/11/08 20:31:20.320594 network.go:62: Outgoing connection established with 47.253.196.77:7000 
+[INFO] 2025/11/08 20:31:20.333582 network.go:62: Outgoing connection established with 47.87.128.178:8000 
+[INFO] 2025/11/08 20:31:20.358966 network.go:62: Outgoing connection established with 8.220.222.120:7000 
+[INFO] 2025/11/08 20:31:20.375303 pool.go:64: Received Batch 68
+[INFO] 2025/11/08 20:31:20.375633 mempool.go:282: create Block node 4 batch_id 68 
+[INFO] 2025/11/08 20:31:20.444474 network.go:107: Incoming connection established with 8.220.222.28:44510 
+[INFO] 2025/11/08 20:31:20.488728 network.go:107: Incoming connection established with 8.220.222.120:51734 
+[INFO] 2025/11/08 20:31:20.517423 network.go:62: Outgoing connection established with 47.253.98.157:8000 
+[INFO] 2025/11/08 20:31:20.552358 network.go:62: Outgoing connection established with 8.220.223.146:8000 
+[INFO] 2025/11/08 20:31:20.558932 network.go:62: Outgoing connection established with 47.87.130.152:7000 
+[INFO] 2025/11/08 20:31:20.583916 network.go:107: Incoming connection established with 47.253.86.255:44748 
+[INFO] 2025/11/08 20:31:20.625036 pool.go:64: Received Batch 84
+[INFO] 2025/11/08 20:31:20.625350 mempool.go:282: create Block node 4 batch_id 84 
+[INFO] 2025/11/08 20:31:20.700303 network.go:107: Incoming connection established with 47.245.147.233:33606 
+[INFO] 2025/11/08 20:31:20.701544 network.go:107: Incoming connection established with 47.245.147.233:37306 
+[INFO] 2025/11/08 20:31:20.741614 network.go:62: Outgoing connection established with 47.252.75.107:8000 
+[INFO] 2025/11/08 20:31:20.755669 network.go:107: Incoming connection established with 8.221.136.178:55848 
+[INFO] 2025/11/08 20:31:20.759572 network.go:62: Outgoing connection established with 47.87.128.178:7000 
+[INFO] 2025/11/08 20:31:20.875153 pool.go:64: Received Batch 100
+[INFO] 2025/11/08 20:31:20.875446 mempool.go:282: create Block node 4 batch_id 100 
+[INFO] 2025/11/08 20:31:21.124594 pool.go:64: Received Batch 116
+[INFO] 2025/11/08 20:31:21.124840 mempool.go:282: create Block node 4 batch_id 116 
+[INFO] 2025/11/08 20:31:21.424768 pool.go:64: Received Batch 132
+[INFO] 2025/11/08 20:31:21.425109 mempool.go:282: create Block node 4 batch_id 132 
+[INFO] 2025/11/08 20:31:21.463527 core.go:243: In Epoch 0,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:21.463600 core.go:494: In Epoch 0,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:21.463752 core.go:956: advance next epoch 1
+[INFO] 2025/11/08 20:31:21.463928 commitor.go:46: commit ConsensusBlock epoch 0 node 9
+[INFO] 2025/11/08 20:31:21.464008 core.go:264: create ConsensusBlock epoch 1 node 4
+[INFO] 2025/11/08 20:31:21.675362 pool.go:64: Received Batch 148
+[INFO] 2025/11/08 20:31:21.675764 mempool.go:282: create Block node 4 batch_id 148 
+[INFO] 2025/11/08 20:31:21.925054 pool.go:64: Received Batch 164
+[INFO] 2025/11/08 20:31:21.925365 mempool.go:282: create Block node 4 batch_id 164 
+[INFO] 2025/11/08 20:31:22.174499 pool.go:64: Received Batch 180
+[INFO] 2025/11/08 20:31:22.174773 mempool.go:282: create Block node 4 batch_id 180 
+[INFO] 2025/11/08 20:31:22.372344 network.go:107: Incoming connection established with 47.253.86.255:58556 
+[INFO] 2025/11/08 20:31:22.425485 pool.go:64: Received Batch 196
+[INFO] 2025/11/08 20:31:22.426291 mempool.go:282: create Block node 4 batch_id 196 
+[INFO] 2025/11/08 20:31:22.539879 network.go:107: Incoming connection established with 47.253.86.255:50290 
+[INFO] 2025/11/08 20:31:22.674623 pool.go:64: Received Batch 212
+[INFO] 2025/11/08 20:31:22.674960 mempool.go:282: create Block node 4 batch_id 212 
+[INFO] 2025/11/08 20:31:22.924597 pool.go:64: Received Batch 228
+[INFO] 2025/11/08 20:31:22.924904 mempool.go:282: create Block node 4 batch_id 228 
+[INFO] 2025/11/08 20:31:22.990060 core.go:243: In Epoch 1,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:22.990150 core.go:494: In Epoch 1,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:22.990360 core.go:956: advance next epoch 2
+[INFO] 2025/11/08 20:31:22.990671 core.go:264: create ConsensusBlock epoch 2 node 4
+[INFO] 2025/11/08 20:31:22.990876 commitor.go:53: commit Block node 9 batch_id 121
+[INFO] 2025/11/08 20:31:22.991899 commitor.go:53: commit Block node 6 batch_id 22
+[INFO] 2025/11/08 20:31:22.992136 commitor.go:53: commit Block node 6 batch_id 118
+[INFO] 2025/11/08 20:31:22.992507 commitor.go:53: commit Block node 7 batch_id 7
+[INFO] 2025/11/08 20:31:22.992867 commitor.go:53: commit Block node 7 batch_id 87
+[INFO] 2025/11/08 20:31:22.993229 commitor.go:53: commit Block node 4 batch_id 4
+[INFO] 2025/11/08 20:31:22.993597 commitor.go:53: commit Block node 4 batch_id 36
+[INFO] 2025/11/08 20:31:22.993960 commitor.go:53: commit Block node 4 batch_id 132
+[INFO] 2025/11/08 20:31:22.994392 commitor.go:53: commit Block node 10 batch_id 10
+[INFO] 2025/11/08 20:31:22.994765 commitor.go:53: commit Block node 7 batch_id 55
+[INFO] 2025/11/08 20:31:22.995126 commitor.go:53: commit Block node 6 batch_id 6
+[INFO] 2025/11/08 20:31:22.995504 commitor.go:53: commit Block node 11 batch_id 11
+[INFO] 2025/11/08 20:31:22.995863 commitor.go:53: commit Block node 8 batch_id 88
+[INFO] 2025/11/08 20:31:22.996248 commitor.go:53: commit Block node 4 batch_id 100
+[INFO] 2025/11/08 20:31:22.997293 commitor.go:53: commit Block node 5 batch_id 85
+[INFO] 2025/11/08 20:31:22.998004 commitor.go:53: commit Block node 11 batch_id 75
+[INFO] 2025/11/08 20:31:22.998115 commitor.go:53: commit Block node 11 batch_id 91
+[INFO] 2025/11/08 20:31:22.998702 commitor.go:53: commit Block node 10 batch_id 106
+[INFO] 2025/11/08 20:31:22.999081 commitor.go:53: commit Block node 7 batch_id 71
+[INFO] 2025/11/08 20:31:23.000070 commitor.go:53: commit Block node 4 batch_id 52
+[INFO] 2025/11/08 20:31:23.000307 commitor.go:53: commit Block node 4 batch_id 84
+[INFO] 2025/11/08 20:31:23.000817 commitor.go:53: commit Block node 9 batch_id 57
+[INFO] 2025/11/08 20:31:23.001117 commitor.go:53: commit Block node 7 batch_id 39
+[INFO] 2025/11/08 20:31:23.002262 commitor.go:53: commit Block node 4 batch_id 20
+[INFO] 2025/11/08 20:31:23.002274 commitor.go:53: commit Block node 5 batch_id 21
+[INFO] 2025/11/08 20:31:23.002295 commitor.go:53: commit Block node 9 batch_id 9
+[INFO] 2025/11/08 20:31:23.002514 commitor.go:53: commit Block node 11 batch_id 43
+[INFO] 2025/11/08 20:31:23.002712 commitor.go:53: commit Block node 11 batch_id 123
+[INFO] 2025/11/08 20:31:23.002980 commitor.go:46: commit ConsensusBlock epoch 1 node 8
+[INFO] 2025/11/08 20:31:23.002991 commitor.go:53: commit Block node 7 batch_id 23
+[INFO] 2025/11/08 20:31:23.174522 pool.go:64: Received Batch 244
+[INFO] 2025/11/08 20:31:23.174818 mempool.go:282: create Block node 4 batch_id 244 
+[INFO] 2025/11/08 20:31:23.411919 network.go:107: Incoming connection established with 47.252.75.107:44194 
+[INFO] 2025/11/08 20:31:23.474893 pool.go:64: Received Batch 260
+[INFO] 2025/11/08 20:31:23.475202 mempool.go:282: create Block node 4 batch_id 260 
+[INFO] 2025/11/08 20:31:23.725078 pool.go:64: Received Batch 276
+[INFO] 2025/11/08 20:31:23.725385 mempool.go:282: create Block node 4 batch_id 276 
+[INFO] 2025/11/08 20:31:23.975128 pool.go:64: Received Batch 292
+[INFO] 2025/11/08 20:31:23.975462 mempool.go:282: create Block node 4 batch_id 292 
+[INFO] 2025/11/08 20:31:24.176050 network.go:107: Incoming connection established with 47.252.75.107:44204 
+[INFO] 2025/11/08 20:31:24.225081 pool.go:64: Received Batch 308
+[INFO] 2025/11/08 20:31:24.225398 mempool.go:282: create Block node 4 batch_id 308 
+[INFO] 2025/11/08 20:31:24.290696 network.go:107: Incoming connection established with 47.252.75.107:50010 
+[INFO] 2025/11/08 20:31:24.475106 pool.go:64: Received Batch 324
+[INFO] 2025/11/08 20:31:24.475428 mempool.go:282: create Block node 4 batch_id 324 
+[INFO] 2025/11/08 20:31:24.725253 pool.go:64: Received Batch 340
+[INFO] 2025/11/08 20:31:24.725572 mempool.go:282: create Block node 4 batch_id 340 
+[INFO] 2025/11/08 20:31:24.975251 pool.go:64: Received Batch 356
+[INFO] 2025/11/08 20:31:24.975578 mempool.go:282: create Block node 4 batch_id 356 
+[INFO] 2025/11/08 20:31:25.021980 core.go:243: In Epoch 2,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:25.022214 core.go:494: In Epoch 2,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:25.022826 core.go:956: advance next epoch 3
+[INFO] 2025/11/08 20:31:25.022913 commitor.go:53: commit Block node 7 batch_id 167
+[INFO] 2025/11/08 20:31:25.022910 core.go:264: create ConsensusBlock epoch 3 node 4
+[INFO] 2025/11/08 20:31:25.023574 commitor.go:53: commit Block node 0 batch_id 48
+[INFO] 2025/11/08 20:31:25.023605 commitor.go:53: commit Block node 0 batch_id 144
+[INFO] 2025/11/08 20:31:25.023916 commitor.go:53: commit Block node 5 batch_id 197
+[INFO] 2025/11/08 20:31:25.024426 commitor.go:53: commit Block node 8 batch_id 216
+[INFO] 2025/11/08 20:31:25.024785 commitor.go:53: commit Block node 1 batch_id 81
+[INFO] 2025/11/08 20:31:25.025243 commitor.go:53: commit Block node 0 batch_id 96
+[INFO] 2025/11/08 20:31:25.025478 commitor.go:53: commit Block node 11 batch_id 139
+[INFO] 2025/11/08 20:31:25.026181 commitor.go:53: commit Block node 10 batch_id 186
+[INFO] 2025/11/08 20:31:25.026292 commitor.go:53: commit Block node 5 batch_id 181
+[INFO] 2025/11/08 20:31:25.026678 commitor.go:53: commit Block node 1 batch_id 161
+[INFO] 2025/11/08 20:31:25.027043 commitor.go:53: commit Block node 6 batch_id 230
+[INFO] 2025/11/08 20:31:25.027422 commitor.go:53: commit Block node 6 batch_id 38
+[INFO] 2025/11/08 20:31:25.027787 commitor.go:53: commit Block node 11 batch_id 59
+[INFO] 2025/11/08 20:31:25.028248 commitor.go:53: commit Block node 3 batch_id 3
+[INFO] 2025/11/08 20:31:25.028566 commitor.go:53: commit Block node 1 batch_id 1
+[INFO] 2025/11/08 20:31:25.028983 commitor.go:53: commit Block node 5 batch_id 165
+[INFO] 2025/11/08 20:31:25.029407 commitor.go:53: commit Block node 4 batch_id 180
+[INFO] 2025/11/08 20:31:25.030471 commitor.go:53: commit Block node 3 batch_id 67
+[INFO] 2025/11/08 20:31:25.030806 commitor.go:53: commit Block node 2 batch_id 114
+[INFO] 2025/11/08 20:31:25.031098 commitor.go:53: commit Block node 0 batch_id 176
+[INFO] 2025/11/08 20:31:25.031393 commitor.go:53: commit Block node 2 batch_id 2
+[INFO] 2025/11/08 20:31:25.031405 commitor.go:53: commit Block node 1 batch_id 145
+[INFO] 2025/11/08 20:31:25.032044 commitor.go:53: commit Block node 2 batch_id 130
+[INFO] 2025/11/08 20:31:25.032290 commitor.go:53: commit Block node 12 batch_id 44
+[INFO] 2025/11/08 20:31:25.033093 commitor.go:53: commit Block node 2 batch_id 34
+[INFO] 2025/11/08 20:31:25.033483 commitor.go:53: commit Block node 3 batch_id 147
+[INFO] 2025/11/08 20:31:25.033649 commitor.go:53: commit Block node 8 batch_id 8
+[INFO] 2025/11/08 20:31:25.033879 commitor.go:53: commit Block node 7 batch_id 151
+[INFO] 2025/11/08 20:31:25.034097 commitor.go:53: commit Block node 3 batch_id 35
+[INFO] 2025/11/08 20:31:25.035620 commitor.go:53: commit Block node 11 batch_id 219
+[INFO] 2025/11/08 20:31:25.035671 commitor.go:46: commit ConsensusBlock epoch 2 node 6
+[INFO] 2025/11/08 20:31:25.035683 commitor.go:53: commit Block node 5 batch_id 69
+[INFO] 2025/11/08 20:31:25.225179 pool.go:64: Received Batch 372
+[INFO] 2025/11/08 20:31:25.225489 mempool.go:282: create Block node 4 batch_id 372 
+[INFO] 2025/11/08 20:31:25.475235 pool.go:64: Received Batch 388
+[INFO] 2025/11/08 20:31:25.475543 mempool.go:282: create Block node 4 batch_id 388 
+[INFO] 2025/11/08 20:31:25.775075 pool.go:64: Received Batch 404
+[INFO] 2025/11/08 20:31:25.775396 mempool.go:282: create Block node 4 batch_id 404 
+[INFO] 2025/11/08 20:31:26.024941 pool.go:64: Received Batch 420
+[INFO] 2025/11/08 20:31:26.025249 mempool.go:282: create Block node 4 batch_id 420 
+[INFO] 2025/11/08 20:31:26.152551 network.go:107: Incoming connection established with 47.253.196.77:34890 
+[INFO] 2025/11/08 20:31:26.267778 core.go:243: In Epoch 3,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:26.268384 core.go:494: In Epoch 3,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:26.270139 core.go:956: advance next epoch 4
+[INFO] 2025/11/08 20:31:26.270489 core.go:264: create ConsensusBlock epoch 4 node 4
+[INFO] 2025/11/08 20:31:26.271122 commitor.go:53: commit Block node 5 batch_id 341
+[INFO] 2025/11/08 20:31:26.271130 commitor.go:53: commit Block node 7 batch_id 327
+[INFO] 2025/11/08 20:31:26.271322 commitor.go:53: commit Block node 4 batch_id 356
+[INFO] 2025/11/08 20:31:26.272219 commitor.go:53: commit Block node 0 batch_id 208
+[INFO] 2025/11/08 20:31:26.272281 commitor.go:53: commit Block node 12 batch_id 252
+[INFO] 2025/11/08 20:31:26.273283 commitor.go:53: commit Block node 2 batch_id 290
+[INFO] 2025/11/08 20:31:26.273297 commitor.go:53: commit Block node 9 batch_id 233
+[INFO] 2025/11/08 20:31:26.274052 commitor.go:53: commit Block node 12 batch_id 188
+[INFO] 2025/11/08 20:31:26.274632 pool.go:64: Received Batch 436
+[INFO] 2025/11/08 20:31:26.274924 mempool.go:282: create Block node 4 batch_id 436 
+[INFO] 2025/11/08 20:31:26.274952 commitor.go:53: commit Block node 0 batch_id 256
+[INFO] 2025/11/08 20:31:26.274959 commitor.go:53: commit Block node 6 batch_id 166
+[INFO] 2025/11/08 20:31:26.275010 commitor.go:53: commit Block node 12 batch_id 172
+[INFO] 2025/11/08 20:31:26.275773 commitor.go:53: commit Block node 8 batch_id 280
+[INFO] 2025/11/08 20:31:26.275877 commitor.go:53: commit Block node 2 batch_id 194
+[INFO] 2025/11/08 20:31:26.276288 commitor.go:53: commit Block node 0 batch_id 128
+[INFO] 2025/11/08 20:31:26.277877 commitor.go:53: commit Block node 5 batch_id 229
+[INFO] 2025/11/08 20:31:26.277894 commitor.go:53: commit Block node 6 batch_id 278
+[INFO] 2025/11/08 20:31:26.278145 commitor.go:53: commit Block node 11 batch_id 347
+[INFO] 2025/11/08 20:31:26.278479 commitor.go:53: commit Block node 1 batch_id 273
+[INFO] 2025/11/08 20:31:26.279230 commitor.go:53: commit Block node 5 batch_id 277
+[INFO] 2025/11/08 20:31:26.279519 commitor.go:53: commit Block node 9 batch_id 153
+[INFO] 2025/11/08 20:31:26.280870 commitor.go:53: commit Block node 9 batch_id 329
+[INFO] 2025/11/08 20:31:26.280884 commitor.go:53: commit Block node 6 batch_id 342
+[INFO] 2025/11/08 20:31:26.281733 commitor.go:53: commit Block node 3 batch_id 131
+[INFO] 2025/11/08 20:31:26.281781 commitor.go:53: commit Block node 12 batch_id 140
+[INFO] 2025/11/08 20:31:26.282163 commitor.go:53: commit Block node 9 batch_id 265
+[INFO] 2025/11/08 20:31:26.282592 commitor.go:53: commit Block node 9 batch_id 297
+[INFO] 2025/11/08 20:31:26.282962 commitor.go:53: commit Block node 10 batch_id 314
+[INFO] 2025/11/08 20:31:26.283750 commitor.go:53: commit Block node 3 batch_id 99
+[INFO] 2025/11/08 20:31:26.283761 commitor.go:53: commit Block node 10 batch_id 282
+[INFO] 2025/11/08 20:31:26.283953 commitor.go:53: commit Block node 0 batch_id 16
+[INFO] 2025/11/08 20:31:26.284189 commitor.go:53: commit Block node 2 batch_id 226
+[INFO] 2025/11/08 20:31:26.284474 commitor.go:46: commit ConsensusBlock epoch 3 node 11
+[INFO] 2025/11/08 20:31:26.284486 commitor.go:53: commit Block node 2 batch_id 162
+[INFO] 2025/11/08 20:31:26.371109 network.go:107: Incoming connection established with 47.253.196.77:34900 
+[INFO] 2025/11/08 20:31:26.524549 pool.go:64: Received Batch 452
+[INFO] 2025/11/08 20:31:26.524915 mempool.go:282: create Block node 4 batch_id 452 
+[INFO] 2025/11/08 20:31:26.775059 pool.go:64: Received Batch 468
+[INFO] 2025/11/08 20:31:26.775379 mempool.go:282: create Block node 4 batch_id 468 
+[INFO] 2025/11/08 20:31:27.024541 pool.go:64: Received Batch 484
+[INFO] 2025/11/08 20:31:27.024846 mempool.go:282: create Block node 4 batch_id 484 
+[INFO] 2025/11/08 20:31:27.152890 core.go:243: In Epoch 4,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:27.153080 core.go:799: IN Epoch 4,actually commit the block in the 1 FABA
+[INFO] 2025/11/08 20:31:27.153085 core.go:858: In Epoch 4,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:27.153491 core.go:956: advance next epoch 5
+[INFO] 2025/11/08 20:31:27.153853 core.go:264: create ConsensusBlock epoch 5 node 4
+[INFO] 2025/11/08 20:31:27.154471 commitor.go:53: commit Block node 2 batch_id 146
+[INFO] 2025/11/08 20:31:27.154487 commitor.go:53: commit Block node 12 batch_id 332
+[INFO] 2025/11/08 20:31:27.154640 commitor.go:53: commit Block node 6 batch_id 166
+[INFO] 2025/11/08 20:31:27.155572 commitor.go:53: commit Block node 11 batch_id 203
+[INFO] 2025/11/08 20:31:27.155583 commitor.go:53: commit Block node 8 batch_id 264
+[INFO] 2025/11/08 20:31:27.156142 commitor.go:53: commit Block node 1 batch_id 369
+[INFO] 2025/11/08 20:31:27.156335 commitor.go:53: commit Block node 6 batch_id 198
+[INFO] 2025/11/08 20:31:27.157266 commitor.go:53: commit Block node 9 batch_id 281
+[INFO] 2025/11/08 20:31:27.157898 commitor.go:53: commit Block node 3 batch_id 387
+[INFO] 2025/11/08 20:31:27.158015 commitor.go:53: commit Block node 12 batch_id 60
+[INFO] 2025/11/08 20:31:27.158444 commitor.go:53: commit Block node 9 batch_id 201
+[INFO] 2025/11/08 20:31:27.158826 commitor.go:53: commit Block node 12 batch_id 28
+[INFO] 2025/11/08 20:31:27.159192 commitor.go:53: commit Block node 8 batch_id 248
+[INFO] 2025/11/08 20:31:27.159581 commitor.go:53: commit Block node 7 batch_id 327
+[INFO] 2025/11/08 20:31:27.159967 commitor.go:53: commit Block node 2 batch_id 338
+[INFO] 2025/11/08 20:31:27.160345 commitor.go:53: commit Block node 5 batch_id 389
+[INFO] 2025/11/08 20:31:27.160718 commitor.go:53: commit Block node 10 batch_id 170
+[INFO] 2025/11/08 20:31:27.161079 commitor.go:53: commit Block node 3 batch_id 259
+[INFO] 2025/11/08 20:31:27.161453 commitor.go:53: commit Block node 7 batch_id 263
+[INFO] 2025/11/08 20:31:27.161829 commitor.go:53: commit Block node 2 batch_id 306
+[INFO] 2025/11/08 20:31:27.162192 commitor.go:53: commit Block node 8 batch_id 200
+[INFO] 2025/11/08 20:31:27.162560 commitor.go:53: commit Block node 10 batch_id 234
+[INFO] 2025/11/08 20:31:27.162931 commitor.go:53: commit Block node 12 batch_id 172
+[INFO] 2025/11/08 20:31:27.163292 commitor.go:53: commit Block node 4 batch_id 212
+[INFO] 2025/11/08 20:31:27.163700 commitor.go:53: commit Block node 5 batch_id 261
+[INFO] 2025/11/08 20:31:27.164086 commitor.go:53: commit Block node 1 batch_id 257
+[INFO] 2025/11/08 20:31:27.164459 commitor.go:53: commit Block node 9 batch_id 345
+[INFO] 2025/11/08 20:31:27.164861 commitor.go:53: commit Block node 0 batch_id 400
+[INFO] 2025/11/08 20:31:27.165229 commitor.go:53: commit Block node 11 batch_id 187
+[INFO] 2025/11/08 20:31:27.165639 commitor.go:53: commit Block node 2 batch_id 178
+[INFO] 2025/11/08 20:31:27.166035 commitor.go:53: commit Block node 0 batch_id 224
+[INFO] 2025/11/08 20:31:27.166430 commitor.go:46: commit ConsensusBlock epoch 4 node 13
+[INFO] 2025/11/08 20:31:27.166444 commitor.go:53: commit Block node 3 batch_id 355
+[INFO] 2025/11/08 20:31:27.275324 pool.go:64: Received Batch 500
+[INFO] 2025/11/08 20:31:27.275627 mempool.go:282: create Block node 4 batch_id 500 
+[INFO] 2025/11/08 20:31:27.525024 pool.go:64: Received Batch 516
+[INFO] 2025/11/08 20:31:27.525342 mempool.go:282: create Block node 4 batch_id 516 
+[INFO] 2025/11/08 20:31:27.824518 pool.go:64: Received Batch 532
+[INFO] 2025/11/08 20:31:27.824834 mempool.go:282: create Block node 4 batch_id 532 
+[INFO] 2025/11/08 20:31:27.881020 core.go:243: In Epoch 5,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:27.881138 core.go:494: In Epoch 5,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:27.882725 core.go:956: advance next epoch 6
+[INFO] 2025/11/08 20:31:27.883057 core.go:264: create ConsensusBlock epoch 6 node 4
+[INFO] 2025/11/08 20:31:27.883621 commitor.go:53: commit Block node 1 batch_id 305
+[INFO] 2025/11/08 20:31:27.883633 commitor.go:53: commit Block node 6 batch_id 422
+[INFO] 2025/11/08 20:31:27.884359 commitor.go:53: commit Block node 5 batch_id 245
+[INFO] 2025/11/08 20:31:27.884374 commitor.go:53: commit Block node 5 batch_id 117
+[INFO] 2025/11/08 20:31:27.885128 commitor.go:53: commit Block node 1 batch_id 65
+[INFO] 2025/11/08 20:31:27.885286 commitor.go:53: commit Block node 9 batch_id 185
+[INFO] 2025/11/08 20:31:27.885694 commitor.go:53: commit Block node 9 batch_id 217
+[INFO] 2025/11/08 20:31:27.885960 commitor.go:53: commit Block node 0 batch_id 192
+[INFO] 2025/11/08 20:31:27.886215 commitor.go:53: commit Block node 4 batch_id 436
+[INFO] 2025/11/08 20:31:27.886498 commitor.go:53: commit Block node 4 batch_id 468
+[INFO] 2025/11/08 20:31:27.886773 commitor.go:53: commit Block node 3 batch_id 51
+[INFO] 2025/11/08 20:31:27.887318 commitor.go:53: commit Block node 10 batch_id 218
+[INFO] 2025/11/08 20:31:27.887468 commitor.go:53: commit Block node 8 batch_id 344
+[INFO] 2025/11/08 20:31:27.888139 commitor.go:53: commit Block node 2 batch_id 242
+[INFO] 2025/11/08 20:31:27.888573 commitor.go:53: commit Block node 7 batch_id 423
+[INFO] 2025/11/08 20:31:27.889055 commitor.go:53: commit Block node 4 batch_id 308
+[INFO] 2025/11/08 20:31:27.889546 commitor.go:53: commit Block node 13 batch_id 93
+[INFO] 2025/11/08 20:31:27.891871 commitor.go:53: commit Block node 8 batch_id 472
+[INFO] 2025/11/08 20:31:27.893597 commitor.go:53: commit Block node 6 batch_id 454
+[INFO] 2025/11/08 20:31:27.893611 commitor.go:53: commit Block node 12 batch_id 348
+[INFO] 2025/11/08 20:31:27.893615 commitor.go:53: commit Block node 13 batch_id 109
+[INFO] 2025/11/08 20:31:27.893900 commitor.go:53: commit Block node 13 batch_id 173
+[INFO] 2025/11/08 20:31:27.894374 commitor.go:53: commit Block node 10 batch_id 490
+[INFO] 2025/11/08 20:31:27.894743 commitor.go:53: commit Block node 2 batch_id 450
+[INFO] 2025/11/08 20:31:27.895108 commitor.go:53: commit Block node 9 batch_id 473
+[INFO] 2025/11/08 20:31:27.895492 commitor.go:53: commit Block node 6 batch_id 438
+[INFO] 2025/11/08 20:31:27.895870 commitor.go:53: commit Block node 2 batch_id 466
+[INFO] 2025/11/08 20:31:27.896325 commitor.go:53: commit Block node 13 batch_id 29
+[INFO] 2025/11/08 20:31:27.896518 commitor.go:53: commit Block node 8 batch_id 456
+[INFO] 2025/11/08 20:31:27.897177 commitor.go:53: commit Block node 5 batch_id 453
+[INFO] 2025/11/08 20:31:27.897399 commitor.go:53: commit Block node 6 batch_id 374
+[INFO] 2025/11/08 20:31:27.898395 commitor.go:46: commit ConsensusBlock epoch 5 node 9
+[INFO] 2025/11/08 20:31:27.898404 commitor.go:53: commit Block node 1 batch_id 49
+[INFO] 2025/11/08 20:31:28.075279 pool.go:64: Received Batch 548
+[INFO] 2025/11/08 20:31:28.075598 mempool.go:282: create Block node 4 batch_id 548 
+[INFO] 2025/11/08 20:31:28.324723 pool.go:64: Received Batch 564
+[INFO] 2025/11/08 20:31:28.324975 mempool.go:282: create Block node 4 batch_id 564 
+[INFO] 2025/11/08 20:31:28.575215 pool.go:64: Received Batch 580
+[INFO] 2025/11/08 20:31:28.575537 mempool.go:282: create Block node 4 batch_id 580 
+[INFO] 2025/11/08 20:31:28.600954 network.go:107: Incoming connection established with 47.253.196.77:54528 
+[INFO] 2025/11/08 20:31:28.643340 core.go:243: In Epoch 6,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:28.643536 core.go:799: IN Epoch 6,actually commit the block in the 1 FABA
+[INFO] 2025/11/08 20:31:28.643541 core.go:858: In Epoch 6,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:28.643853 core.go:956: advance next epoch 7
+[INFO] 2025/11/08 20:31:28.644358 core.go:264: create ConsensusBlock epoch 7 node 4
+[INFO] 2025/11/08 20:31:28.644369 commitor.go:53: commit Block node 10 batch_id 346
+[INFO] 2025/11/08 20:31:28.644807 commitor.go:53: commit Block node 9 batch_id 313
+[INFO] 2025/11/08 20:31:28.645140 commitor.go:53: commit Block node 8 batch_id 424
+[INFO] 2025/11/08 20:31:28.645383 commitor.go:53: commit Block node 9 batch_id 393
+[INFO] 2025/11/08 20:31:28.646122 commitor.go:53: commit Block node 3 batch_id 483
+[INFO] 2025/11/08 20:31:28.646347 commitor.go:53: commit Block node 1 batch_id 353
+[INFO] 2025/11/08 20:31:28.647569 commitor.go:53: commit Block node 7 batch_id 535
+[INFO] 2025/11/08 20:31:28.647580 commitor.go:53: commit Block node 9 batch_id 489
+[INFO] 2025/11/08 20:31:28.648636 commitor.go:53: commit Block node 12 batch_id 412
+[INFO] 2025/11/08 20:31:28.648647 commitor.go:53: commit Block node 13 batch_id 237
+[INFO] 2025/11/08 20:31:28.649014 commitor.go:53: commit Block node 5 batch_id 501
+[INFO] 2025/11/08 20:31:28.649388 commitor.go:53: commit Block node 7 batch_id 391
+[INFO] 2025/11/08 20:31:28.649747 commitor.go:53: commit Block node 5 batch_id 469
+[INFO] 2025/11/08 20:31:28.650113 commitor.go:53: commit Block node 9 batch_id 377
+[INFO] 2025/11/08 20:31:28.650486 commitor.go:53: commit Block node 2 batch_id 482
+[INFO] 2025/11/08 20:31:28.650865 commitor.go:53: commit Block node 9 batch_id 441
+[INFO] 2025/11/08 20:31:28.651254 commitor.go:53: commit Block node 10 batch_id 474
+[INFO] 2025/11/08 20:31:28.651625 commitor.go:53: commit Block node 12 batch_id 380
+[INFO] 2025/11/08 20:31:28.652039 commitor.go:53: commit Block node 13 batch_id 221
+[INFO] 2025/11/08 20:31:28.652382 commitor.go:53: commit Block node 12 batch_id 428
+[INFO] 2025/11/08 20:31:28.653410 commitor.go:53: commit Block node 3 batch_id 499
+[INFO] 2025/11/08 20:31:28.653421 commitor.go:53: commit Block node 7 batch_id 519
+[INFO] 2025/11/08 20:31:28.653620 commitor.go:53: commit Block node 10 batch_id 506
+[INFO] 2025/11/08 20:31:28.653849 commitor.go:53: commit Block node 12 batch_id 364
+[INFO] 2025/11/08 20:31:28.654056 commitor.go:53: commit Block node 4 batch_id 452
+[INFO] 2025/11/08 20:31:28.654627 commitor.go:53: commit Block node 0 batch_id 528
+[INFO] 2025/11/08 20:31:28.654746 commitor.go:53: commit Block node 7 batch_id 503
+[INFO] 2025/11/08 20:31:28.654957 commitor.go:53: commit Block node 9 batch_id 361
+[INFO] 2025/11/08 20:31:28.655175 commitor.go:53: commit Block node 11 batch_id 107
+[INFO] 2025/11/08 20:31:28.655612 commitor.go:53: commit Block node 7 batch_id 359
+[INFO] 2025/11/08 20:31:28.655931 commitor.go:53: commit Block node 10 batch_id 58
+[INFO] 2025/11/08 20:31:28.656797 commitor.go:46: commit ConsensusBlock epoch 6 node 12
+[INFO] 2025/11/08 20:31:28.656807 commitor.go:53: commit Block node 9 batch_id 105
+[INFO] 2025/11/08 20:31:28.824800 pool.go:64: Received Batch 596
+[INFO] 2025/11/08 20:31:28.825110 mempool.go:282: create Block node 4 batch_id 596 
+[INFO] 2025/11/08 20:31:29.075465 pool.go:64: Received Batch 612
+[INFO] 2025/11/08 20:31:29.075795 mempool.go:282: create Block node 4 batch_id 612 
+[INFO] 2025/11/08 20:31:29.130314 network.go:107: Incoming connection established with 47.253.98.157:51244 
+[INFO] 2025/11/08 20:31:29.324678 pool.go:64: Received Batch 628
+[INFO] 2025/11/08 20:31:29.325201 mempool.go:282: create Block node 4 batch_id 628 
+[INFO] 2025/11/08 20:31:29.429644 core.go:243: In Epoch 7,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:29.429741 core.go:494: In Epoch 7,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:29.430080 core.go:956: advance next epoch 8
+[INFO] 2025/11/08 20:31:29.430472 core.go:264: create ConsensusBlock epoch 8 node 4
+[INFO] 2025/11/08 20:31:29.430485 commitor.go:53: commit Block node 0 batch_id 0
+[INFO] 2025/11/08 20:31:29.430881 commitor.go:53: commit Block node 5 batch_id 213
+[INFO] 2025/11/08 20:31:29.431922 commitor.go:53: commit Block node 5 batch_id 437
+[INFO] 2025/11/08 20:31:29.431933 commitor.go:53: commit Block node 6 batch_id 246
+[INFO] 2025/11/08 20:31:29.432892 commitor.go:53: commit Block node 1 batch_id 497
+[INFO] 2025/11/08 20:31:29.432906 commitor.go:53: commit Block node 1 batch_id 177
+[INFO] 2025/11/08 20:31:29.433854 commitor.go:53: commit Block node 6 batch_id 150
+[INFO] 2025/11/08 20:31:29.433926 commitor.go:53: commit Block node 11 batch_id 235
+[INFO] 2025/11/08 20:31:29.434761 commitor.go:53: commit Block node 2 batch_id 322
+[INFO] 2025/11/08 20:31:29.434861 commitor.go:53: commit Block node 2 batch_id 530
+[INFO] 2025/11/08 20:31:29.435263 commitor.go:53: commit Block node 2 batch_id 18
+[INFO] 2025/11/08 20:31:29.435667 commitor.go:53: commit Block node 11 batch_id 267
+[INFO] 2025/11/08 20:31:29.436053 commitor.go:53: commit Block node 13 batch_id 285
+[INFO] 2025/11/08 20:31:29.436438 commitor.go:53: commit Block node 0 batch_id 160
+[INFO] 2025/11/08 20:31:29.436806 commitor.go:53: commit Block node 5 batch_id 581
+[INFO] 2025/11/08 20:31:29.437189 commitor.go:53: commit Block node 5 batch_id 53
+[INFO] 2025/11/08 20:31:29.437571 commitor.go:53: commit Block node 11 batch_id 443
+[INFO] 2025/11/08 20:31:29.437934 commitor.go:53: commit Block node 8 batch_id 296
+[INFO] 2025/11/08 20:31:29.438316 commitor.go:53: commit Block node 12 batch_id 268
+[INFO] 2025/11/08 20:31:29.438686 commitor.go:53: commit Block node 13 batch_id 253
+[INFO] 2025/11/08 20:31:29.439051 commitor.go:53: commit Block node 6 batch_id 214
+[INFO] 2025/11/08 20:31:29.439445 commitor.go:53: commit Block node 7 batch_id 343
+[INFO] 2025/11/08 20:31:29.439812 commitor.go:53: commit Block node 5 batch_id 421
+[INFO] 2025/11/08 20:31:29.440198 commitor.go:53: commit Block node 9 batch_id 425
+[INFO] 2025/11/08 20:31:29.440595 commitor.go:53: commit Block node 13 batch_id 157
+[INFO] 2025/11/08 20:31:29.440951 commitor.go:53: commit Block node 7 batch_id 471
+[INFO] 2025/11/08 20:31:29.441321 commitor.go:53: commit Block node 4 batch_id 196
+[INFO] 2025/11/08 20:31:29.441702 commitor.go:53: commit Block node 13 batch_id 205
+[INFO] 2025/11/08 20:31:29.442086 commitor.go:53: commit Block node 3 batch_id 211
+[INFO] 2025/11/08 20:31:29.442465 commitor.go:53: commit Block node 13 batch_id 301
+[INFO] 2025/11/08 20:31:29.442826 commitor.go:53: commit Block node 1 batch_id 481
+[INFO] 2025/11/08 20:31:29.443191 commitor.go:46: commit ConsensusBlock epoch 7 node 6
+[INFO] 2025/11/08 20:31:29.443206 commitor.go:53: commit Block node 6 batch_id 182
+[INFO] 2025/11/08 20:31:29.575224 pool.go:64: Received Batch 644
+[INFO] 2025/11/08 20:31:29.575528 mempool.go:282: create Block node 4 batch_id 644 
+[INFO] 2025/11/08 20:31:29.874637 pool.go:64: Received Batch 660
+[INFO] 2025/11/08 20:31:29.874958 mempool.go:282: create Block node 4 batch_id 660 
+[INFO] 2025/11/08 20:31:30.003925 network.go:107: Incoming connection established with 47.253.98.157:43262 
+[INFO] 2025/11/08 20:31:30.060547 core.go:243: In Epoch 8,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:30.060557 core.go:549: In Epoch 8,invoke the 0 FABA
+[INFO] 2025/11/08 20:31:30.092148 core.go:956: advance next epoch 9
+[INFO] 2025/11/08 20:31:30.092327 core.go:264: create ConsensusBlock epoch 9 node 4
+[INFO] 2025/11/08 20:31:30.092885 commitor.go:53: commit Block node 8 batch_id 72
+[INFO] 2025/11/08 20:31:30.093308 commitor.go:53: commit Block node 4 batch_id 68
+[INFO] 2025/11/08 20:31:30.093725 commitor.go:53: commit Block node 5 batch_id 533
+[INFO] 2025/11/08 20:31:30.094084 commitor.go:53: commit Block node 6 batch_id 566
+[INFO] 2025/11/08 20:31:30.094867 commitor.go:53: commit Block node 9 batch_id 601
+[INFO] 2025/11/08 20:31:30.095298 commitor.go:53: commit Block node 4 batch_id 276
+[INFO] 2025/11/08 20:31:30.095641 commitor.go:53: commit Block node 8 batch_id 120
+[INFO] 2025/11/08 20:31:30.096425 commitor.go:53: commit Block node 3 batch_id 339
+[INFO] 2025/11/08 20:31:30.096856 commitor.go:53: commit Block node 6 batch_id 470
+[INFO] 2025/11/08 20:31:30.097284 commitor.go:53: commit Block node 3 batch_id 563
+[INFO] 2025/11/08 20:31:30.097972 commitor.go:53: commit Block node 3 batch_id 323
+[INFO] 2025/11/08 20:31:30.098307 commitor.go:53: commit Block node 9 batch_id 25
+[INFO] 2025/11/08 20:31:30.098498 commitor.go:53: commit Block node 9 batch_id 41
+[INFO] 2025/11/08 20:31:30.099008 commitor.go:53: commit Block node 5 batch_id 101
+[INFO] 2025/11/08 20:31:30.099175 commitor.go:53: commit Block node 1 batch_id 193
+[INFO] 2025/11/08 20:31:30.099567 commitor.go:53: commit Block node 10 batch_id 538
+[INFO] 2025/11/08 20:31:30.099992 commitor.go:53: commit Block node 10 batch_id 298
+[INFO] 2025/11/08 20:31:30.100454 commitor.go:53: commit Block node 11 batch_id 315
+[INFO] 2025/11/08 20:31:30.100697 commitor.go:53: commit Block node 9 batch_id 585
+[INFO] 2025/11/08 20:31:30.101205 commitor.go:53: commit Block node 11 batch_id 363
+[INFO] 2025/11/08 20:31:30.101560 commitor.go:53: commit Block node 12 batch_id 508
+[INFO] 2025/11/08 20:31:30.101942 commitor.go:53: commit Block node 11 batch_id 379
+[INFO] 2025/11/08 20:31:30.102287 commitor.go:53: commit Block node 1 batch_id 625
+[INFO] 2025/11/08 20:31:30.102609 commitor.go:53: commit Block node 7 batch_id 551
+[INFO] 2025/11/08 20:31:30.102942 commitor.go:53: commit Block node 7 batch_id 407
+[INFO] 2025/11/08 20:31:30.104065 commitor.go:53: commit Block node 13 batch_id 141
+[INFO] 2025/11/08 20:31:30.105196 commitor.go:53: commit Block node 2 batch_id 562
+[INFO] 2025/11/08 20:31:30.105346 commitor.go:53: commit Block node 8 batch_id 616
+[INFO] 2025/11/08 20:31:30.106405 commitor.go:53: commit Block node 1 batch_id 561
+[INFO] 2025/11/08 20:31:30.106763 commitor.go:53: commit Block node 4 batch_id 596
+[INFO] 2025/11/08 20:31:30.108264 commitor.go:53: commit Block node 3 batch_id 627
+[INFO] 2025/11/08 20:31:30.108848 commitor.go:46: commit ConsensusBlock epoch 8 node 1
+[INFO] 2025/11/08 20:31:30.108860 commitor.go:53: commit Block node 10 batch_id 554
+[INFO] 2025/11/08 20:31:30.125017 pool.go:64: Received Batch 676
+[INFO] 2025/11/08 20:31:30.125349 mempool.go:282: create Block node 4 batch_id 676 
+[INFO] 2025/11/08 20:31:30.318006 network.go:107: Incoming connection established with 47.253.98.157:51252 
+[INFO] 2025/11/08 20:31:30.374691 pool.go:64: Received Batch 692
+[INFO] 2025/11/08 20:31:30.374956 mempool.go:282: create Block node 4 batch_id 692 
+[INFO] 2025/11/08 20:31:30.625021 pool.go:64: Received Batch 708
+[INFO] 2025/11/08 20:31:30.625341 mempool.go:282: create Block node 4 batch_id 708 
+[INFO] 2025/11/08 20:31:30.875362 pool.go:64: Received Batch 724
+[INFO] 2025/11/08 20:31:30.875682 mempool.go:282: create Block node 4 batch_id 724 
+[INFO] 2025/11/08 20:31:30.883241 core.go:243: In Epoch 9,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:30.883251 core.go:549: In Epoch 9,invoke the 0 FABA
+[INFO] 2025/11/08 20:31:31.075282 core.go:799: IN Epoch 9,actually commit the block in the 1 FABA
+[INFO] 2025/11/08 20:31:31.075289 core.go:816: In Epoch 9,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:31.075645 core.go:956: advance next epoch 10
+[INFO] 2025/11/08 20:31:31.075893 core.go:264: create ConsensusBlock epoch 10 node 4
+[INFO] 2025/11/08 20:31:31.076630 commitor.go:53: commit Block node 5 batch_id 149
+[INFO] 2025/11/08 20:31:31.076700 commitor.go:53: commit Block node 10 batch_id 202
+[INFO] 2025/11/08 20:31:31.076953 commitor.go:53: commit Block node 3 batch_id 195
+[INFO] 2025/11/08 20:31:31.077440 commitor.go:53: commit Block node 5 batch_id 373
+[INFO] 2025/11/08 20:31:31.077866 commitor.go:53: commit Block node 3 batch_id 611
+[INFO] 2025/11/08 20:31:31.078052 commitor.go:53: commit Block node 12 batch_id 556
+[INFO] 2025/11/08 20:31:31.078795 commitor.go:53: commit Block node 4 batch_id 148
+[INFO] 2025/11/08 20:31:31.079040 commitor.go:53: commit Block node 7 batch_id 279
+[INFO] 2025/11/08 20:31:31.079815 commitor.go:53: commit Block node 12 batch_id 220
+[INFO] 2025/11/08 20:31:31.079826 commitor.go:53: commit Block node 10 batch_id 330
+[INFO] 2025/11/08 20:31:31.080448 commitor.go:53: commit Block node 11 batch_id 459
+[INFO] 2025/11/08 20:31:31.080871 commitor.go:53: commit Block node 11 batch_id 171
+[INFO] 2025/11/08 20:31:31.081251 commitor.go:53: commit Block node 5 batch_id 485
+[INFO] 2025/11/08 20:31:31.081679 commitor.go:53: commit Block node 12 batch_id 444
+[INFO] 2025/11/08 20:31:31.081908 commitor.go:53: commit Block node 13 batch_id 317
+[INFO] 2025/11/08 20:31:31.082508 commitor.go:53: commit Block node 11 batch_id 603
+[INFO] 2025/11/08 20:31:31.082516 commitor.go:53: commit Block node 10 batch_id 154
+[INFO] 2025/11/08 20:31:31.083491 commitor.go:53: commit Block node 10 batch_id 586
+[INFO] 2025/11/08 20:31:31.083758 commitor.go:53: commit Block node 0 batch_id 320
+[INFO] 2025/11/08 20:31:31.084007 commitor.go:53: commit Block node 6 batch_id 358
+[INFO] 2025/11/08 20:31:31.084205 commitor.go:53: commit Block node 7 batch_id 439
+[INFO] 2025/11/08 20:31:31.084435 commitor.go:53: commit Block node 13 batch_id 189
+[INFO] 2025/11/08 20:31:31.084662 commitor.go:53: commit Block node 2 batch_id 258
+[INFO] 2025/11/08 20:31:31.084887 commitor.go:53: commit Block node 5 batch_id 325
+[INFO] 2025/11/08 20:31:31.085097 commitor.go:53: commit Block node 2 batch_id 418
+[INFO] 2025/11/08 20:31:31.085338 commitor.go:53: commit Block node 9 batch_id 633
+[INFO] 2025/11/08 20:31:31.085609 commitor.go:53: commit Block node 11 batch_id 507
+[INFO] 2025/11/08 20:31:31.085757 commitor.go:53: commit Block node 1 batch_id 545
+[INFO] 2025/11/08 20:31:31.085955 commitor.go:53: commit Block node 1 batch_id 657
+[INFO] 2025/11/08 20:31:31.086161 commitor.go:53: commit Block node 7 batch_id 295
+[INFO] 2025/11/08 20:31:31.086393 commitor.go:53: commit Block node 8 batch_id 504
+[INFO] 2025/11/08 20:31:31.086593 commitor.go:46: commit ConsensusBlock epoch 9 node 11
+[INFO] 2025/11/08 20:31:31.086604 commitor.go:53: commit Block node 10 batch_id 570
+[INFO] 2025/11/08 20:31:31.125027 pool.go:64: Received Batch 740
+[INFO] 2025/11/08 20:31:31.125330 mempool.go:282: create Block node 4 batch_id 740 
+[INFO] 2025/11/08 20:31:31.375113 pool.go:64: Received Batch 756
+[INFO] 2025/11/08 20:31:31.375415 mempool.go:282: create Block node 4 batch_id 756 
+[INFO] 2025/11/08 20:31:31.625001 pool.go:64: Received Batch 772
+[INFO] 2025/11/08 20:31:31.625308 mempool.go:282: create Block node 4 batch_id 772 
+[INFO] 2025/11/08 20:31:31.844460 core.go:243: In Epoch 10,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:31.844551 core.go:494: In Epoch 10,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:31.844792 core.go:956: advance next epoch 11
+[INFO] 2025/11/08 20:31:31.845204 core.go:264: create ConsensusBlock epoch 11 node 4
+[INFO] 2025/11/08 20:31:31.845807 commitor.go:53: commit Block node 1 batch_id 689
+[INFO] 2025/11/08 20:31:31.845919 commitor.go:53: commit Block node 5 batch_id 709
+[INFO] 2025/11/08 20:31:31.846353 commitor.go:53: commit Block node 3 batch_id 723
+[INFO] 2025/11/08 20:31:31.846771 commitor.go:53: commit Block node 14 batch_id 158
+[INFO] 2025/11/08 20:31:31.846782 commitor.go:53: commit Block node 11 batch_id 699
+[INFO] 2025/11/08 20:31:31.847781 commitor.go:53: commit Block node 12 batch_id 588
+[INFO] 2025/11/08 20:31:31.848186 commitor.go:53: commit Block node 14 batch_id 142
+[INFO] 2025/11/08 20:31:31.849120 commitor.go:53: commit Block node 14 batch_id 62
+[INFO] 2025/11/08 20:31:31.849286 commitor.go:53: commit Block node 8 batch_id 696
+[INFO] 2025/11/08 20:31:31.849668 commitor.go:53: commit Block node 4 batch_id 676
+[INFO] 2025/11/08 20:31:31.850032 commitor.go:53: commit Block node 14 batch_id 286
+[INFO] 2025/11/08 20:31:31.850422 commitor.go:53: commit Block node 14 batch_id 190
+[INFO] 2025/11/08 20:31:31.850791 commitor.go:53: commit Block node 3 batch_id 691
+[INFO] 2025/11/08 20:31:31.851160 commitor.go:53: commit Block node 6 batch_id 726
+[INFO] 2025/11/08 20:31:31.851520 commitor.go:53: commit Block node 0 batch_id 496
+[INFO] 2025/11/08 20:31:31.851879 commitor.go:53: commit Block node 9 batch_id 681
+[INFO] 2025/11/08 20:31:31.852272 commitor.go:53: commit Block node 6 batch_id 694
+[INFO] 2025/11/08 20:31:31.852637 commitor.go:53: commit Block node 3 batch_id 403
+[INFO] 2025/11/08 20:31:31.853012 commitor.go:53: commit Block node 0 batch_id 432
+[INFO] 2025/11/08 20:31:31.853404 commitor.go:53: commit Block node 12 batch_id 524
+[INFO] 2025/11/08 20:31:31.853770 commitor.go:53: commit Block node 6 batch_id 534
+[INFO] 2025/11/08 20:31:31.854133 commitor.go:53: commit Block node 10 batch_id 650
+[INFO] 2025/11/08 20:31:31.854518 commitor.go:53: commit Block node 14 batch_id 30
+[INFO] 2025/11/08 20:31:31.854876 commitor.go:53: commit Block node 11 batch_id 651
+[INFO] 2025/11/08 20:31:31.855234 commitor.go:53: commit Block node 7 batch_id 679
+[INFO] 2025/11/08 20:31:31.855593 commitor.go:53: commit Block node 10 batch_id 682
+[INFO] 2025/11/08 20:31:31.855962 commitor.go:53: commit Block node 13 batch_id 381
+[INFO] 2025/11/08 20:31:31.856335 commitor.go:53: commit Block node 3 batch_id 675
+[INFO] 2025/11/08 20:31:31.856715 commitor.go:53: commit Block node 0 batch_id 688
+[INFO] 2025/11/08 20:31:31.857104 commitor.go:53: commit Block node 4 batch_id 692
+[INFO] 2025/11/08 20:31:31.857434 commitor.go:53: commit Block node 7 batch_id 711
+[INFO] 2025/11/08 20:31:31.858215 commitor.go:46: commit ConsensusBlock epoch 10 node 8
+[INFO] 2025/11/08 20:31:31.858225 commitor.go:53: commit Block node 1 batch_id 705
+[INFO] 2025/11/08 20:31:31.875566 pool.go:64: Received Batch 788
+[INFO] 2025/11/08 20:31:31.875856 mempool.go:282: create Block node 4 batch_id 788 
+[INFO] 2025/11/08 20:31:32.175386 pool.go:64: Received Batch 804
+[INFO] 2025/11/08 20:31:32.175630 mempool.go:282: create Block node 4 batch_id 804 
+[INFO] 2025/11/08 20:31:32.425027 pool.go:64: Received Batch 820
+[INFO] 2025/11/08 20:31:32.425570 mempool.go:282: create Block node 4 batch_id 820 
+[INFO] 2025/11/08 20:31:32.594337 core.go:243: In Epoch 11,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:32.594428 core.go:494: In Epoch 11,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:32.594951 core.go:956: advance next epoch 12
+[INFO] 2025/11/08 20:31:32.595081 core.go:264: create ConsensusBlock epoch 12 node 4
+[INFO] 2025/11/08 20:31:32.595120 commitor.go:53: commit Block node 7 batch_id 247
+[INFO] 2025/11/08 20:31:32.595753 commitor.go:53: commit Block node 14 batch_id 302
+[INFO] 2025/11/08 20:31:32.595950 commitor.go:53: commit Block node 0 batch_id 576
+[INFO] 2025/11/08 20:31:32.596890 commitor.go:53: commit Block node 2 batch_id 642
+[INFO] 2025/11/08 20:31:32.596941 commitor.go:53: commit Block node 6 batch_id 134
+[INFO] 2025/11/08 20:31:32.597764 commitor.go:53: commit Block node 8 batch_id 72
+[INFO] 2025/11/08 20:31:32.597801 commitor.go:53: commit Block node 3 batch_id 307
+[INFO] 2025/11/08 20:31:32.598568 commitor.go:53: commit Block node 12 batch_id 300
+[INFO] 2025/11/08 20:31:32.598826 commitor.go:53: commit Block node 4 batch_id 500
+[INFO] 2025/11/08 20:31:32.599122 commitor.go:53: commit Block node 11 batch_id 635
+[INFO] 2025/11/08 20:31:32.599727 commitor.go:53: commit Block node 2 batch_id 434
+[INFO] 2025/11/08 20:31:32.599891 commitor.go:53: commit Block node 9 batch_id 553
+[INFO] 2025/11/08 20:31:32.600294 commitor.go:53: commit Block node 8 batch_id 184
+[INFO] 2025/11/08 20:31:32.600675 commitor.go:53: commit Block node 4 batch_id 244
+[INFO] 2025/11/08 20:31:32.601059 commitor.go:53: commit Block node 5 batch_id 645
+[INFO] 2025/11/08 20:31:32.601478 commitor.go:53: commit Block node 14 batch_id 30
+[INFO] 2025/11/08 20:31:32.601845 commitor.go:53: commit Block node 12 batch_id 476
+[INFO] 2025/11/08 20:31:32.602260 commitor.go:53: commit Block node 3 batch_id 627
+[INFO] 2025/11/08 20:31:32.602660 commitor.go:53: commit Block node 8 batch_id 664
+[INFO] 2025/11/08 20:31:32.603031 commitor.go:53: commit Block node 0 batch_id 704
+[INFO] 2025/11/08 20:31:32.603412 commitor.go:53: commit Block node 4 batch_id 724
+[INFO] 2025/11/08 20:31:32.603775 commitor.go:53: commit Block node 8 batch_id 552
+[INFO] 2025/11/08 20:31:32.604179 commitor.go:53: commit Block node 11 batch_id 539
+[INFO] 2025/11/08 20:31:32.604544 commitor.go:53: commit Block node 7 batch_id 679
+[INFO] 2025/11/08 20:31:32.604908 commitor.go:53: commit Block node 2 batch_id 514
+[INFO] 2025/11/08 20:31:32.605288 commitor.go:53: commit Block node 6 batch_id 566
+[INFO] 2025/11/08 20:31:32.605651 commitor.go:53: commit Block node 3 batch_id 659
+[INFO] 2025/11/08 20:31:32.606015 commitor.go:53: commit Block node 12 batch_id 668
+[INFO] 2025/11/08 20:31:32.606409 commitor.go:53: commit Block node 12 batch_id 684
+[INFO] 2025/11/08 20:31:32.606772 commitor.go:53: commit Block node 0 batch_id 624
+[INFO] 2025/11/08 20:31:32.607428 commitor.go:53: commit Block node 11 batch_id 619
+[INFO] 2025/11/08 20:31:32.607512 commitor.go:46: commit ConsensusBlock epoch 11 node 13
+[INFO] 2025/11/08 20:31:32.607528 commitor.go:53: commit Block node 9 batch_id 585
+[INFO] 2025/11/08 20:31:32.675379 pool.go:64: Received Batch 836
+[INFO] 2025/11/08 20:31:32.675692 mempool.go:282: create Block node 4 batch_id 836 
+[INFO] 2025/11/08 20:31:32.925193 pool.go:64: Received Batch 852
+[INFO] 2025/11/08 20:31:32.925522 mempool.go:282: create Block node 4 batch_id 852 
+[INFO] 2025/11/08 20:31:33.174774 pool.go:64: Received Batch 868
+[INFO] 2025/11/08 20:31:33.175083 mempool.go:282: create Block node 4 batch_id 868 
+[INFO] 2025/11/08 20:31:33.232365 core.go:243: In Epoch 12,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:33.232616 core.go:494: In Epoch 12,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:33.232858 core.go:956: advance next epoch 13
+[INFO] 2025/11/08 20:31:33.233125 core.go:264: create ConsensusBlock epoch 13 node 4
+[INFO] 2025/11/08 20:31:33.233637 commitor.go:53: commit Block node 2 batch_id 690
+[INFO] 2025/11/08 20:31:33.233649 commitor.go:53: commit Block node 2 batch_id 594
+[INFO] 2025/11/08 20:31:33.234508 commitor.go:53: commit Block node 3 batch_id 771
+[INFO] 2025/11/08 20:31:33.234770 commitor.go:53: commit Block node 7 batch_id 135
+[INFO] 2025/11/08 20:31:33.234994 commitor.go:53: commit Block node 7 batch_id 279
+[INFO] 2025/11/08 20:31:33.235494 commitor.go:53: commit Block node 6 batch_id 358
+[INFO] 2025/11/08 20:31:33.236207 commitor.go:53: commit Block node 12 batch_id 396
+[INFO] 2025/11/08 20:31:33.236331 commitor.go:53: commit Block node 13 batch_id 461
+[INFO] 2025/11/08 20:31:33.236568 commitor.go:53: commit Block node 9 batch_id 697
+[INFO] 2025/11/08 20:31:33.236776 commitor.go:53: commit Block node 0 batch_id 736
+[INFO] 2025/11/08 20:31:33.236994 commitor.go:53: commit Block node 8 batch_id 664
+[INFO] 2025/11/08 20:31:33.238157 commitor.go:53: commit Block node 3 batch_id 755
+[INFO] 2025/11/08 20:31:33.238540 commitor.go:53: commit Block node 4 batch_id 692
+[INFO] 2025/11/08 20:31:33.238943 commitor.go:53: commit Block node 3 batch_id 835
+[INFO] 2025/11/08 20:31:33.239352 commitor.go:53: commit Block node 11 batch_id 667
+[INFO] 2025/11/08 20:31:33.239743 commitor.go:53: commit Block node 1 batch_id 769
+[INFO] 2025/11/08 20:31:33.240145 commitor.go:53: commit Block node 0 batch_id 800
+[INFO] 2025/11/08 20:31:33.240553 commitor.go:53: commit Block node 11 batch_id 651
+[INFO] 2025/11/08 20:31:33.240939 commitor.go:53: commit Block node 4 batch_id 724
+[INFO] 2025/11/08 20:31:33.241337 commitor.go:53: commit Block node 13 batch_id 429
+[INFO] 2025/11/08 20:31:33.241718 commitor.go:53: commit Block node 1 batch_id 673
+[INFO] 2025/11/08 20:31:33.242106 commitor.go:53: commit Block node 0 batch_id 704
+[INFO] 2025/11/08 20:31:33.242500 commitor.go:53: commit Block node 14 batch_id 238
+[INFO] 2025/11/08 20:31:33.242905 commitor.go:53: commit Block node 15 batch_id 15
+[INFO] 2025/11/08 20:31:33.243262 commitor.go:53: commit Block node 3 batch_id 803
+[INFO] 2025/11/08 20:31:33.243728 commitor.go:53: commit Block node 2 batch_id 770
+[INFO] 2025/11/08 20:31:33.244171 commitor.go:53: commit Block node 5 batch_id 741
+[INFO] 2025/11/08 20:31:33.244560 commitor.go:53: commit Block node 6 batch_id 758
+[INFO] 2025/11/08 20:31:33.245241 commitor.go:53: commit Block node 14 batch_id 318
+[INFO] 2025/11/08 20:31:33.245444 commitor.go:53: commit Block node 1 batch_id 833
+[INFO] 2025/11/08 20:31:33.246365 commitor.go:53: commit Block node 4 batch_id 740
+[INFO] 2025/11/08 20:31:33.246646 commitor.go:46: commit ConsensusBlock epoch 12 node 0
+[INFO] 2025/11/08 20:31:33.246655 commitor.go:53: commit Block node 11 batch_id 715
+[INFO] 2025/11/08 20:31:33.424691 pool.go:64: Received Batch 884
+[INFO] 2025/11/08 20:31:33.424989 mempool.go:282: create Block node 4 batch_id 884 
+[INFO] 2025/11/08 20:31:33.674659 pool.go:64: Received Batch 900
+[INFO] 2025/11/08 20:31:33.674960 mempool.go:282: create Block node 4 batch_id 900 
+[INFO] 2025/11/08 20:31:33.864565 core.go:243: In Epoch 13,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:33.864575 core.go:549: In Epoch 13,invoke the 0 FABA
+[INFO] 2025/11/08 20:31:33.924696 pool.go:64: Received Batch 916
+[INFO] 2025/11/08 20:31:33.924936 mempool.go:282: create Block node 4 batch_id 916 
+[INFO] 2025/11/08 20:31:34.224591 pool.go:64: Received Batch 932
+[INFO] 2025/11/08 20:31:34.224901 mempool.go:282: create Block node 4 batch_id 932 
+[INFO] 2025/11/08 20:31:34.281334 core.go:956: advance next epoch 14
+[INFO] 2025/11/08 20:31:34.281444 core.go:264: create ConsensusBlock epoch 14 node 4
+[INFO] 2025/11/08 20:31:34.281529 core.go:831: In Epoch 13,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:34.281799 commitor.go:53: commit Block node 0 batch_id 592
+[INFO] 2025/11/08 20:31:34.283058 commitor.go:53: commit Block node 12 batch_id 652
+[INFO] 2025/11/08 20:31:34.283205 commitor.go:53: commit Block node 15 batch_id 239
+[INFO] 2025/11/08 20:31:34.283752 commitor.go:53: commit Block node 3 batch_id 515
+[INFO] 2025/11/08 20:31:34.284114 commitor.go:53: commit Block node 0 batch_id 736
+[INFO] 2025/11/08 20:31:34.284425 commitor.go:53: commit Block node 7 batch_id 663
+[INFO] 2025/11/08 20:31:34.284731 commitor.go:53: commit Block node 14 batch_id 94
+[INFO] 2025/11/08 20:31:34.285046 commitor.go:53: commit Block node 10 batch_id 602
+[INFO] 2025/11/08 20:31:34.286521 commitor.go:53: commit Block node 9 batch_id 745
+[INFO] 2025/11/08 20:31:34.286780 commitor.go:53: commit Block node 3 batch_id 547
+[INFO] 2025/11/08 20:31:34.287713 commitor.go:53: commit Block node 1 batch_id 721
+[INFO] 2025/11/08 20:31:34.287937 commitor.go:53: commit Block node 15 batch_id 111
+[INFO] 2025/11/08 20:31:34.288459 commitor.go:53: commit Block node 1 batch_id 225
+[INFO] 2025/11/08 20:31:34.288905 commitor.go:53: commit Block node 7 batch_id 487
+[INFO] 2025/11/08 20:31:34.289390 commitor.go:53: commit Block node 11 batch_id 667
+[INFO] 2025/11/08 20:31:34.289878 commitor.go:53: commit Block node 12 batch_id 476
+[INFO] 2025/11/08 20:31:34.290363 commitor.go:53: commit Block node 14 batch_id 46
+[INFO] 2025/11/08 20:31:34.290842 commitor.go:53: commit Block node 15 batch_id 63
+[INFO] 2025/11/08 20:31:34.291340 commitor.go:53: commit Block node 9 batch_id 697
+[INFO] 2025/11/08 20:31:34.291812 commitor.go:53: commit Block node 10 batch_id 714
+[INFO] 2025/11/08 20:31:34.292297 commitor.go:53: commit Block node 5 batch_id 517
+[INFO] 2025/11/08 20:31:34.292802 commitor.go:53: commit Block node 5 batch_id 549
+[INFO] 2025/11/08 20:31:34.293275 commitor.go:53: commit Block node 5 batch_id 565
+[INFO] 2025/11/08 20:31:34.293776 commitor.go:53: commit Block node 7 batch_id 567
+[INFO] 2025/11/08 20:31:34.294311 commitor.go:53: commit Block node 3 batch_id 707
+[INFO] 2025/11/08 20:31:34.294791 commitor.go:53: commit Block node 15 batch_id 95
+[INFO] 2025/11/08 20:31:34.299267 commitor.go:46: commit ConsensusBlock epoch 13 node 15
+[INFO] 2025/11/08 20:31:34.299285 commitor.go:53: commit Block node 6 batch_id 710
+[INFO] 2025/11/08 20:31:34.299296 commitor.go:53: commit Block node 2 batch_id 706
+[INFO] 2025/11/08 20:31:34.299300 commitor.go:53: commit Block node 6 batch_id 742
+[INFO] 2025/11/08 20:31:34.299304 commitor.go:53: commit Block node 8 batch_id 744
+[INFO] 2025/11/08 20:31:34.299308 commitor.go:53: commit Block node 4 batch_id 404
+[INFO] 2025/11/08 20:31:34.299312 commitor.go:53: commit Block node 0 batch_id 608
+[INFO] 2025/11/08 20:31:34.474560 pool.go:64: Received Batch 948
+[INFO] 2025/11/08 20:31:34.474875 mempool.go:282: create Block node 4 batch_id 948 
+[INFO] 2025/11/08 20:31:34.725029 pool.go:64: Received Batch 964
+[INFO] 2025/11/08 20:31:34.725335 mempool.go:282: create Block node 4 batch_id 964 
+[INFO] 2025/11/08 20:31:34.907306 core.go:243: In Epoch 14,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:34.907492 core.go:494: In Epoch 14,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:34.907839 core.go:956: advance next epoch 15
+[INFO] 2025/11/08 20:31:34.908177 commitor.go:53: commit Block node 6 batch_id 870
+[INFO] 2025/11/08 20:31:34.908390 commitor.go:53: commit Block node 4 batch_id 612
+[INFO] 2025/11/08 20:31:34.908629 commitor.go:53: commit Block node 14 batch_id 206
+[INFO] 2025/11/08 20:31:34.909624 core.go:264: create ConsensusBlock epoch 15 node 4
+[INFO] 2025/11/08 20:31:34.909678 commitor.go:53: commit Block node 13 batch_id 573
+[INFO] 2025/11/08 20:31:34.910031 commitor.go:53: commit Block node 3 batch_id 787
+[INFO] 2025/11/08 20:31:34.910865 commitor.go:53: commit Block node 5 batch_id 805
+[INFO] 2025/11/08 20:31:34.911068 commitor.go:53: commit Block node 5 batch_id 917
+[INFO] 2025/11/08 20:31:34.911664 commitor.go:53: commit Block node 5 batch_id 757
+[INFO] 2025/11/08 20:31:34.912282 commitor.go:53: commit Block node 0 batch_id 768
+[INFO] 2025/11/08 20:31:34.912509 commitor.go:53: commit Block node 4 batch_id 836
+[INFO] 2025/11/08 20:31:34.913141 commitor.go:53: commit Block node 5 batch_id 853
+[INFO] 2025/11/08 20:31:34.913228 commitor.go:53: commit Block node 2 batch_id 626
+[INFO] 2025/11/08 20:31:34.913749 commitor.go:53: commit Block node 7 batch_id 727
+[INFO] 2025/11/08 20:31:34.913862 commitor.go:53: commit Block node 7 batch_id 743
+[INFO] 2025/11/08 20:31:34.914087 commitor.go:53: commit Block node 0 batch_id 928
+[INFO] 2025/11/08 20:31:34.914289 commitor.go:53: commit Block node 0 batch_id 640
+[INFO] 2025/11/08 20:31:34.914504 commitor.go:53: commit Block node 12 batch_id 732
+[INFO] 2025/11/08 20:31:34.914710 commitor.go:53: commit Block node 10 batch_id 890
+[INFO] 2025/11/08 20:31:34.914971 commitor.go:53: commit Block node 9 batch_id 889
+[INFO] 2025/11/08 20:31:34.915211 commitor.go:53: commit Block node 12 batch_id 812
+[INFO] 2025/11/08 20:31:34.915426 commitor.go:53: commit Block node 2 batch_id 738
+[INFO] 2025/11/08 20:31:34.915662 commitor.go:53: commit Block node 10 batch_id 778
+[INFO] 2025/11/08 20:31:34.915874 commitor.go:53: commit Block node 4 batch_id 852
+[INFO] 2025/11/08 20:31:34.916095 commitor.go:53: commit Block node 12 batch_id 828
+[INFO] 2025/11/08 20:31:34.916300 commitor.go:53: commit Block node 10 batch_id 842
+[INFO] 2025/11/08 20:31:34.916517 commitor.go:53: commit Block node 4 batch_id 884
+[INFO] 2025/11/08 20:31:34.916723 commitor.go:53: commit Block node 6 batch_id 886
+[INFO] 2025/11/08 20:31:34.916923 commitor.go:53: commit Block node 4 batch_id 900
+[INFO] 2025/11/08 20:31:34.917144 commitor.go:53: commit Block node 7 batch_id 807
+[INFO] 2025/11/08 20:31:34.917365 commitor.go:53: commit Block node 15 batch_id 79
+[INFO] 2025/11/08 20:31:34.917562 commitor.go:53: commit Block node 1 batch_id 801
+[INFO] 2025/11/08 20:31:34.917767 commitor.go:46: commit ConsensusBlock epoch 14 node 6
+[INFO] 2025/11/08 20:31:34.917777 commitor.go:53: commit Block node 8 batch_id 536
+[INFO] 2025/11/08 20:31:34.975367 pool.go:64: Received Batch 980
+[INFO] 2025/11/08 20:31:34.975886 mempool.go:282: create Block node 4 batch_id 980 
+[INFO] 2025/11/08 20:31:35.225123 pool.go:64: Received Batch 996
+[INFO] 2025/11/08 20:31:35.225447 mempool.go:282: create Block node 4 batch_id 996 
+[INFO] 2025/11/08 20:31:35.475065 pool.go:64: Received Batch 1012
+[INFO] 2025/11/08 20:31:35.475365 mempool.go:282: create Block node 4 batch_id 1012 
+[INFO] 2025/11/08 20:31:35.523676 core.go:243: In Epoch 15,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:35.523771 core.go:494: In Epoch 15,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:35.523972 core.go:956: advance next epoch 16
+[INFO] 2025/11/08 20:31:35.524238 core.go:264: create ConsensusBlock epoch 16 node 4
+[INFO] 2025/11/08 20:31:35.524777 commitor.go:53: commit Block node 2 batch_id 866
+[INFO] 2025/11/08 20:31:35.524849 commitor.go:53: commit Block node 10 batch_id 938
+[INFO] 2025/11/08 20:31:35.525659 commitor.go:53: commit Block node 0 batch_id 240
+[INFO] 2025/11/08 20:31:35.525671 commitor.go:53: commit Block node 5 batch_id 293
+[INFO] 2025/11/08 20:31:35.526422 commitor.go:53: commit Block node 2 batch_id 610
+[INFO] 2025/11/08 20:31:35.526955 commitor.go:53: commit Block node 10 batch_id 634
+[INFO] 2025/11/08 20:31:35.527148 commitor.go:53: commit Block node 12 batch_id 76
+[INFO] 2025/11/08 20:31:35.527613 commitor.go:53: commit Block node 12 batch_id 124
+[INFO] 2025/11/08 20:31:35.527788 commitor.go:53: commit Block node 0 batch_id 512
+[INFO] 2025/11/08 20:31:35.528173 commitor.go:53: commit Block node 3 batch_id 851
+[INFO] 2025/11/08 20:31:35.528540 commitor.go:53: commit Block node 1 batch_id 945
+[INFO] 2025/11/08 20:31:35.528927 commitor.go:53: commit Block node 10 batch_id 746
+[INFO] 2025/11/08 20:31:35.529312 commitor.go:53: commit Block node 11 batch_id 859
+[INFO] 2025/11/08 20:31:35.529577 commitor.go:53: commit Block node 0 batch_id 896
+[INFO] 2025/11/08 20:31:35.530698 commitor.go:53: commit Block node 1 batch_id 897
+[INFO] 2025/11/08 20:31:35.530710 commitor.go:53: commit Block node 11 batch_id 939
+[INFO] 2025/11/08 20:31:35.531271 commitor.go:53: commit Block node 8 batch_id 824
+[INFO] 2025/11/08 20:31:35.531280 commitor.go:53: commit Block node 12 batch_id 780
+[INFO] 2025/11/08 20:31:35.531341 commitor.go:53: commit Block node 15 batch_id 287
+[INFO] 2025/11/08 20:31:35.531546 commitor.go:53: commit Block node 1 batch_id 929
+[INFO] 2025/11/08 20:31:35.531763 commitor.go:53: commit Block node 2 batch_id 834
+[INFO] 2025/11/08 20:31:35.531993 commitor.go:53: commit Block node 13 batch_id 653
+[INFO] 2025/11/08 20:31:35.532219 commitor.go:53: commit Block node 9 batch_id 953
+[INFO] 2025/11/08 20:31:35.532428 commitor.go:53: commit Block node 3 batch_id 739
+[INFO] 2025/11/08 20:31:35.533484 commitor.go:53: commit Block node 11 batch_id 907
+[INFO] 2025/11/08 20:31:35.533872 commitor.go:53: commit Block node 4 batch_id 820
+[INFO] 2025/11/08 20:31:35.534243 commitor.go:53: commit Block node 6 batch_id 838
+[INFO] 2025/11/08 20:31:35.534633 commitor.go:53: commit Block node 13 batch_id 509
+[INFO] 2025/11/08 20:31:35.534997 commitor.go:53: commit Block node 15 batch_id 31
+[INFO] 2025/11/08 20:31:35.535374 commitor.go:53: commit Block node 5 batch_id 821
+[INFO] 2025/11/08 20:31:35.535746 commitor.go:53: commit Block node 7 batch_id 855
+[INFO] 2025/11/08 20:31:35.536140 commitor.go:46: commit ConsensusBlock epoch 15 node 11
+[INFO] 2025/11/08 20:31:35.536154 commitor.go:53: commit Block node 0 batch_id 880
+[INFO] 2025/11/08 20:31:35.724663 pool.go:64: Received Batch 1028
+[INFO] 2025/11/08 20:31:35.724917 mempool.go:282: create Block node 4 batch_id 1028 
+[INFO] 2025/11/08 20:31:35.974848 pool.go:64: Received Batch 1044
+[INFO] 2025/11/08 20:31:35.975150 mempool.go:282: create Block node 4 batch_id 1044 
+[INFO] 2025/11/08 20:31:36.143908 core.go:243: In Epoch 16,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:36.144016 core.go:494: In Epoch 16,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:36.144384 core.go:956: advance next epoch 17
+[INFO] 2025/11/08 20:31:36.144724 core.go:264: create ConsensusBlock epoch 17 node 4
+[INFO] 2025/11/08 20:31:36.144733 commitor.go:53: commit Block node 9 batch_id 873
+[INFO] 2025/11/08 20:31:36.145081 commitor.go:53: commit Block node 13 batch_id 621
+[INFO] 2025/11/08 20:31:36.145988 commitor.go:53: commit Block node 4 batch_id 868
+[INFO] 2025/11/08 20:31:36.146502 commitor.go:53: commit Block node 10 batch_id 906
+[INFO] 2025/11/08 20:31:36.148315 commitor.go:53: commit Block node 13 batch_id 637
+[INFO] 2025/11/08 20:31:36.148328 commitor.go:53: commit Block node 13 batch_id 477
+[INFO] 2025/11/08 20:31:36.148333 commitor.go:53: commit Block node 3 batch_id 979
+[INFO] 2025/11/08 20:31:36.148337 commitor.go:53: commit Block node 2 batch_id 978
+[INFO] 2025/11/08 20:31:36.148547 commitor.go:53: commit Block node 2 batch_id 930
+[INFO] 2025/11/08 20:31:36.149275 commitor.go:53: commit Block node 7 batch_id 903
+[INFO] 2025/11/08 20:31:36.149598 commitor.go:53: commit Block node 8 batch_id 760
+[INFO] 2025/11/08 20:31:36.150387 commitor.go:53: commit Block node 9 batch_id 761
+[INFO] 2025/11/08 20:31:36.150660 commitor.go:53: commit Block node 7 batch_id 791
+[INFO] 2025/11/08 20:31:36.150878 commitor.go:53: commit Block node 11 batch_id 811
+[INFO] 2025/11/08 20:31:36.151091 commitor.go:53: commit Block node 8 batch_id 856
+[INFO] 2025/11/08 20:31:36.151304 commitor.go:53: commit Block node 6 batch_id 854
+[INFO] 2025/11/08 20:31:36.152771 commitor.go:53: commit Block node 15 batch_id 303
+[INFO] 2025/11/08 20:31:36.152786 commitor.go:53: commit Block node 11 batch_id 491
+[INFO] 2025/11/08 20:31:36.153271 commitor.go:53: commit Block node 10 batch_id 954
+[INFO] 2025/11/08 20:31:36.153534 commitor.go:53: commit Block node 6 batch_id 950
+[INFO] 2025/11/08 20:31:36.153904 commitor.go:53: commit Block node 1 batch_id 977
+[INFO] 2025/11/08 20:31:36.154425 commitor.go:53: commit Block node 8 batch_id 520
+[INFO] 2025/11/08 20:31:36.154652 commitor.go:53: commit Block node 8 batch_id 568
+[INFO] 2025/11/08 20:31:36.155047 commitor.go:53: commit Block node 7 batch_id 695
+[INFO] 2025/11/08 20:31:36.155413 commitor.go:53: commit Block node 6 batch_id 918
+[INFO] 2025/11/08 20:31:36.156492 commitor.go:53: commit Block node 8 batch_id 936
+[INFO] 2025/11/08 20:31:36.156729 commitor.go:53: commit Block node 13 batch_id 733
+[INFO] 2025/11/08 20:31:36.157135 commitor.go:53: commit Block node 9 batch_id 617
+[INFO] 2025/11/08 20:31:36.157550 commitor.go:53: commit Block node 7 batch_id 839
+[INFO] 2025/11/08 20:31:36.157923 commitor.go:53: commit Block node 7 batch_id 871
+[INFO] 2025/11/08 20:31:36.158293 commitor.go:53: commit Block node 1 batch_id 465
+[INFO] 2025/11/08 20:31:36.158643 commitor.go:46: commit ConsensusBlock epoch 16 node 10
+[INFO] 2025/11/08 20:31:36.158705 commitor.go:53: commit Block node 11 batch_id 683
+[INFO] 2025/11/08 20:31:36.275336 pool.go:64: Received Batch 1060
+[INFO] 2025/11/08 20:31:36.275661 mempool.go:282: create Block node 4 batch_id 1060 
+[INFO] 2025/11/08 20:31:36.524735 pool.go:64: Received Batch 1076
+[INFO] 2025/11/08 20:31:36.525056 mempool.go:282: create Block node 4 batch_id 1076 
+[INFO] 2025/11/08 20:31:36.768439 core.go:243: In Epoch 17,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:36.768681 core.go:494: In Epoch 17,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:36.768919 core.go:956: advance next epoch 18
+[INFO] 2025/11/08 20:31:36.769213 core.go:264: create ConsensusBlock epoch 18 node 4
+[INFO] 2025/11/08 20:31:36.769678 commitor.go:53: commit Block node 14 batch_id 382
+[INFO] 2025/11/08 20:31:36.769686 commitor.go:53: commit Block node 14 batch_id 318
+[INFO] 2025/11/08 20:31:36.770337 commitor.go:53: commit Block node 5 batch_id 693
+[INFO] 2025/11/08 20:31:36.770697 commitor.go:53: commit Block node 15 batch_id 175
+[INFO] 2025/11/08 20:31:36.771135 commitor.go:53: commit Block node 15 batch_id 223
+[INFO] 2025/11/08 20:31:36.771515 commitor.go:53: commit Block node 8 batch_id 632
+[INFO] 2025/11/08 20:31:36.771837 commitor.go:53: commit Block node 7 batch_id 647
+[INFO] 2025/11/08 20:31:36.772244 commitor.go:53: commit Block node 1 batch_id 641
+[INFO] 2025/11/08 20:31:36.773206 commitor.go:53: commit Block node 15 batch_id 143
+[INFO] 2025/11/08 20:31:36.773231 commitor.go:53: commit Block node 2 batch_id 642
+[INFO] 2025/11/08 20:31:36.773462 commitor.go:53: commit Block node 15 batch_id 207
+[INFO] 2025/11/08 20:31:36.773679 commitor.go:53: commit Block node 15 batch_id 351
+[INFO] 2025/11/08 20:31:36.773884 commitor.go:53: commit Block node 14 batch_id 334
+[INFO] 2025/11/08 20:31:36.774108 commitor.go:53: commit Block node 2 batch_id 722
+[INFO] 2025/11/08 20:31:36.774327 commitor.go:53: commit Block node 15 batch_id 335
+[INFO] 2025/11/08 20:31:36.774583 pool.go:64: Received Batch 1092
+[INFO] 2025/11/08 20:31:36.774903 mempool.go:282: create Block node 4 batch_id 1092 
+[INFO] 2025/11/08 20:31:36.774913 commitor.go:53: commit Block node 14 batch_id 350
+[INFO] 2025/11/08 20:31:36.774917 commitor.go:53: commit Block node 15 batch_id 431
+[INFO] 2025/11/08 20:31:36.775161 commitor.go:53: commit Block node 15 batch_id 415
+[INFO] 2025/11/08 20:31:36.775367 commitor.go:46: commit ConsensusBlock epoch 17 node 15
+[INFO] 2025/11/08 20:31:36.775377 commitor.go:53: commit Block node 14 batch_id 366
+[INFO] 2025/11/08 20:31:37.024879 pool.go:64: Received Batch 1108
+[INFO] 2025/11/08 20:31:37.025194 mempool.go:282: create Block node 4 batch_id 1108 
+[INFO] 2025/11/08 20:31:37.275010 pool.go:64: Received Batch 1124
+[INFO] 2025/11/08 20:31:37.275500 mempool.go:282: create Block node 4 batch_id 1124 
+[INFO] 2025/11/08 20:31:37.392329 core.go:243: In Epoch 18,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:37.392407 core.go:494: In Epoch 18,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:37.392603 core.go:956: advance next epoch 19
+[INFO] 2025/11/08 20:31:37.392771 core.go:264: create ConsensusBlock epoch 19 node 4
+[INFO] 2025/11/08 20:31:37.393283 commitor.go:53: commit Block node 14 batch_id 398
+[INFO] 2025/11/08 20:31:37.393544 commitor.go:53: commit Block node 15 batch_id 447
+[INFO] 2025/11/08 20:31:37.394227 commitor.go:46: commit ConsensusBlock epoch 18 node 15
+[INFO] 2025/11/08 20:31:37.394243 commitor.go:53: commit Block node 14 batch_id 414
+[INFO] 2025/11/08 20:31:37.394247 commitor.go:53: commit Block node 15 batch_id 463
+[INFO] 2025/11/08 20:31:37.524766 pool.go:64: Received Batch 1140
+[INFO] 2025/11/08 20:31:37.525010 mempool.go:282: create Block node 4 batch_id 1140 
+[INFO] 2025/11/08 20:31:37.774744 pool.go:64: Received Batch 1156
+[INFO] 2025/11/08 20:31:37.775052 mempool.go:282: create Block node 4 batch_id 1156 
+[INFO] 2025/11/08 20:31:38.018735 core.go:243: In Epoch 19,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:38.018749 core.go:549: In Epoch 19,invoke the 0 FABA
+[INFO] 2025/11/08 20:31:38.025014 pool.go:64: Received Batch 1172
+[INFO] 2025/11/08 20:31:38.025260 mempool.go:282: create Block node 4 batch_id 1172 
+[INFO] 2025/11/08 20:31:38.198178 core.go:799: IN Epoch 19,actually commit the block in the 1 FABA
+[INFO] 2025/11/08 20:31:38.198185 core.go:816: In Epoch 19,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:38.199796 core.go:956: advance next epoch 20
+[INFO] 2025/11/08 20:31:38.200163 commitor.go:53: commit Block node 15 batch_id 479
+[INFO] 2025/11/08 20:31:38.200221 core.go:264: create ConsensusBlock epoch 20 node 4
+[INFO] 2025/11/08 20:31:38.200835 commitor.go:53: commit Block node 3 batch_id 1123
+[INFO] 2025/11/08 20:31:38.201011 commitor.go:53: commit Block node 2 batch_id 1074
+[INFO] 2025/11/08 20:31:38.201700 commitor.go:53: commit Block node 8 batch_id 952
+[INFO] 2025/11/08 20:31:38.202241 commitor.go:53: commit Block node 6 batch_id 1014
+[INFO] 2025/11/08 20:31:38.202319 commitor.go:53: commit Block node 5 batch_id 869
+[INFO] 2025/11/08 20:31:38.202915 commitor.go:53: commit Block node 5 batch_id 885
+[INFO] 2025/11/08 20:31:38.203499 commitor.go:53: commit Block node 13 batch_id 845
+[INFO] 2025/11/08 20:31:38.203604 commitor.go:53: commit Block node 4 batch_id 1044
+[INFO] 2025/11/08 20:31:38.203931 commitor.go:53: commit Block node 14 batch_id 622
+[INFO] 2025/11/08 20:31:38.204963 commitor.go:53: commit Block node 1 batch_id 1073
+[INFO] 2025/11/08 20:31:38.205154 commitor.go:53: commit Block node 1 batch_id 1057
+[INFO] 2025/11/08 20:31:38.205529 commitor.go:53: commit Block node 7 batch_id 1111
+[INFO] 2025/11/08 20:31:38.205907 commitor.go:53: commit Block node 13 batch_id 797
+[INFO] 2025/11/08 20:31:38.206304 commitor.go:53: commit Block node 4 batch_id 1060
+[INFO] 2025/11/08 20:31:38.206706 commitor.go:53: commit Block node 7 batch_id 1127
+[INFO] 2025/11/08 20:31:38.207087 commitor.go:53: commit Block node 4 batch_id 1124
+[INFO] 2025/11/08 20:31:38.207750 commitor.go:53: commit Block node 14 batch_id 654
+[INFO] 2025/11/08 20:31:38.208015 commitor.go:53: commit Block node 5 batch_id 1125
+[INFO] 2025/11/08 20:31:38.208423 commitor.go:53: commit Block node 6 batch_id 1078
+[INFO] 2025/11/08 20:31:38.208848 commitor.go:53: commit Block node 1 batch_id 1121
+[INFO] 2025/11/08 20:31:38.209938 commitor.go:53: commit Block node 2 batch_id 818
+[INFO] 2025/11/08 20:31:38.210324 commitor.go:53: commit Block node 11 batch_id 1099
+[INFO] 2025/11/08 20:31:38.210693 commitor.go:53: commit Block node 6 batch_id 1110
+[INFO] 2025/11/08 20:31:38.211055 commitor.go:53: commit Block node 2 batch_id 1138
+[INFO] 2025/11/08 20:31:38.211420 commitor.go:53: commit Block node 2 batch_id 1106
+[INFO] 2025/11/08 20:31:38.211790 commitor.go:53: commit Block node 13 batch_id 669
+[INFO] 2025/11/08 20:31:38.212185 commitor.go:53: commit Block node 0 batch_id 992
+[INFO] 2025/11/08 20:31:38.212547 commitor.go:53: commit Block node 6 batch_id 982
+[INFO] 2025/11/08 20:31:38.212908 commitor.go:53: commit Block node 5 batch_id 1093
+[INFO] 2025/11/08 20:31:38.213279 commitor.go:53: commit Block node 10 batch_id 1114
+[INFO] 2025/11/08 20:31:38.213657 commitor.go:46: commit ConsensusBlock epoch 19 node 3
+[INFO] 2025/11/08 20:31:38.213672 commitor.go:53: commit Block node 0 batch_id 1120
+[INFO] 2025/11/08 20:31:38.274609 pool.go:64: Received Batch 1188
+[INFO] 2025/11/08 20:31:38.275060 mempool.go:282: create Block node 4 batch_id 1188 
+[INFO] 2025/11/08 20:31:38.574982 pool.go:64: Received Batch 1204
+[INFO] 2025/11/08 20:31:38.575330 mempool.go:282: create Block node 4 batch_id 1204 
+[INFO] 2025/11/08 20:31:38.824525 pool.go:64: Received Batch 1220
+[INFO] 2025/11/08 20:31:38.824836 mempool.go:282: create Block node 4 batch_id 1220 
+[INFO] 2025/11/08 20:31:38.831123 core.go:243: In Epoch 20,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:38.831225 core.go:494: In Epoch 20,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:38.831485 core.go:956: advance next epoch 21
+[INFO] 2025/11/08 20:31:38.831839 core.go:264: create ConsensusBlock epoch 21 node 4
+[INFO] 2025/11/08 20:31:38.831917 commitor.go:53: commit Block node 4 batch_id 1156
+[INFO] 2025/11/08 20:31:38.832306 commitor.go:53: commit Block node 12 batch_id 972
+[INFO] 2025/11/08 20:31:38.833018 commitor.go:53: commit Block node 15 batch_id 511
+[INFO] 2025/11/08 20:31:38.833225 commitor.go:53: commit Block node 1 batch_id 1153
+[INFO] 2025/11/08 20:31:38.833462 commitor.go:53: commit Block node 9 batch_id 1177
+[INFO] 2025/11/08 20:31:38.834101 commitor.go:53: commit Block node 5 batch_id 789
+[INFO] 2025/11/08 20:31:38.834142 commitor.go:53: commit Block node 2 batch_id 962
+[INFO] 2025/11/08 20:31:38.834752 commitor.go:53: commit Block node 4 batch_id 756
+[INFO] 2025/11/08 20:31:38.834840 commitor.go:53: commit Block node 6 batch_id 598
+[INFO] 2025/11/08 20:31:38.835227 commitor.go:53: commit Block node 2 batch_id 658
+[INFO] 2025/11/08 20:31:38.835495 commitor.go:53: commit Block node 7 batch_id 951
+[INFO] 2025/11/08 20:31:38.835766 commitor.go:53: commit Block node 9 batch_id 841
+[INFO] 2025/11/08 20:31:38.836249 commitor.go:53: commit Block node 4 batch_id 1012
+[INFO] 2025/11/08 20:31:38.836414 commitor.go:53: commit Block node 0 batch_id 1072
+[INFO] 2025/11/08 20:31:38.837583 commitor.go:53: commit Block node 13 batch_id 829
+[INFO] 2025/11/08 20:31:38.837969 commitor.go:53: commit Block node 10 batch_id 826
+[INFO] 2025/11/08 20:31:38.838351 commitor.go:53: commit Block node 11 batch_id 843
+[INFO] 2025/11/08 20:31:38.839500 commitor.go:53: commit Block node 13 batch_id 685
+[INFO] 2025/11/08 20:31:38.839661 commitor.go:53: commit Block node 8 batch_id 840
+[INFO] 2025/11/08 20:31:38.840037 commitor.go:53: commit Block node 10 batch_id 1082
+[INFO] 2025/11/08 20:31:38.840511 commitor.go:53: commit Block node 6 batch_id 614
+[INFO] 2025/11/08 20:31:38.840773 commitor.go:53: commit Block node 3 batch_id 1107
+[INFO] 2025/11/08 20:31:38.841154 commitor.go:53: commit Block node 3 batch_id 1139
+[INFO] 2025/11/08 20:31:38.841532 commitor.go:53: commit Block node 11 batch_id 1051
+[INFO] 2025/11/08 20:31:38.841888 commitor.go:53: commit Block node 10 batch_id 730
+[INFO] 2025/11/08 20:31:38.842280 commitor.go:53: commit Block node 10 batch_id 618
+[INFO] 2025/11/08 20:31:38.842666 commitor.go:53: commit Block node 0 batch_id 816
+[INFO] 2025/11/08 20:31:38.843037 commitor.go:53: commit Block node 14 batch_id 222
+[INFO] 2025/11/08 20:31:38.843411 commitor.go:53: commit Block node 10 batch_id 1050
+[INFO] 2025/11/08 20:31:38.843778 commitor.go:53: commit Block node 7 batch_id 775
+[INFO] 2025/11/08 20:31:38.844158 commitor.go:53: commit Block node 8 batch_id 792
+[INFO] 2025/11/08 20:31:38.844527 commitor.go:46: commit ConsensusBlock epoch 20 node 4
+[INFO] 2025/11/08 20:31:38.844536 commitor.go:53: commit Block node 9 batch_id 537
+[INFO] 2025/11/08 20:31:39.074904 pool.go:64: Received Batch 1236
+[INFO] 2025/11/08 20:31:39.075206 mempool.go:282: create Block node 4 batch_id 1236 
+[INFO] 2025/11/08 20:31:39.325160 pool.go:64: Received Batch 1252
+[INFO] 2025/11/08 20:31:39.325652 mempool.go:282: create Block node 4 batch_id 1252 
+[INFO] 2025/11/08 20:31:39.468399 core.go:243: In Epoch 21,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:39.468472 core.go:494: In Epoch 21,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:39.468742 core.go:956: advance next epoch 22
+[INFO] 2025/11/08 20:31:39.469100 core.go:264: create ConsensusBlock epoch 22 node 4
+[INFO] 2025/11/08 20:31:39.469115 commitor.go:53: commit Block node 6 batch_id 678
+[INFO] 2025/11/08 20:31:39.469749 commitor.go:53: commit Block node 13 batch_id 77
+[INFO] 2025/11/08 20:31:39.469864 commitor.go:53: commit Block node 8 batch_id 488
+[INFO] 2025/11/08 20:31:39.470851 commitor.go:53: commit Block node 11 batch_id 891
+[INFO] 2025/11/08 20:31:39.470936 commitor.go:53: commit Block node 10 batch_id 1130
+[INFO] 2025/11/08 20:31:39.471338 commitor.go:53: commit Block node 9 batch_id 969
+[INFO] 2025/11/08 20:31:39.471873 commitor.go:53: commit Block node 8 batch_id 648
+[INFO] 2025/11/08 20:31:39.472987 commitor.go:53: commit Block node 10 batch_id 362
+[INFO] 2025/11/08 20:31:39.473083 commitor.go:53: commit Block node 11 batch_id 1131
+[INFO] 2025/11/08 20:31:39.473453 commitor.go:53: commit Block node 6 batch_id 662
+[INFO] 2025/11/08 20:31:39.473815 commitor.go:53: commit Block node 6 batch_id 1062
+[INFO] 2025/11/08 20:31:39.474207 commitor.go:53: commit Block node 8 batch_id 328
+[INFO] 2025/11/08 20:31:39.474619 commitor.go:53: commit Block node 10 batch_id 378
+[INFO] 2025/11/08 20:31:39.474938 commitor.go:53: commit Block node 13 batch_id 525
+[INFO] 2025/11/08 20:31:39.475304 commitor.go:53: commit Block node 13 batch_id 781
+[INFO] 2025/11/08 20:31:39.475671 commitor.go:53: commit Block node 12 batch_id 492
+[INFO] 2025/11/08 20:31:39.476071 commitor.go:53: commit Block node 13 batch_id 909
+[INFO] 2025/11/08 20:31:39.476451 commitor.go:53: commit Block node 0 batch_id 304
+[INFO] 2025/11/08 20:31:39.476818 commitor.go:53: commit Block node 1 batch_id 433
+[INFO] 2025/11/08 20:31:39.477195 commitor.go:53: commit Block node 6 batch_id 806
+[INFO] 2025/11/08 20:31:39.477567 commitor.go:53: commit Block node 11 batch_id 763
+[INFO] 2025/11/08 20:31:39.477943 commitor.go:53: commit Block node 9 batch_id 921
+[INFO] 2025/11/08 20:31:39.478320 commitor.go:53: commit Block node 11 batch_id 987
+[INFO] 2025/11/08 20:31:39.478702 commitor.go:53: commit Block node 2 batch_id 674
+[INFO] 2025/11/08 20:31:39.479051 commitor.go:53: commit Block node 1 batch_id 209
+[INFO] 2025/11/08 20:31:39.479950 commitor.go:53: commit Block node 10 batch_id 1178
+[INFO] 2025/11/08 20:31:39.479996 commitor.go:53: commit Block node 8 batch_id 1016
+[INFO] 2025/11/08 20:31:39.480373 commitor.go:53: commit Block node 14 batch_id 254
+[INFO] 2025/11/08 20:31:39.480757 commitor.go:53: commit Block node 8 batch_id 712
+[INFO] 2025/11/08 20:31:39.481174 commitor.go:53: commit Block node 9 batch_id 1161
+[INFO] 2025/11/08 20:31:39.481569 commitor.go:53: commit Block node 14 batch_id 430
+[INFO] 2025/11/08 20:31:39.481947 commitor.go:46: commit ConsensusBlock epoch 21 node 9
+[INFO] 2025/11/08 20:31:39.481960 commitor.go:53: commit Block node 7 batch_id 1191
+[INFO] 2025/11/08 20:31:39.574632 pool.go:64: Received Batch 1268
+[INFO] 2025/11/08 20:31:39.574948 mempool.go:282: create Block node 4 batch_id 1268 
+[INFO] 2025/11/08 20:31:39.825333 pool.go:64: Received Batch 1284
+[INFO] 2025/11/08 20:31:39.825630 mempool.go:282: create Block node 4 batch_id 1284 
+[INFO] 2025/11/08 20:31:40.075192 pool.go:64: Received Batch 1300
+[INFO] 2025/11/08 20:31:40.075497 mempool.go:282: create Block node 4 batch_id 1300 
+[INFO] 2025/11/08 20:31:40.092177 core.go:243: In Epoch 22,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:40.092249 core.go:494: In Epoch 22,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:40.092527 core.go:956: advance next epoch 23
+[INFO] 2025/11/08 20:31:40.092906 core.go:264: create ConsensusBlock epoch 23 node 4
+[INFO] 2025/11/08 20:31:40.092918 commitor.go:53: commit Block node 12 batch_id 908
+[INFO] 2025/11/08 20:31:40.093571 commitor.go:53: commit Block node 11 batch_id 923
+[INFO] 2025/11/08 20:31:40.093694 commitor.go:53: commit Block node 14 batch_id 750
+[INFO] 2025/11/08 20:31:40.094224 commitor.go:53: commit Block node 9 batch_id 1209
+[INFO] 2025/11/08 20:31:40.094578 commitor.go:53: commit Block node 5 batch_id 1221
+[INFO] 2025/11/08 20:31:40.095242 commitor.go:53: commit Block node 14 batch_id 782
+[INFO] 2025/11/08 20:31:40.095472 commitor.go:53: commit Block node 8 batch_id 1112
+[INFO] 2025/11/08 20:31:40.096463 commitor.go:53: commit Block node 4 batch_id 1140
+[INFO] 2025/11/08 20:31:40.096487 commitor.go:53: commit Block node 11 batch_id 955
+[INFO] 2025/11/08 20:31:40.096941 commitor.go:53: commit Block node 12 batch_id 892
+[INFO] 2025/11/08 20:31:40.097167 commitor.go:53: commit Block node 11 batch_id 1035
+[INFO] 2025/11/08 20:31:40.097709 commitor.go:53: commit Block node 10 batch_id 1194
+[INFO] 2025/11/08 20:31:40.097794 commitor.go:53: commit Block node 14 batch_id 590
+[INFO] 2025/11/08 20:31:40.098046 commitor.go:53: commit Block node 1 batch_id 1025
+[INFO] 2025/11/08 20:31:40.098305 commitor.go:53: commit Block node 9 batch_id 1129
+[INFO] 2025/11/08 20:31:40.098544 commitor.go:53: commit Block node 8 batch_id 984
+[INFO] 2025/11/08 20:31:40.098781 commitor.go:53: commit Block node 14 batch_id 574
+[INFO] 2025/11/08 20:31:40.099000 commitor.go:53: commit Block node 10 batch_id 1034
+[INFO] 2025/11/08 20:31:40.099231 commitor.go:53: commit Block node 12 batch_id 1052
+[INFO] 2025/11/08 20:31:40.099442 commitor.go:53: commit Block node 15 batch_id 399
+[INFO] 2025/11/08 20:31:40.099652 commitor.go:53: commit Block node 0 batch_id 1040
+[INFO] 2025/11/08 20:31:40.099858 commitor.go:53: commit Block node 14 batch_id 686
+[INFO] 2025/11/08 20:31:40.100100 commitor.go:53: commit Block node 11 batch_id 1195
+[INFO] 2025/11/08 20:31:40.100316 commitor.go:53: commit Block node 6 batch_id 1254
+[INFO] 2025/11/08 20:31:40.100535 commitor.go:53: commit Block node 6 batch_id 1206
+[INFO] 2025/11/08 20:31:40.100738 commitor.go:53: commit Block node 14 batch_id 558
+[INFO] 2025/11/08 20:31:40.100999 commitor.go:53: commit Block node 3 batch_id 1011
+[INFO] 2025/11/08 20:31:40.101213 commitor.go:53: commit Block node 11 batch_id 1211
+[INFO] 2025/11/08 20:31:40.101424 commitor.go:53: commit Block node 12 batch_id 988
+[INFO] 2025/11/08 20:31:40.101675 commitor.go:53: commit Block node 1 batch_id 1137
+[INFO] 2025/11/08 20:31:40.101890 commitor.go:53: commit Block node 11 batch_id 1147
+[INFO] 2025/11/08 20:31:40.102134 commitor.go:46: commit ConsensusBlock epoch 22 node 10
+[INFO] 2025/11/08 20:31:40.102147 commitor.go:53: commit Block node 13 batch_id 749
+[INFO] 2025/11/08 20:31:40.324712 pool.go:64: Received Batch 1316
+[INFO] 2025/11/08 20:31:40.325098 mempool.go:282: create Block node 4 batch_id 1316 
+[INFO] 2025/11/08 20:31:40.624664 pool.go:64: Received Batch 1332
+[INFO] 2025/11/08 20:31:40.624992 mempool.go:282: create Block node 4 batch_id 1332 
+[INFO] 2025/11/08 20:31:40.734064 core.go:243: In Epoch 23,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:40.734163 core.go:494: In Epoch 23,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:40.734445 core.go:956: advance next epoch 24
+[INFO] 2025/11/08 20:31:40.734725 core.go:264: create ConsensusBlock epoch 24 node 4
+[INFO] 2025/11/08 20:31:40.735367 commitor.go:53: commit Block node 0 batch_id 1104
+[INFO] 2025/11/08 20:31:40.735375 commitor.go:53: commit Block node 13 batch_id 957
+[INFO] 2025/11/08 20:31:40.735665 commitor.go:53: commit Block node 3 batch_id 1299
+[INFO] 2025/11/08 20:31:40.736573 commitor.go:53: commit Block node 13 batch_id 413
+[INFO] 2025/11/08 20:31:40.736744 commitor.go:53: commit Block node 8 batch_id 1032
+[INFO] 2025/11/08 20:31:40.737510 commitor.go:53: commit Block node 1 batch_id 753
+[INFO] 2025/11/08 20:31:40.737669 commitor.go:53: commit Block node 7 batch_id 967
+[INFO] 2025/11/08 20:31:40.738101 commitor.go:53: commit Block node 5 batch_id 1237
+[INFO] 2025/11/08 20:31:40.738271 commitor.go:53: commit Block node 5 batch_id 1285
+[INFO] 2025/11/08 20:31:40.738487 commitor.go:53: commit Block node 0 batch_id 1168
+[INFO] 2025/11/08 20:31:40.738727 commitor.go:53: commit Block node 6 batch_id 790
+[INFO] 2025/11/08 20:31:40.738964 commitor.go:53: commit Block node 2 batch_id 1218
+[INFO] 2025/11/08 20:31:40.739210 commitor.go:53: commit Block node 7 batch_id 1239
+[INFO] 2025/11/08 20:31:40.739410 commitor.go:53: commit Block node 7 batch_id 1031
+[INFO] 2025/11/08 20:31:40.740525 commitor.go:53: commit Block node 12 batch_id 924
+[INFO] 2025/11/08 20:31:40.740561 commitor.go:53: commit Block node 0 batch_id 784
+[INFO] 2025/11/08 20:31:40.740954 commitor.go:53: commit Block node 5 batch_id 1013
+[INFO] 2025/11/08 20:31:40.741325 commitor.go:53: commit Block node 9 batch_id 1257
+[INFO] 2025/11/08 20:31:40.741687 commitor.go:53: commit Block node 7 batch_id 599
+[INFO] 2025/11/08 20:31:40.742065 commitor.go:53: commit Block node 5 batch_id 613
+[INFO] 2025/11/08 20:31:40.742427 commitor.go:53: commit Block node 13 batch_id 365
+[INFO] 2025/11/08 20:31:40.742794 commitor.go:53: commit Block node 9 batch_id 1193
+[INFO] 2025/11/08 20:31:40.743163 commitor.go:53: commit Block node 2 batch_id 1266
+[INFO] 2025/11/08 20:31:40.743557 commitor.go:53: commit Block node 8 batch_id 1256
+[INFO] 2025/11/08 20:31:40.743933 commitor.go:53: commit Block node 11 batch_id 571
+[INFO] 2025/11/08 20:31:40.744304 commitor.go:53: commit Block node 0 batch_id 1184
+[INFO] 2025/11/08 20:31:40.744677 commitor.go:53: commit Block node 12 batch_id 620
+[INFO] 2025/11/08 20:31:40.745051 commitor.go:53: commit Block node 11 batch_id 427
+[INFO] 2025/11/08 20:31:40.745417 commitor.go:53: commit Block node 6 batch_id 294
+[INFO] 2025/11/08 20:31:40.745795 commitor.go:53: commit Block node 3 batch_id 419
+[INFO] 2025/11/08 20:31:40.746192 commitor.go:53: commit Block node 3 batch_id 435
+[INFO] 2025/11/08 20:31:40.746553 commitor.go:46: commit ConsensusBlock epoch 23 node 1
+[INFO] 2025/11/08 20:31:40.746567 commitor.go:53: commit Block node 8 batch_id 1176
+[INFO] 2025/11/08 20:31:40.875409 pool.go:64: Received Batch 1348
+[INFO] 2025/11/08 20:31:40.875731 mempool.go:282: create Block node 4 batch_id 1348 
+[INFO] 2025/11/08 20:31:41.125089 pool.go:64: Received Batch 1364
+[INFO] 2025/11/08 20:31:41.125390 mempool.go:282: create Block node 4 batch_id 1364 
+[INFO] 2025/11/08 20:31:41.368949 core.go:243: In Epoch 24,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:41.369031 core.go:494: In Epoch 24,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:41.369314 core.go:956: advance next epoch 25
+[INFO] 2025/11/08 20:31:41.369671 core.go:264: create ConsensusBlock epoch 25 node 4
+[INFO] 2025/11/08 20:31:41.369733 commitor.go:53: commit Block node 15 batch_id 719
+[INFO] 2025/11/08 20:31:41.370464 commitor.go:53: commit Block node 5 batch_id 1077
+[INFO] 2025/11/08 20:31:41.370555 commitor.go:53: commit Block node 2 batch_id 690
+[INFO] 2025/11/08 20:31:41.371385 commitor.go:53: commit Block node 2 batch_id 786
+[INFO] 2025/11/08 20:31:41.371456 commitor.go:53: commit Block node 2 batch_id 882
+[INFO] 2025/11/08 20:31:41.371995 commitor.go:53: commit Block node 3 batch_id 1155
+[INFO] 2025/11/08 20:31:41.372101 commitor.go:53: commit Block node 3 batch_id 179
+[INFO] 2025/11/08 20:31:41.372980 commitor.go:53: commit Block node 15 batch_id 303
+[INFO] 2025/11/08 20:31:41.373063 commitor.go:53: commit Block node 6 batch_id 822
+[INFO] 2025/11/08 20:31:41.373589 commitor.go:53: commit Block node 12 batch_id 316
+[INFO] 2025/11/08 20:31:41.373721 commitor.go:53: commit Block node 11 batch_id 523
+[INFO] 2025/11/08 20:31:41.374123 commitor.go:53: commit Block node 6 batch_id 582
+[INFO] 2025/11/08 20:31:41.374487 commitor.go:53: commit Block node 14 batch_id 606
+[INFO] 2025/11/08 20:31:41.374556 pool.go:64: Received Batch 1380
+[INFO] 2025/11/08 20:31:41.374843 mempool.go:282: create Block node 4 batch_id 1380 
+[INFO] 2025/11/08 20:31:41.374866 commitor.go:53: commit Block node 2 batch_id 1010
+[INFO] 2025/11/08 20:31:41.375241 commitor.go:53: commit Block node 10 batch_id 1130
+[INFO] 2025/11/08 20:31:41.375609 commitor.go:53: commit Block node 12 batch_id 652
+[INFO] 2025/11/08 20:31:41.377797 commitor.go:53: commit Block node 0 batch_id 464
+[INFO] 2025/11/08 20:31:41.377814 commitor.go:53: commit Block node 5 batch_id 677
+[INFO] 2025/11/08 20:31:41.377818 commitor.go:53: commit Block node 9 batch_id 521
+[INFO] 2025/11/08 20:31:41.377822 commitor.go:53: commit Block node 12 batch_id 796
+[INFO] 2025/11/08 20:31:41.378229 commitor.go:53: commit Block node 8 batch_id 888
+[INFO] 2025/11/08 20:31:41.379006 commitor.go:53: commit Block node 7 batch_id 631
+[INFO] 2025/11/08 20:31:41.379376 commitor.go:53: commit Block node 11 batch_id 427
+[INFO] 2025/11/08 20:31:41.379742 commitor.go:53: commit Block node 14 batch_id 46
+[INFO] 2025/11/08 20:31:41.380137 commitor.go:53: commit Block node 11 batch_id 1067
+[INFO] 2025/11/08 20:31:41.380502 commitor.go:53: commit Block node 8 batch_id 664
+[INFO] 2025/11/08 20:31:41.381678 commitor.go:53: commit Block node 6 batch_id 726
+[INFO] 2025/11/08 20:31:41.382056 commitor.go:53: commit Block node 11 batch_id 843
+[INFO] 2025/11/08 20:31:41.382413 commitor.go:53: commit Block node 15 batch_id 671
+[INFO] 2025/11/08 20:31:41.382794 commitor.go:53: commit Block node 14 batch_id 862
+[INFO] 2025/11/08 20:31:41.383166 commitor.go:53: commit Block node 15 batch_id 335
+[INFO] 2025/11/08 20:31:41.383523 commitor.go:46: commit ConsensusBlock epoch 24 node 14
+[INFO] 2025/11/08 20:31:41.383537 commitor.go:53: commit Block node 4 batch_id 692
+[INFO] 2025/11/08 20:31:41.624954 pool.go:64: Received Batch 1396
+[INFO] 2025/11/08 20:31:41.625394 mempool.go:282: create Block node 4 batch_id 1396 
+[INFO] 2025/11/08 20:31:41.874665 pool.go:64: Received Batch 1412
+[INFO] 2025/11/08 20:31:41.874980 mempool.go:282: create Block node 4 batch_id 1412 
+[INFO] 2025/11/08 20:31:42.013443 core.go:243: In Epoch 25,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:42.013549 core.go:494: In Epoch 25,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:42.013828 core.go:956: advance next epoch 26
+[INFO] 2025/11/08 20:31:42.014159 core.go:264: create ConsensusBlock epoch 26 node 4
+[INFO] 2025/11/08 20:31:42.014665 commitor.go:53: commit Block node 12 batch_id 1212
+[INFO] 2025/11/08 20:31:42.014686 commitor.go:53: commit Block node 7 batch_id 1383
+[INFO] 2025/11/08 20:31:42.015565 commitor.go:53: commit Block node 12 batch_id 1196
+[INFO] 2025/11/08 20:31:42.015928 commitor.go:53: commit Block node 0 batch_id 1344
+[INFO] 2025/11/08 20:31:42.016347 commitor.go:53: commit Block node 13 batch_id 1101
+[INFO] 2025/11/08 20:31:42.016759 commitor.go:53: commit Block node 9 batch_id 1353
+[INFO] 2025/11/08 20:31:42.017514 commitor.go:53: commit Block node 15 batch_id 751
+[INFO] 2025/11/08 20:31:42.017949 commitor.go:53: commit Block node 7 batch_id 1207
+[INFO] 2025/11/08 20:31:42.018375 commitor.go:53: commit Block node 4 batch_id 1220
+[INFO] 2025/11/08 20:31:42.018609 commitor.go:53: commit Block node 0 batch_id 1232
+[INFO] 2025/11/08 20:31:42.018819 commitor.go:53: commit Block node 6 batch_id 1158
+[INFO] 2025/11/08 20:31:42.020082 commitor.go:53: commit Block node 0 batch_id 1216
+[INFO] 2025/11/08 20:31:42.020171 commitor.go:53: commit Block node 12 batch_id 1132
+[INFO] 2025/11/08 20:31:42.021464 commitor.go:53: commit Block node 13 batch_id 1069
+[INFO] 2025/11/08 20:31:42.021471 commitor.go:53: commit Block node 6 batch_id 486
+[INFO] 2025/11/08 20:31:42.021777 commitor.go:53: commit Block node 3 batch_id 947
+[INFO] 2025/11/08 20:31:42.022160 commitor.go:53: commit Block node 13 batch_id 445
+[INFO] 2025/11/08 20:31:42.022529 commitor.go:53: commit Block node 4 batch_id 420
+[INFO] 2025/11/08 20:31:42.022899 commitor.go:53: commit Block node 10 batch_id 1002
+[INFO] 2025/11/08 20:31:42.023266 commitor.go:53: commit Block node 3 batch_id 531
+[INFO] 2025/11/08 20:31:42.023642 commitor.go:53: commit Block node 4 batch_id 548
+[INFO] 2025/11/08 20:31:42.024038 commitor.go:53: commit Block node 2 batch_id 210
+[INFO] 2025/11/08 20:31:42.024414 commitor.go:53: commit Block node 5 batch_id 405
+[INFO] 2025/11/08 20:31:42.024772 commitor.go:53: commit Block node 9 batch_id 1369
+[INFO] 2025/11/08 20:31:42.025158 commitor.go:53: commit Block node 2 batch_id 802
+[INFO] 2025/11/08 20:31:42.025524 commitor.go:53: commit Block node 8 batch_id 1240
+[INFO] 2025/11/08 20:31:42.025903 commitor.go:53: commit Block node 8 batch_id 920
+[INFO] 2025/11/08 20:31:42.026274 commitor.go:53: commit Block node 10 batch_id 1226
+[INFO] 2025/11/08 20:31:42.026633 commitor.go:53: commit Block node 1 batch_id 849
+[INFO] 2025/11/08 20:31:42.027012 commitor.go:53: commit Block node 13 batch_id 1037
+[INFO] 2025/11/08 20:31:42.027377 commitor.go:53: commit Block node 10 batch_id 1018
+[INFO] 2025/11/08 20:31:42.027735 commitor.go:46: commit ConsensusBlock epoch 25 node 5
+[INFO] 2025/11/08 20:31:42.027749 commitor.go:53: commit Block node 5 batch_id 1109
+[INFO] 2025/11/08 20:31:42.124661 pool.go:64: Received Batch 1428
+[INFO] 2025/11/08 20:31:42.124962 mempool.go:282: create Block node 4 batch_id 1428 
+[INFO] 2025/11/08 20:31:42.374536 pool.go:64: Received Batch 1444
+[INFO] 2025/11/08 20:31:42.375058 mempool.go:282: create Block node 4 batch_id 1444 
+[INFO] 2025/11/08 20:31:42.675046 pool.go:64: Received Batch 1460
+[INFO] 2025/11/08 20:31:42.675388 mempool.go:282: create Block node 4 batch_id 1460 
+[INFO] 2025/11/08 20:31:42.692696 core.go:243: In Epoch 26,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:42.692787 core.go:494: In Epoch 26,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:42.693042 core.go:956: advance next epoch 27
+[INFO] 2025/11/08 20:31:42.693411 core.go:264: create ConsensusBlock epoch 27 node 4
+[INFO] 2025/11/08 20:31:42.693470 commitor.go:53: commit Block node 1 batch_id 1377
+[INFO] 2025/11/08 20:31:42.693841 commitor.go:53: commit Block node 1 batch_id 1393
+[INFO] 2025/11/08 20:31:42.695069 commitor.go:53: commit Block node 15 batch_id 735
+[INFO] 2025/11/08 20:31:42.695077 commitor.go:53: commit Block node 2 batch_id 1378
+[INFO] 2025/11/08 20:31:42.695394 commitor.go:53: commit Block node 15 batch_id 767
+[INFO] 2025/11/08 20:31:42.696592 commitor.go:53: commit Block node 3 batch_id 1363
+[INFO] 2025/11/08 20:31:42.696603 commitor.go:53: commit Block node 4 batch_id 1380
+[INFO] 2025/11/08 20:31:42.697031 commitor.go:53: commit Block node 1 batch_id 1409
+[INFO] 2025/11/08 20:31:42.697422 commitor.go:53: commit Block node 15 batch_id 639
+[INFO] 2025/11/08 20:31:42.697824 commitor.go:53: commit Block node 9 batch_id 1305
+[INFO] 2025/11/08 20:31:42.698206 commitor.go:53: commit Block node 6 batch_id 1270
+[INFO] 2025/11/08 20:31:42.698583 commitor.go:53: commit Block node 6 batch_id 1318
+[INFO] 2025/11/08 20:31:42.698976 commitor.go:53: commit Block node 6 batch_id 1366
+[INFO] 2025/11/08 20:31:42.699345 commitor.go:53: commit Block node 6 batch_id 966
+[INFO] 2025/11/08 20:31:42.699724 commitor.go:53: commit Block node 4 batch_id 996
+[INFO] 2025/11/08 20:31:42.700130 commitor.go:53: commit Block node 3 batch_id 1059
+[INFO] 2025/11/08 20:31:42.700459 commitor.go:53: commit Block node 14 batch_id 638
+[INFO] 2025/11/08 20:31:42.701339 commitor.go:53: commit Block node 1 batch_id 1201
+[INFO] 2025/11/08 20:31:42.701425 commitor.go:53: commit Block node 14 batch_id 974
+[INFO] 2025/11/08 20:31:42.701579 commitor.go:53: commit Block node 4 batch_id 948
+[INFO] 2025/11/08 20:31:42.701800 commitor.go:53: commit Block node 5 batch_id 949
+[INFO] 2025/11/08 20:31:42.702007 commitor.go:53: commit Block node 7 batch_id 1175
+[INFO] 2025/11/08 20:31:42.702207 commitor.go:53: commit Block node 11 batch_id 1323
+[INFO] 2025/11/08 20:31:42.702424 commitor.go:53: commit Block node 8 batch_id 1416
+[INFO] 2025/11/08 20:31:42.702623 commitor.go:53: commit Block node 5 batch_id 965
+[INFO] 2025/11/08 20:31:42.702863 commitor.go:53: commit Block node 1 batch_id 1265
+[INFO] 2025/11/08 20:31:42.703073 commitor.go:53: commit Block node 3 batch_id 163
+[INFO] 2025/11/08 20:31:42.703276 commitor.go:53: commit Block node 1 batch_id 113
+[INFO] 2025/11/08 20:31:42.703487 commitor.go:53: commit Block node 6 batch_id 310
+[INFO] 2025/11/08 20:31:42.703694 commitor.go:53: commit Block node 11 batch_id 1019
+[INFO] 2025/11/08 20:31:42.703963 commitor.go:53: commit Block node 3 batch_id 1043
+[INFO] 2025/11/08 20:31:42.704213 commitor.go:46: commit ConsensusBlock epoch 26 node 11
+[INFO] 2025/11/08 20:31:42.704224 commitor.go:53: commit Block node 7 batch_id 1015
+[INFO] 2025/11/08 20:31:42.925320 pool.go:64: Received Batch 1476
+[INFO] 2025/11/08 20:31:42.925569 mempool.go:282: create Block node 4 batch_id 1476 
+[INFO] 2025/11/08 20:31:43.174663 pool.go:64: Received Batch 1492
+[INFO] 2025/11/08 20:31:43.174975 mempool.go:282: create Block node 4 batch_id 1492 
+[INFO] 2025/11/08 20:31:43.424921 pool.go:64: Received Batch 1508
+[INFO] 2025/11/08 20:31:43.425307 mempool.go:282: create Block node 4 batch_id 1508 
+[INFO] 2025/11/08 20:31:43.493408 core.go:243: In Epoch 27,the MAX FABA invoke counts is 0
+[INFO] 2025/11/08 20:31:43.493514 core.go:494: In Epoch 27,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:43.493857 core.go:956: advance next epoch 28
+[INFO] 2025/11/08 20:31:43.494268 core.go:264: create ConsensusBlock epoch 28 node 4
+[INFO] 2025/11/08 20:31:43.494727 commitor.go:53: commit Block node 15 batch_id 831
+[INFO] 2025/11/08 20:31:43.494894 commitor.go:53: commit Block node 4 batch_id 1348
+[INFO] 2025/11/08 20:31:43.495801 commitor.go:53: commit Block node 11 batch_id 1227
+[INFO] 2025/11/08 20:31:43.496116 commitor.go:53: commit Block node 9 batch_id 1225
+[INFO] 2025/11/08 20:31:43.496537 commitor.go:53: commit Block node 12 batch_id 1244
+[INFO] 2025/11/08 20:31:43.497741 commitor.go:53: commit Block node 1 batch_id 1281
+[INFO] 2025/11/08 20:31:43.498812 commitor.go:53: commit Block node 12 batch_id 1308
+[INFO] 2025/11/08 20:31:43.499427 commitor.go:53: commit Block node 14 batch_id 718
+[INFO] 2025/11/08 20:31:43.499577 commitor.go:53: commit Block node 2 batch_id 1234
+[INFO] 2025/11/08 20:31:43.500011 commitor.go:53: commit Block node 4 batch_id 1252
+[INFO] 2025/11/08 20:31:43.500501 commitor.go:53: commit Block node 2 batch_id 1314
+[INFO] 2025/11/08 20:31:43.500986 commitor.go:53: commit Block node 12 batch_id 1084
+[INFO] 2025/11/08 20:31:43.501478 commitor.go:53: commit Block node 6 batch_id 1334
+[INFO] 2025/11/08 20:31:43.501992 commitor.go:53: commit Block node 7 batch_id 1431
+[INFO] 2025/11/08 20:31:43.502477 commitor.go:53: commit Block node 13 batch_id 1181
+[INFO] 2025/11/08 20:31:43.502975 commitor.go:53: commit Block node 10 batch_id 1434
+[INFO] 2025/11/08 20:31:43.503480 commitor.go:53: commit Block node 14 batch_id 1022
+[INFO] 2025/11/08 20:31:43.504429 commitor.go:53: commit Block node 4 batch_id 1412
+[INFO] 2025/11/08 20:31:43.504509 commitor.go:53: commit Block node 11 batch_id 1339
+[INFO] 2025/11/08 20:31:43.504987 commitor.go:53: commit Block node 6 batch_id 1446
+[INFO] 2025/11/08 20:31:43.505484 commitor.go:53: commit Block node 10 batch_id 1306
+[INFO] 2025/11/08 20:31:43.505992 commitor.go:53: commit Block node 15 batch_id 703
+[INFO] 2025/11/08 20:31:43.506831 commitor.go:53: commit Block node 15 batch_id 799
+[INFO] 2025/11/08 20:31:43.507763 commitor.go:53: commit Block node 2 batch_id 1442
+[INFO] 2025/11/08 20:31:43.508579 commitor.go:53: commit Block node 13 batch_id 1149
+[INFO] 2025/11/08 20:31:43.509052 commitor.go:53: commit Block node 0 batch_id 1424
+[INFO] 2025/11/08 20:31:43.509949 commitor.go:53: commit Block node 15 batch_id 623
+[INFO] 2025/11/08 20:31:43.510347 commitor.go:53: commit Block node 0 batch_id 720
+[INFO] 2025/11/08 20:31:43.510840 commitor.go:53: commit Block node 7 batch_id 215
+[INFO] 2025/11/08 20:31:43.511320 commitor.go:53: commit Block node 0 batch_id 1296
+[INFO] 2025/11/08 20:31:43.511824 commitor.go:53: commit Block node 10 batch_id 1450
+[INFO] 2025/11/08 20:31:43.512301 commitor.go:46: commit ConsensusBlock epoch 27 node 1
+[INFO] 2025/11/08 20:31:43.512375 commitor.go:53: commit Block node 10 batch_id 666
+[INFO] 2025/11/08 20:31:43.675440 pool.go:64: Received Batch 1524
+[INFO] 2025/11/08 20:31:43.675764 mempool.go:282: create Block node 4 batch_id 1524 
+[INFO] 2025/11/08 20:31:43.924736 pool.go:64: Received Batch 1540
+[INFO] 2025/11/08 20:31:43.925043 mempool.go:282: create Block node 4 batch_id 1540 
+[INFO] 2025/11/08 20:31:44.115431 core.go:243: In Epoch 28,the MAX FABA invoke counts is 1
+[INFO] 2025/11/08 20:31:44.115446 core.go:549: In Epoch 28,invoke the 0 FABA
+[INFO] 2025/11/08 20:31:44.174713 pool.go:64: Received Batch 1556
+[INFO] 2025/11/08 20:31:44.175044 mempool.go:282: create Block node 4 batch_id 1556 
+[INFO] 2025/11/08 20:31:44.425505 pool.go:64: Received Batch 1572
+[INFO] 2025/11/08 20:31:44.425838 mempool.go:282: create Block node 4 batch_id 1572 
+[INFO] 2025/11/08 20:31:44.674701 pool.go:64: Received Batch 1588
+[INFO] 2025/11/08 20:31:44.675286 mempool.go:282: create Block node 4 batch_id 1588 
+[INFO] 2025/11/08 20:31:44.776432 core.go:956: advance next epoch 29
+[INFO] 2025/11/08 20:31:44.776537 core.go:264: create ConsensusBlock epoch 29 node 4
+[INFO] 2025/11/08 20:31:44.776929 commitor.go:53: commit Block node 14 batch_id 926
+[INFO] 2025/11/08 20:31:44.777764 core.go:831: In Epoch 28,the block commit at the 9 round
+[INFO] 2025/11/08 20:31:44.778133 commitor.go:53: commit Block node 10 batch_id 826
+[INFO] 2025/11/08 20:31:44.778220 commitor.go:53: commit Block node 14 batch_id 1054
+[INFO] 2025/11/08 20:31:44.778777 commitor.go:53: commit Block node 9 batch_id 1257
+[INFO] 2025/11/08 20:31:44.779129 commitor.go:53: commit Block node 2 batch_id 1218
+[INFO] 2025/11/08 20:31:44.780080 commitor.go:53: commit Block node 7 batch_id 1319
+[INFO] 2025/11/08 20:31:44.783911 commitor.go:53: commit Block node 0 batch_id 1200
+[INFO] 2025/11/08 20:31:44.783921 commitor.go:53: commit Block node 6 batch_id 966
+[INFO] 2025/11/08 20:31:44.783924 commitor.go:53: commit Block node 14 batch_id 670
+[INFO] 2025/11/08 20:31:44.783926 commitor.go:53: commit Block node 6 batch_id 1174
+[INFO] 2025/11/08 20:31:44.783929 commitor.go:53: commit Block node 7 batch_id 1239
+[INFO] 2025/11/08 20:31:44.783931 commitor.go:53: commit Block node 13 batch_id 1037
+[INFO] 2025/11/08 20:31:44.783937 commitor.go:53: commit Block node 0 batch_id 736
+[INFO] 2025/11/08 20:31:44.784368 commitor.go:53: commit Block node 5 batch_id 1269
+[INFO] 2025/11/08 20:31:44.784850 commitor.go:53: commit Block node 12 batch_id 1308
+[INFO] 2025/11/08 20:31:44.785315 commitor.go:53: commit Block node 13 batch_id 1021
+[INFO] 2025/11/08 20:31:44.785839 commitor.go:53: commit Block node 5 batch_id 1173
+[INFO] 2025/11/08 20:31:44.786318 commitor.go:53: commit Block node 13 batch_id 1053
+[INFO] 2025/11/08 20:31:44.786831 commitor.go:53: commit Block node 8 batch_id 760
+[INFO] 2025/11/08 20:31:44.787311 commitor.go:53: commit Block node 2 batch_id 866
+[INFO] 2025/11/08 20:31:44.787786 commitor.go:53: commit Block node 9 batch_id 1033
+[INFO] 2025/11/08 20:31:44.788274 commitor.go:53: commit Block node 12 batch_id 1036
+[INFO] 2025/11/08 20:31:44.788779 commitor.go:53: commit Block node 10 batch_id 1034
+[INFO] 2025/11/08 20:31:44.789892 commitor.go:53: commit Block node 13 batch_id 1165
+[INFO] 2025/11/08 20:31:44.790028 commitor.go:53: commit Block node 12 batch_id 1276
+[INFO] 2025/11/08 20:31:44.790576 commitor.go:53: commit Block node 6 batch_id 1302
+[INFO] 2025/11/08 20:31:44.790998 commitor.go:53: commit Block node 12 batch_id 1340
+[INFO] 2025/11/08 20:31:44.791529 commitor.go:53: commit Block node 9 batch_id 1305
+[INFO] 2025/11/08 20:31:44.792009 commitor.go:53: commit Block node 7 batch_id 1335
+[INFO] 2025/11/08 20:31:44.792367 commitor.go:53: commit Block node 12 batch_id 1292
+[INFO] 2025/11/08 20:31:44.792993 commitor.go:53: commit Block node 14 batch_id 1022
+[INFO] 2025/11/08 20:31:44.793298 commitor.go:46: commit ConsensusBlock epoch 28 node 13
+[INFO] 2025/11/08 20:31:44.793307 commitor.go:53: commit Block node 10 batch_id 1274
+[INFO] 2025/11/08 20:31:44.974819 pool.go:64: Received Batch 1604
+[INFO] 2025/11/08 20:31:44.975266 mempool.go:282: create Block node 4 batch_id 1604 
+[INFO] 2025/11/08 20:31:45.227851 pool.go:64: Received Batch 1620
+[INFO] 2025/11/08 20:31:45.228421 mempool.go:282: create Block node 4 batch_id 1620 
+[INFO] 2025/11/08 20:31:45.475192 pool.go:64: Received Batch 1636
+[INFO] 2025/11/08 20:31:45.475504 mempool.go:282: create Block node 4 batch_id 1636 
+[INFO] 2025/11/08 20:31:45.725184 pool.go:64: Received Batch 1652
+[INFO] 2025/11/08 20:31:45.725496 mempool.go:282: create Block node 4 batch_id 1652 
+[INFO] 2025/11/08 20:31:45.974899 pool.go:64: Received Batch 1668
+[INFO] 2025/11/08 20:31:45.975380 mempool.go:282: create Block node 4 batch_id 1668 
+[INFO] 2025/11/08 20:31:46.224583 pool.go:64: Received Batch 1684
+[INFO] 2025/11/08 20:31:46.225139 mempool.go:282: create Block node 4 batch_id 1684 
+[INFO] 2025/11/08 20:31:46.475448 pool.go:64: Received Batch 1700
+[INFO] 2025/11/08 20:31:46.476068 mempool.go:282: create Block node 4 batch_id 1700 
+[INFO] 2025/11/08 20:31:46.724763 pool.go:64: Received Batch 1716
+[INFO] 2025/11/08 20:31:46.725083 mempool.go:282: create Block node 4 batch_id 1716 
+[INFO] 2025/11/08 20:31:47.025574 pool.go:64: Received Batch 1732
+[INFO] 2025/11/08 20:31:47.025898 mempool.go:282: create Block node 4 batch_id 1732 
+[INFO] 2025/11/08 20:31:47.274631 pool.go:64: Received Batch 1748
+[INFO] 2025/11/08 20:31:47.274971 mempool.go:282: create Block node 4 batch_id 1748 
+[INFO] 2025/11/08 20:31:47.525131 pool.go:64: Received Batch 1764
+[INFO] 2025/11/08 20:31:47.525625 mempool.go:282: create Block node 4 batch_id 1764 
+[INFO] 2025/11/08 20:31:47.775033 pool.go:64: Received Batch 1780
+[INFO] 2025/11/08 20:31:47.775547 mempool.go:282: create Block node 4 batch_id 1780 
+[INFO] 2025/11/08 20:31:48.025044 pool.go:64: Received Batch 1796
+[INFO] 2025/11/08 20:31:48.025560 mempool.go:282: create Block node 4 batch_id 1796 
+[INFO] 2025/11/08 20:31:48.274849 pool.go:64: Received Batch 1812
+[INFO] 2025/11/08 20:31:48.275421 mempool.go:282: create Block node 4 batch_id 1812 
+[INFO] 2025/11/08 20:31:48.524859 pool.go:64: Received Batch 1828
+[INFO] 2025/11/08 20:31:48.525411 mempool.go:282: create Block node 4 batch_id 1828 
+[INFO] 2025/11/08 20:31:48.775348 pool.go:64: Received Batch 1844
+[INFO] 2025/11/08 20:31:48.775877 mempool.go:282: create Block node 4 batch_id 1844 
+[INFO] 2025/11/08 20:31:49.075128 pool.go:64: Received Batch 1860
+[INFO] 2025/11/08 20:31:49.075695 mempool.go:282: create Block node 4 batch_id 1860 
+[INFO] 2025/11/08 20:31:49.324862 pool.go:64: Received Batch 1876
+[INFO] 2025/11/08 20:31:49.325203 mempool.go:282: create Block node 4 batch_id 1876 
+[INFO] 2025/11/08 20:31:49.574830 pool.go:64: Received Batch 1892
+[INFO] 2025/11/08 20:31:49.575155 mempool.go:282: create Block node 4 batch_id 1892 
+[INFO] 2025/11/08 20:31:49.824687 pool.go:64: Received Batch 1908
+[INFO] 2025/11/08 20:31:49.824986 mempool.go:282: create Block node 4 batch_id 1908 
+[INFO] 2025/11/08 20:31:50.075033 pool.go:64: Received Batch 1924
+[INFO] 2025/11/08 20:31:50.075362 mempool.go:282: create Block node 4 batch_id 1924 
+[INFO] 2025/11/08 20:31:50.325503 pool.go:64: Received Batch 1940
+[INFO] 2025/11/08 20:31:50.326027 mempool.go:282: create Block node 4 batch_id 1940 
+[INFO] 2025/11/08 20:31:50.575180 pool.go:64: Received Batch 1956
+[INFO] 2025/11/08 20:31:50.575700 mempool.go:282: create Block node 4 batch_id 1956 
+[INFO] 2025/11/08 20:31:50.825242 pool.go:64: Received Batch 1972
+[INFO] 2025/11/08 20:31:50.825781 mempool.go:282: create Block node 4 batch_id 1972 
+[INFO] 2025/11/08 20:31:51.074847 pool.go:64: Received Batch 1988
+[INFO] 2025/11/08 20:31:51.075380 mempool.go:282: create Block node 4 batch_id 1988 
+[INFO] 2025/11/08 20:31:51.374832 pool.go:64: Received Batch 2004
+[INFO] 2025/11/08 20:31:51.375390 mempool.go:282: create Block node 4 batch_id 2004 
+[INFO] 2025/11/08 20:31:51.625068 pool.go:64: Received Batch 2020
+[INFO] 2025/11/08 20:31:51.625604 mempool.go:282: create Block node 4 batch_id 2020 
+[INFO] 2025/11/08 20:31:51.875403 pool.go:64: Received Batch 2036
+[INFO] 2025/11/08 20:31:51.875946 mempool.go:282: create Block node 4 batch_id 2036 
+[INFO] 2025/11/08 20:31:52.125482 pool.go:64: Received Batch 2052
+[INFO] 2025/11/08 20:31:52.126035 mempool.go:282: create Block node 4 batch_id 2052 
+[INFO] 2025/11/08 20:31:52.374858 pool.go:64: Received Batch 2068
+[INFO] 2025/11/08 20:31:52.375450 mempool.go:282: create Block node 4 batch_id 2068 
+[INFO] 2025/11/08 20:31:52.405862 core.go:243: In Epoch 29,the MAX FABA invoke counts is 2
+[INFO] 2025/11/08 20:31:52.405925 core.go:549: In Epoch 29,invoke the 1 FABA
+[INFO] 2025/11/08 20:31:52.405967 core.go:799: IN Epoch 29,actually commit the block in the 1 FABA
+[INFO] 2025/11/08 20:31:52.406225 core.go:799: IN Epoch 29,actually commit the block in the 2 FABA
+[INFO] 2025/11/08 20:31:52.406229 core.go:858: In Epoch 29,the block commit at the 6 round
+[INFO] 2025/11/08 20:31:52.428678 core.go:956: advance next epoch 30
+[INFO] 2025/11/08 20:31:52.429128 commitor.go:53: commit Block node 3 batch_id 1443
+[INFO] 2025/11/08 20:31:52.429387 commitor.go:53: commit Block node 4 batch_id 1444
+[INFO] 2025/11/08 20:31:52.429816 commitor.go:53: commit Block node 5 batch_id 1461
+[INFO] 2025/11/08 20:31:52.430240 commitor.go:53: commit Block node 10 batch_id 1498
+[INFO] 2025/11/08 20:31:52.430673 commitor.go:53: commit Block node 1 batch_id 1521
+[INFO] 2025/11/08 20:31:52.430902 commitor.go:53: commit Block node 7 batch_id 1527
+[INFO] 2025/11/08 20:31:52.431134 commitor.go:53: commit Block node 5 batch_id 1525
+[INFO] 2025/11/08 20:31:52.431354 commitor.go:53: commit Block node 8 batch_id 1528
+[INFO] 2025/11/08 20:31:52.431600 commitor.go:53: commit Block node 3 batch_id 1491
+[INFO] 2025/11/08 20:31:52.431820 commitor.go:53: commit Block node 11 batch_id 1515
+[INFO] 2025/11/08 20:31:52.432067 commitor.go:53: commit Block node 13 batch_id 1245
+[INFO] 2025/11/08 20:31:52.432276 commitor.go:53: commit Block node 6 batch_id 1494
+[INFO] 2025/11/08 20:31:52.432489 commitor.go:53: commit Block node 8 batch_id 1288
+[INFO] 2025/11/08 20:31:52.432713 commitor.go:53: commit Block node 11 batch_id 1419
+[INFO] 2025/11/08 20:31:52.432929 commitor.go:53: commit Block node 9 batch_id 1497
+[INFO] 2025/11/08 20:31:52.433183 commitor.go:53: commit Block node 7 batch_id 1543
+[INFO] 2025/11/08 20:31:52.433385 commitor.go:53: commit Block node 8 batch_id 1544
+[INFO] 2025/11/08 20:31:52.433606 commitor.go:53: commit Block node 8 batch_id 1384
+[INFO] 2025/11/08 20:31:52.433805 commitor.go:53: commit Block node 4 batch_id 1492
+[INFO] 2025/11/08 20:31:52.434265 commitor.go:53: commit Block node 7 batch_id 1511
+[INFO] 2025/11/08 20:31:52.434683 commitor.go:53: commit Block node 3 batch_id 1539
+[INFO] 2025/11/08 20:31:52.435087 commitor.go:53: commit Block node 7 batch_id 1559
+[INFO] 2025/11/08 20:31:52.435486 commitor.go:53: commit Block node 7 batch_id 1415
+[INFO] 2025/11/08 20:31:52.435885 commitor.go:53: commit Block node 3 batch_id 1411
+[INFO] 2025/11/08 20:31:52.436301 commitor.go:53: commit Block node 9 batch_id 1465
+[INFO] 2025/11/08 20:31:52.436525 commitor.go:53: commit Block node 10 batch_id 1546
+[INFO] 2025/11/08 20:31:52.436750 commitor.go:53: commit Block node 9 batch_id 1545
+[INFO] 2025/11/08 20:31:52.436965 commitor.go:53: commit Block node 8 batch_id 1400
+[INFO] 2025/11/08 20:31:52.437182 commitor.go:53: commit Block node 13 batch_id 1117
+[INFO] 2025/11/08 20:31:52.437416 commitor.go:53: commit Block node 11 batch_id 1531
+[INFO] 2025/11/08 20:31:52.437669 commitor.go:53: commit Block node 15 batch_id 863
+[INFO] 2025/11/08 20:31:52.437887 commitor.go:46: commit ConsensusBlock epoch 29 node 7
+[INFO] 2025/11/08 20:31:52.437898 commitor.go:53: commit Block node 11 batch_id 1387
+[INFO] 2025/11/08 20:31:52.449054 core.go:264: create ConsensusBlock epoch 30 node 4
+[INFO] 2025/11/08 20:31:52.624814 pool.go:64: Received Batch 2084
+[INFO] 2025/11/08 20:31:52.625110 mempool.go:282: create Block node 4 batch_id 2084 
+[INFO] 2025/11/08 20:31:52.875144 pool.go:64: Received Batch 2100
+[INFO] 2025/11/08 20:31:52.875456 mempool.go:282: create Block node 4 batch_id 2100 
+[INFO] 2025/11/08 20:31:53.124834 pool.go:64: Received Batch 2116
+[INFO] 2025/11/08 20:31:53.125130 mempool.go:282: create Block node 4 batch_id 2116 
+[INFO] 2025/11/08 20:31:53.424584 pool.go:64: Received Batch 2132
+[INFO] 2025/11/08 20:31:53.424912 mempool.go:282: create Block node 4 batch_id 2132 
+[INFO] 2025/11/08 20:31:53.674976 pool.go:64: Received Batch 2148
+[INFO] 2025/11/08 20:31:53.675308 mempool.go:282: create Block node 4 batch_id 2148 
+[INFO] 2025/11/08 20:31:53.925568 pool.go:64: Received Batch 2164
+[INFO] 2025/11/08 20:31:53.925894 mempool.go:282: create Block node 4 batch_id 2164 
+[INFO] 2025/11/08 20:31:54.174545 pool.go:64: Received Batch 2180
+[INFO] 2025/11/08 20:31:54.174857 mempool.go:282: create Block node 4 batch_id 2180 
+[INFO] 2025/11/08 20:31:54.424744 pool.go:64: Received Batch 2196
+[INFO] 2025/11/08 20:31:54.425316 mempool.go:282: create Block node 4 batch_id 2196 
+[INFO] 2025/11/08 20:31:54.674870 pool.go:64: Received Batch 2212
+[INFO] 2025/11/08 20:31:54.675405 mempool.go:282: create Block node 4 batch_id 2212 
+[INFO] 2025/11/08 20:31:54.925394 pool.go:64: Received Batch 2228
+[INFO] 2025/11/08 20:31:54.925935 mempool.go:282: create Block node 4 batch_id 2228 
+[INFO] 2025/11/08 20:31:55.174574 pool.go:64: Received Batch 2244
+[INFO] 2025/11/08 20:31:55.175152 mempool.go:282: create Block node 4 batch_id 2244 
+[INFO] 2025/11/08 20:31:55.474861 pool.go:64: Received Batch 2260
+[INFO] 2025/11/08 20:31:55.475409 mempool.go:282: create Block node 4 batch_id 2260 
+[INFO] 2025/11/08 20:31:55.725127 pool.go:64: Received Batch 2276
+[INFO] 2025/11/08 20:31:55.725751 mempool.go:282: create Block node 4 batch_id 2276 
+[INFO] 2025/11/08 20:31:55.974759 pool.go:64: Received Batch 2292
+[INFO] 2025/11/08 20:31:55.975304 mempool.go:282: create Block node 4 batch_id 2292 
+[INFO] 2025/11/08 20:31:56.224646 pool.go:64: Received Batch 2308
+[INFO] 2025/11/08 20:31:56.225221 mempool.go:282: create Block node 4 batch_id 2308 
+[INFO] 2025/11/08 20:31:56.490934 pool.go:64: Received Batch 2324
+[INFO] 2025/11/08 20:31:56.491520 mempool.go:282: create Block node 4 batch_id 2324 
+[INFO] 2025/11/08 20:31:56.725003 pool.go:64: Received Batch 2340
+[INFO] 2025/11/08 20:31:56.725350 mempool.go:282: create Block node 4 batch_id 2340 
+[INFO] 2025/11/08 20:31:56.975178 pool.go:64: Received Batch 2356
+[INFO] 2025/11/08 20:31:56.975492 mempool.go:282: create Block node 4 batch_id 2356 
+[INFO] 2025/11/08 20:31:57.224687 pool.go:64: Received Batch 2372
+[INFO] 2025/11/08 20:31:57.225027 mempool.go:282: create Block node 4 batch_id 2372 
+[INFO] 2025/11/08 20:31:57.475119 pool.go:64: Received Batch 2388
+[INFO] 2025/11/08 20:31:57.475441 mempool.go:282: create Block node 4 batch_id 2388 
+[INFO] 2025/11/08 20:31:57.774820 pool.go:64: Received Batch 2404
+[INFO] 2025/11/08 20:31:57.775153 mempool.go:282: create Block node 4 batch_id 2404 
+[INFO] 2025/11/08 20:31:58.025082 pool.go:64: Received Batch 2420
+[INFO] 2025/11/08 20:31:58.025397 mempool.go:282: create Block node 4 batch_id 2420 
+[INFO] 2025/11/08 20:31:58.274769 pool.go:64: Received Batch 2436
+[INFO] 2025/11/08 20:31:58.275093 mempool.go:282: create Block node 4 batch_id 2436 
+[INFO] 2025/11/08 20:31:58.525044 pool.go:64: Received Batch 2452
+[INFO] 2025/11/08 20:31:58.525365 mempool.go:282: create Block node 4 batch_id 2452 
+[INFO] 2025/11/08 20:31:58.774844 pool.go:64: Received Batch 2468
+[INFO] 2025/11/08 20:31:58.775183 mempool.go:282: create Block node 4 batch_id 2468 
+[INFO] 2025/11/08 20:31:59.024748 pool.go:64: Received Batch 2484
+[INFO] 2025/11/08 20:31:59.025080 mempool.go:282: create Block node 4 batch_id 2484 
+[INFO] 2025/11/08 20:31:59.274651 pool.go:64: Received Batch 2500
+[INFO] 2025/11/08 20:31:59.274984 mempool.go:282: create Block node 4 batch_id 2500 
+[INFO] 2025/11/08 20:31:59.524969 pool.go:64: Received Batch 2516
+[INFO] 2025/11/08 20:31:59.525307 mempool.go:282: create Block node 4 batch_id 2516 
+[INFO] 2025/11/08 20:31:59.825393 pool.go:64: Received Batch 2532
+[INFO] 2025/11/08 20:31:59.825739 mempool.go:282: create Block node 4 batch_id 2532 
+[INFO] 2025/11/08 20:32:00.074848 pool.go:64: Received Batch 2548
+[INFO] 2025/11/08 20:32:00.075216 mempool.go:282: create Block node 4 batch_id 2548 
+[INFO] 2025/11/08 20:32:00.324705 pool.go:64: Received Batch 2564
+[INFO] 2025/11/08 20:32:00.325059 mempool.go:282: create Block node 4 batch_id 2564 
+[INFO] 2025/11/08 20:32:00.574571 pool.go:64: Received Batch 2580
+[INFO] 2025/11/08 20:32:00.574910 mempool.go:282: create Block node 4 batch_id 2580 
+[INFO] 2025/11/08 20:32:00.824946 pool.go:64: Received Batch 2596
+[INFO] 2025/11/08 20:32:00.825276 mempool.go:282: create Block node 4 batch_id 2596 
+[INFO] 2025/11/08 20:32:01.074592 pool.go:64: Received Batch 2612
+[INFO] 2025/11/08 20:32:01.074934 mempool.go:282: create Block node 4 batch_id 2612 
+[INFO] 2025/11/08 20:32:01.325137 pool.go:64: Received Batch 2628
+[INFO] 2025/11/08 20:32:01.325459 mempool.go:282: create Block node 4 batch_id 2628 
+[INFO] 2025/11/08 20:32:01.574544 pool.go:64: Received Batch 2644
+[INFO] 2025/11/08 20:32:01.574862 mempool.go:282: create Block node 4 batch_id 2644 
+[INFO] 2025/11/08 20:32:01.874742 pool.go:64: Received Batch 2660
+[INFO] 2025/11/08 20:32:01.875107 mempool.go:282: create Block node 4 batch_id 2660 
+[INFO] 2025/11/08 20:32:02.124798 pool.go:64: Received Batch 2676
+[INFO] 2025/11/08 20:32:02.125119 mempool.go:282: create Block node 4 batch_id 2676 
+[INFO] 2025/11/08 20:32:02.374711 pool.go:64: Received Batch 2692
+[INFO] 2025/11/08 20:32:02.375303 mempool.go:282: create Block node 4 batch_id 2692 
+[INFO] 2025/11/08 20:32:02.624554 pool.go:64: Received Batch 2708
+[INFO] 2025/11/08 20:32:02.625096 mempool.go:282: create Block node 4 batch_id 2708 
+[INFO] 2025/11/08 20:32:02.874898 pool.go:64: Received Batch 2724
+[INFO] 2025/11/08 20:32:02.875485 mempool.go:282: create Block node 4 batch_id 2724 
+[INFO] 2025/11/08 20:32:03.125255 pool.go:64: Received Batch 2740
+[INFO] 2025/11/08 20:32:03.125821 mempool.go:282: create Block node 4 batch_id 2740 
+[INFO] 2025/11/08 20:32:03.374740 pool.go:64: Received Batch 2756
+[INFO] 2025/11/08 20:32:03.375381 mempool.go:282: create Block node 4 batch_id 2756 
+[INFO] 2025/11/08 20:32:03.625405 pool.go:64: Received Batch 2772
+[INFO] 2025/11/08 20:32:03.625947 mempool.go:282: create Block node 4 batch_id 2772 
+[INFO] 2025/11/08 20:32:03.875392 pool.go:64: Received Batch 2788
+[INFO] 2025/11/08 20:32:03.875914 mempool.go:282: create Block node 4 batch_id 2788 
+[INFO] 2025/11/08 20:32:04.174994 pool.go:64: Received Batch 2804
+[INFO] 2025/11/08 20:32:04.175524 mempool.go:282: create Block node 4 batch_id 2804 
+[INFO] 2025/11/08 20:32:04.425063 pool.go:64: Received Batch 2820
+[INFO] 2025/11/08 20:32:04.425667 mempool.go:282: create Block node 4 batch_id 2820 
+[INFO] 2025/11/08 20:32:04.674752 pool.go:64: Received Batch 2836
+[INFO] 2025/11/08 20:32:04.675317 mempool.go:282: create Block node 4 batch_id 2836 
+[INFO] 2025/11/08 20:32:04.924916 pool.go:64: Received Batch 2852
+[INFO] 2025/11/08 20:32:04.925482 mempool.go:282: create Block node 4 batch_id 2852 
+[INFO] 2025/11/08 20:32:05.175265 pool.go:64: Received Batch 2868
+[INFO] 2025/11/08 20:32:05.175823 mempool.go:282: create Block node 4 batch_id 2868 
+[INFO] 2025/11/08 20:32:05.425196 pool.go:64: Received Batch 2884
+[INFO] 2025/11/08 20:32:05.425706 mempool.go:282: create Block node 4 batch_id 2884 
+[INFO] 2025/11/08 20:32:05.675566 pool.go:64: Received Batch 2900
+[INFO] 2025/11/08 20:32:05.676127 mempool.go:282: create Block node 4 batch_id 2900 
+[INFO] 2025/11/08 20:32:05.924722 pool.go:64: Received Batch 2916
+[INFO] 2025/11/08 20:32:05.925243 mempool.go:282: create Block node 4 batch_id 2916 
+[INFO] 2025/11/08 20:32:06.224573 pool.go:64: Received Batch 2932
+[INFO] 2025/11/08 20:32:06.225153 mempool.go:282: create Block node 4 batch_id 2932 
+[INFO] 2025/11/08 20:32:06.474600 pool.go:64: Received Batch 2948
+[INFO] 2025/11/08 20:32:06.475145 mempool.go:282: create Block node 4 batch_id 2948 
+[INFO] 2025/11/08 20:32:06.736165 pool.go:64: Received Batch 2964
+[INFO] 2025/11/08 20:32:06.736749 mempool.go:282: create Block node 4 batch_id 2964 
+[INFO] 2025/11/08 20:32:06.988481 pool.go:64: Received Batch 2980
+[INFO] 2025/11/08 20:32:06.989075 mempool.go:282: create Block node 4 batch_id 2980 
+[INFO] 2025/11/08 20:32:07.224569 pool.go:64: Received Batch 2996
+[INFO] 2025/11/08 20:32:07.224910 mempool.go:282: create Block node 4 batch_id 2996 
+[INFO] 2025/11/08 20:32:07.475286 pool.go:64: Received Batch 3012
+[INFO] 2025/11/08 20:32:07.475597 mempool.go:282: create Block node 4 batch_id 3012 
+[INFO] 2025/11/08 20:32:07.724715 pool.go:64: Received Batch 3028
+[INFO] 2025/11/08 20:32:07.725053 mempool.go:282: create Block node 4 batch_id 3028 
+[INFO] 2025/11/08 20:32:07.974665 pool.go:64: Received Batch 3044
+[INFO] 2025/11/08 20:32:07.974978 mempool.go:282: create Block node 4 batch_id 3044 
+[INFO] 2025/11/08 20:32:08.275114 pool.go:64: Received Batch 3060
+[INFO] 2025/11/08 20:32:08.275428 mempool.go:282: create Block node 4 batch_id 3060 
+[INFO] 2025/11/08 20:32:08.524915 pool.go:64: Received Batch 3076
+[INFO] 2025/11/08 20:32:08.525249 mempool.go:282: create Block node 4 batch_id 3076 
+[INFO] 2025/11/08 20:32:08.775105 pool.go:64: Received Batch 3092
+[INFO] 2025/11/08 20:32:08.775448 mempool.go:282: create Block node 4 batch_id 3092 
+[INFO] 2025/11/08 20:32:09.025196 pool.go:64: Received Batch 3108
+[INFO] 2025/11/08 20:32:09.025512 mempool.go:282: create Block node 4 batch_id 3108 
+[INFO] 2025/11/08 20:32:09.274922 pool.go:64: Received Batch 3124
+[INFO] 2025/11/08 20:32:09.275244 mempool.go:282: create Block node 4 batch_id 3124 
+[INFO] 2025/11/08 20:32:09.525029 pool.go:64: Received Batch 3140
+[INFO] 2025/11/08 20:32:09.525327 mempool.go:282: create Block node 4 batch_id 3140 
+[INFO] 2025/11/08 20:32:09.775109 pool.go:64: Received Batch 3156
+[INFO] 2025/11/08 20:32:09.775447 mempool.go:282: create Block node 4 batch_id 3156 
+[INFO] 2025/11/08 20:32:10.025439 pool.go:64: Received Batch 3172
+[INFO] 2025/11/08 20:32:10.025753 mempool.go:282: create Block node 4 batch_id 3172 
+[INFO] 2025/11/08 20:32:10.274532 pool.go:64: Received Batch 3188
+[INFO] 2025/11/08 20:32:10.274846 mempool.go:282: create Block node 4 batch_id 3188 
+[INFO] 2025/11/08 20:32:10.574731 pool.go:64: Received Batch 3204
+[INFO] 2025/11/08 20:32:10.575059 mempool.go:282: create Block node 4 batch_id 3204 
+[INFO] 2025/11/08 20:32:10.825091 pool.go:64: Received Batch 3220
+[INFO] 2025/11/08 20:32:10.825452 mempool.go:282: create Block node 4 batch_id 3220 
+[INFO] 2025/11/08 20:32:11.074706 pool.go:64: Received Batch 3236
+[INFO] 2025/11/08 20:32:11.075035 mempool.go:282: create Block node 4 batch_id 3236 
+[INFO] 2025/11/08 20:32:11.324976 pool.go:64: Received Batch 3252
+[INFO] 2025/11/08 20:32:11.325297 mempool.go:282: create Block node 4 batch_id 3252 
+[INFO] 2025/11/08 20:32:11.575097 pool.go:64: Received Batch 3268
+[INFO] 2025/11/08 20:32:11.575427 mempool.go:282: create Block node 4 batch_id 3268 
+[INFO] 2025/11/08 20:32:11.824535 pool.go:64: Received Batch 3284
+[INFO] 2025/11/08 20:32:11.824858 mempool.go:282: create Block node 4 batch_id 3284 
+[INFO] 2025/11/08 20:32:12.074726 pool.go:64: Received Batch 3300
+[INFO] 2025/11/08 20:32:12.075065 mempool.go:282: create Block node 4 batch_id 3300 
+[INFO] 2025/11/08 20:32:12.324613 pool.go:64: Received Batch 3316
+[INFO] 2025/11/08 20:32:12.324857 mempool.go:282: create Block node 4 batch_id 3316 
+[INFO] 2025/11/08 20:32:12.624625 pool.go:64: Received Batch 3332
+[INFO] 2025/11/08 20:32:12.624889 mempool.go:282: create Block node 4 batch_id 3332 
+[INFO] 2025/11/08 20:32:12.874850 pool.go:64: Received Batch 3348
+[INFO] 2025/11/08 20:32:12.875181 mempool.go:282: create Block node 4 batch_id 3348 
+[INFO] 2025/11/08 20:32:13.124782 pool.go:64: Received Batch 3364
+[INFO] 2025/11/08 20:32:13.125062 mempool.go:282: create Block node 4 batch_id 3364 
+[INFO] 2025/11/08 20:32:13.374761 pool.go:64: Received Batch 3380
+[INFO] 2025/11/08 20:32:13.375025 mempool.go:282: create Block node 4 batch_id 3380 
+[INFO] 2025/11/08 20:32:13.625326 pool.go:64: Received Batch 3396
+[INFO] 2025/11/08 20:32:13.625680 mempool.go:282: create Block node 4 batch_id 3396 
+[INFO] 2025/11/08 20:32:13.874717 pool.go:64: Received Batch 3412
+[INFO] 2025/11/08 20:32:13.875037 mempool.go:282: create Block node 4 batch_id 3412 
+[INFO] 2025/11/08 20:32:14.125331 pool.go:64: Received Batch 3428
+[INFO] 2025/11/08 20:32:14.125654 mempool.go:282: create Block node 4 batch_id 3428 
+[INFO] 2025/11/08 20:32:14.374948 pool.go:64: Received Batch 3444
+[INFO] 2025/11/08 20:32:14.375232 mempool.go:282: create Block node 4 batch_id 3444 
+[INFO] 2025/11/08 20:32:14.674664 pool.go:64: Received Batch 3460
+[INFO] 2025/11/08 20:32:14.674934 mempool.go:282: create Block node 4 batch_id 3460 
+[INFO] 2025/11/08 20:32:14.924879 pool.go:64: Received Batch 3476
+[INFO] 2025/11/08 20:32:14.925168 mempool.go:282: create Block node 4 batch_id 3476 
+[INFO] 2025/11/08 20:32:15.175300 pool.go:64: Received Batch 3492
+[INFO] 2025/11/08 20:32:15.175644 mempool.go:282: create Block node 4 batch_id 3492 
+[INFO] 2025/11/08 20:32:15.425032 pool.go:64: Received Batch 3508
+[INFO] 2025/11/08 20:32:15.425302 mempool.go:282: create Block node 4 batch_id 3508 
+[INFO] 2025/11/08 20:32:15.675441 pool.go:64: Received Batch 3524
+[INFO] 2025/11/08 20:32:15.675781 mempool.go:282: create Block node 4 batch_id 3524 
+[INFO] 2025/11/08 20:32:15.924570 pool.go:64: Received Batch 3540
+[INFO] 2025/11/08 20:32:15.924907 mempool.go:282: create Block node 4 batch_id 3540 
+[INFO] 2025/11/08 20:32:16.174741 pool.go:64: Received Batch 3556
+[INFO] 2025/11/08 20:32:16.175064 mempool.go:282: create Block node 4 batch_id 3556 
+[INFO] 2025/11/08 20:32:16.425523 pool.go:64: Received Batch 3572
+[INFO] 2025/11/08 20:32:16.425796 mempool.go:282: create Block node 4 batch_id 3572 
+[INFO] 2025/11/08 20:32:16.675150 pool.go:64: Received Batch 3588
+[INFO] 2025/11/08 20:32:16.675475 mempool.go:282: create Block node 4 batch_id 3588 
+[INFO] 2025/11/08 20:32:16.975055 pool.go:64: Received Batch 3604
+[INFO] 2025/11/08 20:32:16.975397 mempool.go:282: create Block node 4 batch_id 3604 
+[INFO] 2025/11/08 20:32:17.224730 pool.go:64: Received Batch 3620
+[INFO] 2025/11/08 20:32:17.225051 mempool.go:282: create Block node 4 batch_id 3620 
+[INFO] 2025/11/08 20:32:17.474781 pool.go:64: Received Batch 3636
+[INFO] 2025/11/08 20:32:17.475112 mempool.go:282: create Block node 4 batch_id 3636 
+[INFO] 2025/11/08 20:32:17.724716 pool.go:64: Received Batch 3652
+[INFO] 2025/11/08 20:32:17.725048 mempool.go:282: create Block node 4 batch_id 3652 
+[INFO] 2025/11/08 20:32:17.975015 pool.go:64: Received Batch 3668
+[INFO] 2025/11/08 20:32:17.975371 mempool.go:282: create Block node 4 batch_id 3668 
+[INFO] 2025/11/08 20:32:18.225427 pool.go:64: Received Batch 3684
+[INFO] 2025/11/08 20:32:18.225760 mempool.go:282: create Block node 4 batch_id 3684 
+[INFO] 2025/11/08 20:32:18.475026 pool.go:64: Received Batch 3700
+[INFO] 2025/11/08 20:32:18.475354 mempool.go:282: create Block node 4 batch_id 3700 
+[INFO] 2025/11/08 20:32:18.724501 pool.go:64: Received Batch 3716
+[INFO] 2025/11/08 20:32:18.724773 mempool.go:282: create Block node 4 batch_id 3716 
+[INFO] 2025/11/08 20:32:19.024924 pool.go:64: Received Batch 3732
+[INFO] 2025/11/08 20:32:19.025185 mempool.go:282: create Block node 4 batch_id 3732 
+[INFO] 2025/11/08 20:32:19.274838 pool.go:64: Received Batch 3748
+[INFO] 2025/11/08 20:32:19.275172 mempool.go:282: create Block node 4 batch_id 3748 
+[INFO] 2025/11/08 20:32:19.525020 pool.go:64: Received Batch 3764
+[INFO] 2025/11/08 20:32:19.525298 mempool.go:282: create Block node 4 batch_id 3764 
+[INFO] 2025/11/08 20:32:19.775373 pool.go:64: Received Batch 3780
+[INFO] 2025/11/08 20:32:19.775716 mempool.go:282: create Block node 4 batch_id 3780 
+[INFO] 2025/11/08 20:32:20.025217 pool.go:64: Received Batch 3796
+[INFO] 2025/11/08 20:32:20.025553 mempool.go:282: create Block node 4 batch_id 3796 
+[INFO] 2025/11/08 20:32:20.275013 pool.go:64: Received Batch 3812
+[INFO] 2025/11/08 20:32:20.275279 mempool.go:282: create Block node 4 batch_id 3812 
+[INFO] 2025/11/08 20:32:20.524530 pool.go:64: Received Batch 3828
+[INFO] 2025/11/08 20:32:20.524791 mempool.go:282: create Block node 4 batch_id 3828 
+[INFO] 2025/11/08 20:32:20.774897 pool.go:64: Received Batch 3844
+[INFO] 2025/11/08 20:32:20.775247 mempool.go:282: create Block node 4 batch_id 3844 
+[INFO] 2025/11/08 20:32:21.075198 pool.go:64: Received Batch 3860
+[INFO] 2025/11/08 20:32:21.075463 mempool.go:282: create Block node 4 batch_id 3860 
+[INFO] 2025/11/08 20:32:21.324795 pool.go:64: Received Batch 3876
+[INFO] 2025/11/08 20:32:21.325054 mempool.go:282: create Block node 4 batch_id 3876 
+[INFO] 2025/11/08 20:32:21.574649 pool.go:64: Received Batch 3892
+[INFO] 2025/11/08 20:32:21.574914 mempool.go:282: create Block node 4 batch_id 3892 
+[INFO] 2025/11/08 20:32:21.824507 pool.go:64: Received Batch 3908
+[INFO] 2025/11/08 20:32:21.824871 mempool.go:282: create Block node 4 batch_id 3908 
+[INFO] 2025/11/08 20:32:22.074862 pool.go:64: Received Batch 3924
+[INFO] 2025/11/08 20:32:22.075127 mempool.go:282: create Block node 4 batch_id 3924 
+[INFO] 2025/11/08 20:32:22.324733 pool.go:64: Received Batch 3940
+[INFO] 2025/11/08 20:32:22.325236 mempool.go:282: create Block node 4 batch_id 3940 
+[INFO] 2025/11/08 20:32:22.575185 pool.go:64: Received Batch 3956
+[INFO] 2025/11/08 20:32:22.575631 mempool.go:282: create Block node 4 batch_id 3956 
+[INFO] 2025/11/08 20:32:22.825052 pool.go:64: Received Batch 3972
+[INFO] 2025/11/08 20:32:22.825452 mempool.go:282: create Block node 4 batch_id 3972 
+[INFO] 2025/11/08 20:32:23.075558 pool.go:64: Received Batch 3988
+[INFO] 2025/11/08 20:32:23.075986 mempool.go:282: create Block node 4 batch_id 3988 
+[INFO] 2025/11/08 20:32:23.375040 pool.go:64: Received Batch 4004
+[INFO] 2025/11/08 20:32:23.375630 mempool.go:282: create Block node 4 batch_id 4004 
+[INFO] 2025/11/08 20:32:23.625322 pool.go:64: Received Batch 4020
+[INFO] 2025/11/08 20:32:23.625779 mempool.go:282: create Block node 4 batch_id 4020 
+[INFO] 2025/11/08 20:32:23.874682 pool.go:64: Received Batch 4036
+[INFO] 2025/11/08 20:32:23.875139 mempool.go:282: create Block node 4 batch_id 4036 
+[INFO] 2025/11/08 20:32:24.124956 pool.go:64: Received Batch 4052
+[INFO] 2025/11/08 20:32:24.125375 mempool.go:282: create Block node 4 batch_id 4052 
+[INFO] 2025/11/08 20:32:24.374813 pool.go:64: Received Batch 4068
+[INFO] 2025/11/08 20:32:24.375226 mempool.go:282: create Block node 4 batch_id 4068 
+[INFO] 2025/11/08 20:32:24.625372 pool.go:64: Received Batch 4084
+[INFO] 2025/11/08 20:32:24.625963 mempool.go:282: create Block node 4 batch_id 4084 
+[INFO] 2025/11/08 20:32:24.875170 pool.go:64: Received Batch 4100
+[INFO] 2025/11/08 20:32:24.875634 mempool.go:282: create Block node 4 batch_id 4100 
+[INFO] 2025/11/08 20:32:25.125092 pool.go:64: Received Batch 4116
+[INFO] 2025/11/08 20:32:25.125518 mempool.go:282: create Block node 4 batch_id 4116 
+[INFO] 2025/11/08 20:32:25.425328 pool.go:64: Received Batch 4132
+[INFO] 2025/11/08 20:32:25.425748 mempool.go:282: create Block node 4 batch_id 4132 
+[INFO] 2025/11/08 20:32:25.675558 pool.go:64: Received Batch 4148
+[INFO] 2025/11/08 20:32:25.676134 mempool.go:282: create Block node 4 batch_id 4148 
+[INFO] 2025/11/08 20:32:25.924808 pool.go:64: Received Batch 4164
+[INFO] 2025/11/08 20:32:25.925350 mempool.go:282: create Block node 4 batch_id 4164 
+[INFO] 2025/11/08 20:32:26.174850 pool.go:64: Received Batch 4180
+[INFO] 2025/11/08 20:32:26.175264 mempool.go:282: create Block node 4 batch_id 4180 
+[INFO] 2025/11/08 20:32:26.424859 pool.go:64: Received Batch 4196
+[INFO] 2025/11/08 20:32:26.425419 mempool.go:282: create Block node 4 batch_id 4196 
+[INFO] 2025/11/08 20:32:26.674628 pool.go:64: Received Batch 4212
+[INFO] 2025/11/08 20:32:26.675058 mempool.go:282: create Block node 4 batch_id 4212 
+[INFO] 2025/11/08 20:32:26.924653 pool.go:64: Received Batch 4228
+[INFO] 2025/11/08 20:32:26.925095 mempool.go:282: create Block node 4 batch_id 4228 
+[INFO] 2025/11/08 20:32:27.175372 pool.go:64: Received Batch 4244
+[INFO] 2025/11/08 20:32:27.175913 mempool.go:282: create Block node 4 batch_id 4244 
+[INFO] 2025/11/08 20:32:27.474852 pool.go:64: Received Batch 4260
+[INFO] 2025/11/08 20:32:27.475369 mempool.go:282: create Block node 4 batch_id 4260 
+[INFO] 2025/11/08 20:32:27.725232 pool.go:64: Received Batch 4276
+[INFO] 2025/11/08 20:32:27.725659 mempool.go:282: create Block node 4 batch_id 4276 
+[INFO] 2025/11/08 20:32:27.975173 pool.go:64: Received Batch 4292
+[INFO] 2025/11/08 20:32:27.975610 mempool.go:282: create Block node 4 batch_id 4292 
+[INFO] 2025/11/08 20:32:28.225056 pool.go:64: Received Batch 4308
+[INFO] 2025/11/08 20:32:28.225685 mempool.go:282: create Block node 4 batch_id 4308 
+[INFO] 2025/11/08 20:32:28.475055 pool.go:64: Received Batch 4324
+[INFO] 2025/11/08 20:32:28.475636 mempool.go:282: create Block node 4 batch_id 4324 
+[INFO] 2025/11/08 20:32:28.724777 pool.go:64: Received Batch 4340
+[INFO] 2025/11/08 20:32:28.725345 mempool.go:282: create Block node 4 batch_id 4340 
+[INFO] 2025/11/08 20:32:28.975071 pool.go:64: Received Batch 4356
+[INFO] 2025/11/08 20:32:28.975494 mempool.go:282: create Block node 4 batch_id 4356 
+[INFO] 2025/11/08 20:32:29.224870 pool.go:64: Received Batch 4372
+[INFO] 2025/11/08 20:32:29.225465 mempool.go:282: create Block node 4 batch_id 4372 
+[INFO] 2025/11/08 20:32:29.474555 pool.go:64: Received Batch 4388
+[INFO] 2025/11/08 20:32:29.474979 mempool.go:282: create Block node 4 batch_id 4388 
+[INFO] 2025/11/08 20:32:29.775269 pool.go:64: Received Batch 4404
+[INFO] 2025/11/08 20:32:29.775710 mempool.go:282: create Block node 4 batch_id 4404 
+[INFO] 2025/11/08 20:32:30.024872 pool.go:64: Received Batch 4420
+[INFO] 2025/11/08 20:32:30.025308 mempool.go:282: create Block node 4 batch_id 4420 
+[INFO] 2025/11/08 20:32:30.275457 pool.go:64: Received Batch 4436
+[INFO] 2025/11/08 20:32:30.276066 mempool.go:282: create Block node 4 batch_id 4436 
+[INFO] 2025/11/08 20:32:30.525356 pool.go:64: Received Batch 4452
+[INFO] 2025/11/08 20:32:30.525787 mempool.go:282: create Block node 4 batch_id 4452 
+[INFO] 2025/11/08 20:32:30.774853 pool.go:64: Received Batch 4468
+[INFO] 2025/11/08 20:32:30.775285 mempool.go:282: create Block node 4 batch_id 4468 
+[INFO] 2025/11/08 20:32:31.025021 pool.go:64: Received Batch 4484
+[INFO] 2025/11/08 20:32:31.025584 mempool.go:282: create Block node 4 batch_id 4484 
+[INFO] 2025/11/08 20:32:31.274675 pool.go:64: Received Batch 4500
+[INFO] 2025/11/08 20:32:31.275077 mempool.go:282: create Block node 4 batch_id 4500 
+[INFO] 2025/11/08 20:32:31.525386 pool.go:64: Received Batch 4516
+[INFO] 2025/11/08 20:32:31.525801 mempool.go:282: create Block node 4 batch_id 4516 
+[INFO] 2025/11/08 20:32:31.825166 pool.go:64: Received Batch 4532
+[INFO] 2025/11/08 20:32:31.825736 mempool.go:282: create Block node 4 batch_id 4532 
+[INFO] 2025/11/08 20:32:32.074538 pool.go:64: Received Batch 4548
+[INFO] 2025/11/08 20:32:32.074973 mempool.go:282: create Block node 4 batch_id 4548 
+[INFO] 2025/11/08 20:32:32.325045 pool.go:64: Received Batch 4564
+[INFO] 2025/11/08 20:32:32.325601 mempool.go:282: create Block node 4 batch_id 4564 
+[INFO] 2025/11/08 20:32:32.575137 pool.go:64: Received Batch 4580
+[INFO] 2025/11/08 20:32:32.575621 mempool.go:282: create Block node 4 batch_id 4580 
+[INFO] 2025/11/08 20:32:32.824853 pool.go:64: Received Batch 4596
+[INFO] 2025/11/08 20:32:32.825302 mempool.go:282: create Block node 4 batch_id 4596 
+[INFO] 2025/11/08 20:32:33.075151 pool.go:64: Received Batch 4612
+[INFO] 2025/11/08 20:32:33.075583 mempool.go:282: create Block node 4 batch_id 4612 
+[INFO] 2025/11/08 20:32:33.324584 pool.go:64: Received Batch 4628
+[INFO] 2025/11/08 20:32:33.324980 mempool.go:282: create Block node 4 batch_id 4628 
+[INFO] 2025/11/08 20:32:33.574679 pool.go:64: Received Batch 4644
+[INFO] 2025/11/08 20:32:33.575096 mempool.go:282: create Block node 4 batch_id 4644 
+[INFO] 2025/11/08 20:32:33.874687 pool.go:64: Received Batch 4660
+[INFO] 2025/11/08 20:32:33.875111 mempool.go:282: create Block node 4 batch_id 4660 
+[INFO] 2025/11/08 20:32:34.125237 pool.go:64: Received Batch 4676
+[INFO] 2025/11/08 20:32:34.125798 mempool.go:282: create Block node 4 batch_id 4676 
+[INFO] 2025/11/08 20:32:34.375544 pool.go:64: Received Batch 4692
+[INFO] 2025/11/08 20:32:34.375975 mempool.go:282: create Block node 4 batch_id 4692 
+[INFO] 2025/11/08 20:32:34.625572 pool.go:64: Received Batch 4708
+[INFO] 2025/11/08 20:32:34.625990 mempool.go:282: create Block node 4 batch_id 4708 
+[INFO] 2025/11/08 20:32:34.875040 pool.go:64: Received Batch 4724
+[INFO] 2025/11/08 20:32:34.875503 mempool.go:282: create Block node 4 batch_id 4724 
+[INFO] 2025/11/08 20:32:35.124924 pool.go:64: Received Batch 4740
+[INFO] 2025/11/08 20:32:35.125366 mempool.go:282: create Block node 4 batch_id 4740 
+[INFO] 2025/11/08 20:32:35.375448 pool.go:64: Received Batch 4756
+[INFO] 2025/11/08 20:32:35.375884 mempool.go:282: create Block node 4 batch_id 4756 
+[INFO] 2025/11/08 20:32:35.625312 pool.go:64: Received Batch 4772
+[INFO] 2025/11/08 20:32:35.625724 mempool.go:282: create Block node 4 batch_id 4772 
+[INFO] 2025/11/08 20:32:35.874815 pool.go:64: Received Batch 4788
+[INFO] 2025/11/08 20:32:35.875267 mempool.go:282: create Block node 4 batch_id 4788 
+[INFO] 2025/11/08 20:32:36.174974 pool.go:64: Received Batch 4804
+[INFO] 2025/11/08 20:32:36.175407 mempool.go:282: create Block node 4 batch_id 4804 
+[INFO] 2025/11/08 20:32:36.425472 pool.go:64: Received Batch 4820
+[INFO] 2025/11/08 20:32:36.425894 mempool.go:282: create Block node 4 batch_id 4820 
+[INFO] 2025/11/08 20:32:36.675218 pool.go:64: Received Batch 4836
+[INFO] 2025/11/08 20:32:36.675806 mempool.go:282: create Block node 4 batch_id 4836 
+[INFO] 2025/11/08 20:32:36.925109 pool.go:64: Received Batch 4852
+[INFO] 2025/11/08 20:32:36.925542 mempool.go:282: create Block node 4 batch_id 4852 
+[INFO] 2025/11/08 20:32:37.175202 pool.go:64: Received Batch 4868
+[INFO] 2025/11/08 20:32:37.175639 mempool.go:282: create Block node 4 batch_id 4868 
+[INFO] 2025/11/08 20:32:37.424885 pool.go:64: Received Batch 4884
+[INFO] 2025/11/08 20:32:37.425496 mempool.go:282: create Block node 4 batch_id 4884 
+[INFO] 2025/11/08 20:32:37.675320 pool.go:64: Received Batch 4900
+[INFO] 2025/11/08 20:32:37.675791 mempool.go:282: create Block node 4 batch_id 4900 
+[INFO] 2025/11/08 20:32:37.925541 pool.go:64: Received Batch 4916
+[INFO] 2025/11/08 20:32:37.925959 mempool.go:282: create Block node 4 batch_id 4916 
+[INFO] 2025/11/08 20:32:38.225197 pool.go:64: Received Batch 4932
+[INFO] 2025/11/08 20:32:38.225624 mempool.go:282: create Block node 4 batch_id 4932 
+[INFO] 2025/11/08 20:32:38.475564 pool.go:64: Received Batch 4948
+[INFO] 2025/11/08 20:32:38.476013 mempool.go:282: create Block node 4 batch_id 4948 
+[INFO] 2025/11/08 20:32:38.725540 pool.go:64: Received Batch 4964
+[INFO] 2025/11/08 20:32:38.725970 mempool.go:282: create Block node 4 batch_id 4964 
+[INFO] 2025/11/08 20:32:38.975272 pool.go:64: Received Batch 4980
+[INFO] 2025/11/08 20:32:38.975853 mempool.go:282: create Block node 4 batch_id 4980 
+[INFO] 2025/11/08 20:32:39.224636 pool.go:64: Received Batch 4996
+[INFO] 2025/11/08 20:32:39.225054 mempool.go:282: create Block node 4 batch_id 4996 
+[INFO] 2025/11/08 20:32:39.474890 pool.go:64: Received Batch 5012
+[INFO] 2025/11/08 20:32:39.475443 mempool.go:282: create Block node 4 batch_id 5012 
+[INFO] 2025/11/08 20:32:39.724721 pool.go:64: Received Batch 5028
+[INFO] 2025/11/08 20:32:39.725287 mempool.go:282: create Block node 4 batch_id 5028 
+[INFO] 2025/11/08 20:32:39.975460 pool.go:64: Received Batch 5044
+[INFO] 2025/11/08 20:32:39.975891 mempool.go:282: create Block node 4 batch_id 5044 
+[INFO] 2025/11/08 20:32:40.274857 pool.go:64: Received Batch 5060
+[INFO] 2025/11/08 20:32:40.275304 mempool.go:282: create Block node 4 batch_id 5060 
+[INFO] 2025/11/08 20:32:40.525029 pool.go:64: Received Batch 5076
+[INFO] 2025/11/08 20:32:40.525473 mempool.go:282: create Block node 4 batch_id 5076 
+[INFO] 2025/11/08 20:32:40.774791 pool.go:64: Received Batch 5092
+[INFO] 2025/11/08 20:32:40.775234 mempool.go:282: create Block node 4 batch_id 5092 
+[INFO] 2025/11/08 20:32:41.024778 pool.go:64: Received Batch 5108
+[INFO] 2025/11/08 20:32:41.025365 mempool.go:282: create Block node 4 batch_id 5108 
+[INFO] 2025/11/08 20:32:41.275467 pool.go:64: Received Batch 5124
+[INFO] 2025/11/08 20:32:41.275976 mempool.go:282: create Block node 4 batch_id 5124 
+[INFO] 2025/11/08 20:32:41.525014 pool.go:64: Received Batch 5140
+[INFO] 2025/11/08 20:32:41.525450 mempool.go:282: create Block node 4 batch_id 5140 
+[INFO] 2025/11/08 20:32:41.775192 pool.go:64: Received Batch 5156
+[INFO] 2025/11/08 20:32:41.775752 mempool.go:282: create Block node 4 batch_id 5156 
+[INFO] 2025/11/08 20:32:42.024839 pool.go:64: Received Batch 5172
+[INFO] 2025/11/08 20:32:42.025280 mempool.go:282: create Block node 4 batch_id 5172 
+[INFO] 2025/11/08 20:32:42.275247 pool.go:64: Received Batch 5188
+[INFO] 2025/11/08 20:32:42.275660 mempool.go:282: create Block node 4 batch_id 5188 
+[INFO] 2025/11/08 20:32:42.575076 pool.go:64: Received Batch 5204
+[INFO] 2025/11/08 20:32:42.575636 mempool.go:282: create Block node 4 batch_id 5204 
+[INFO] 2025/11/08 20:32:42.824569 pool.go:64: Received Batch 5220
+[INFO] 2025/11/08 20:32:42.825056 mempool.go:282: create Block node 4 batch_id 5220 
+[INFO] 2025/11/08 20:32:43.075212 pool.go:64: Received Batch 5236
+[INFO] 2025/11/08 20:32:43.075617 mempool.go:282: create Block node 4 batch_id 5236 
+[INFO] 2025/11/08 20:32:43.324793 pool.go:64: Received Batch 5252
+[INFO] 2025/11/08 20:32:43.325213 mempool.go:282: create Block node 4 batch_id 5252 
+[INFO] 2025/11/08 20:32:43.575387 pool.go:64: Received Batch 5268
+[INFO] 2025/11/08 20:32:43.575850 mempool.go:282: create Block node 4 batch_id 5268 
+[INFO] 2025/11/08 20:32:43.825514 pool.go:64: Received Batch 5284
+[INFO] 2025/11/08 20:32:43.826087 mempool.go:282: create Block node 4 batch_id 5284 
+[INFO] 2025/11/08 20:32:44.075455 pool.go:64: Received Batch 5300
+[INFO] 2025/11/08 20:32:44.075873 mempool.go:282: create Block node 4 batch_id 5300 
+[INFO] 2025/11/08 20:32:44.324914 pool.go:64: Received Batch 5316
+[INFO] 2025/11/08 20:32:44.325357 mempool.go:282: create Block node 4 batch_id 5316 
+[INFO] 2025/11/08 20:32:44.624538 pool.go:64: Received Batch 5332
+[INFO] 2025/11/08 20:32:44.625143 mempool.go:282: create Block node 4 batch_id 5332 
+[INFO] 2025/11/08 20:32:44.875490 pool.go:64: Received Batch 5348
+[INFO] 2025/11/08 20:32:44.875963 mempool.go:282: create Block node 4 batch_id 5348 
+[INFO] 2025/11/08 20:32:45.124713 pool.go:64: Received Batch 5364
+[INFO] 2025/11/08 20:32:45.125149 mempool.go:282: create Block node 4 batch_id 5364 
+[INFO] 2025/11/08 20:32:45.375163 pool.go:64: Received Batch 5380
+[INFO] 2025/11/08 20:32:45.375607 mempool.go:282: create Block node 4 batch_id 5380 
+[INFO] 2025/11/08 20:32:45.625099 pool.go:64: Received Batch 5396
+[INFO] 2025/11/08 20:32:45.625545 mempool.go:282: create Block node 4 batch_id 5396 
+[INFO] 2025/11/08 20:32:45.875211 pool.go:64: Received Batch 5412
+[INFO] 2025/11/08 20:32:45.875632 mempool.go:282: create Block node 4 batch_id 5412 
+[INFO] 2025/11/08 20:32:46.125338 pool.go:64: Received Batch 5428
+[INFO] 2025/11/08 20:32:46.125756 mempool.go:282: create Block node 4 batch_id 5428 
+[INFO] 2025/11/08 20:32:46.374954 pool.go:64: Received Batch 5444
+[INFO] 2025/11/08 20:32:46.375538 mempool.go:282: create Block node 4 batch_id 5444 
+[INFO] 2025/11/08 20:32:46.675493 pool.go:64: Received Batch 5460
+[INFO] 2025/11/08 20:32:46.675947 mempool.go:282: create Block node 4 batch_id 5460 
+[INFO] 2025/11/08 20:32:46.925330 pool.go:64: Received Batch 5476
+[INFO] 2025/11/08 20:32:46.925771 mempool.go:282: create Block node 4 batch_id 5476 
+[INFO] 2025/11/08 20:32:47.175546 pool.go:64: Received Batch 5492
+[INFO] 2025/11/08 20:32:47.175999 mempool.go:282: create Block node 4 batch_id 5492 
+[INFO] 2025/11/08 20:32:47.424710 pool.go:64: Received Batch 5508
+[INFO] 2025/11/08 20:32:47.425132 mempool.go:282: create Block node 4 batch_id 5508 
+[INFO] 2025/11/08 20:32:47.674816 pool.go:64: Received Batch 5524
+[INFO] 2025/11/08 20:32:47.675281 mempool.go:282: create Block node 4 batch_id 5524 
+[INFO] 2025/11/08 20:32:47.925051 pool.go:64: Received Batch 5540
+[INFO] 2025/11/08 20:32:47.925478 mempool.go:282: create Block node 4 batch_id 5540 
+[INFO] 2025/11/08 20:32:48.175219 pool.go:64: Received Batch 5556
+[INFO] 2025/11/08 20:32:48.175669 mempool.go:282: create Block node 4 batch_id 5556 
+[INFO] 2025/11/08 20:32:48.425342 pool.go:64: Received Batch 5572
+[INFO] 2025/11/08 20:32:48.425778 mempool.go:282: create Block node 4 batch_id 5572 
+[INFO] 2025/11/08 20:32:48.675171 pool.go:64: Received Batch 5588
+[INFO] 2025/11/08 20:32:48.675607 mempool.go:282: create Block node 4 batch_id 5588 
+[INFO] 2025/11/08 20:32:48.975201 pool.go:64: Received Batch 5604
+[INFO] 2025/11/08 20:32:48.975638 mempool.go:282: create Block node 4 batch_id 5604 
+[INFO] 2025/11/08 20:32:49.224999 pool.go:64: Received Batch 5620
+[INFO] 2025/11/08 20:32:49.225601 mempool.go:282: create Block node 4 batch_id 5620 
+[INFO] 2025/11/08 20:32:49.475375 pool.go:64: Received Batch 5636
+[INFO] 2025/11/08 20:32:49.475980 mempool.go:282: create Block node 4 batch_id 5636 
+[INFO] 2025/11/08 20:32:49.725251 pool.go:64: Received Batch 5652
+[INFO] 2025/11/08 20:32:49.725808 mempool.go:282: create Block node 4 batch_id 5652 
+[INFO] 2025/11/08 20:32:49.975303 pool.go:64: Received Batch 5668
+[INFO] 2025/11/08 20:32:49.975794 mempool.go:282: create Block node 4 batch_id 5668 
+[INFO] 2025/11/08 20:32:50.224790 pool.go:64: Received Batch 5684
+[INFO] 2025/11/08 20:32:50.225372 mempool.go:282: create Block node 4 batch_id 5684 
+[INFO] 2025/11/08 20:32:50.475438 pool.go:64: Received Batch 5700
+[INFO] 2025/11/08 20:32:50.475881 mempool.go:282: create Block node 4 batch_id 5700 
+[INFO] 2025/11/08 20:32:50.724746 pool.go:64: Received Batch 5716
+[INFO] 2025/11/08 20:32:50.725166 mempool.go:282: create Block node 4 batch_id 5716 
+[INFO] 2025/11/08 20:32:51.025179 pool.go:64: Received Batch 5732
+[INFO] 2025/11/08 20:32:51.025622 mempool.go:282: create Block node 4 batch_id 5732 
+[INFO] 2025/11/08 20:32:51.274812 pool.go:64: Received Batch 5748
+[INFO] 2025/11/08 20:32:51.275233 mempool.go:282: create Block node 4 batch_id 5748 
+[INFO] 2025/11/08 20:32:51.525340 pool.go:64: Received Batch 5764
+[INFO] 2025/11/08 20:32:51.525775 mempool.go:282: create Block node 4 batch_id 5764 
+[INFO] 2025/11/08 20:32:51.775223 pool.go:64: Received Batch 5780
+[INFO] 2025/11/08 20:32:51.775647 mempool.go:282: create Block node 4 batch_id 5780 
+[INFO] 2025/11/08 20:32:52.025262 pool.go:64: Received Batch 5796
+[INFO] 2025/11/08 20:32:52.025841 mempool.go:282: create Block node 4 batch_id 5796 
+[INFO] 2025/11/08 20:32:52.275455 pool.go:64: Received Batch 5812
+[INFO] 2025/11/08 20:32:52.275906 mempool.go:282: create Block node 4 batch_id 5812 
+[INFO] 2025/11/08 20:32:52.524649 pool.go:64: Received Batch 5828
+[INFO] 2025/11/08 20:32:52.525189 mempool.go:282: create Block node 4 batch_id 5828 
+[INFO] 2025/11/08 20:32:52.774750 pool.go:64: Received Batch 5844
+[INFO] 2025/11/08 20:32:52.775299 mempool.go:282: create Block node 4 batch_id 5844 
+[INFO] 2025/11/08 20:32:53.075427 pool.go:64: Received Batch 5860
+[INFO] 2025/11/08 20:32:53.075846 mempool.go:282: create Block node 4 batch_id 5860 

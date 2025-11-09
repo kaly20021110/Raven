@@ -12,9 +12,9 @@ from alibaba.remote import Bench
 def local(ctx):
     ''' Run benchmarks on localhost '''
     bench_params = {
-        'nodes': 4,
-        'duration': 40,
-        'rate': 5_000,                  # tx send rate
+        'nodes': 16,
+        'duration': 50,
+        'rate': 300,                  # tx send rate
         'batch_size': 512,              # the max number of tx that can be hold 
         'log_level': 0b1111,            # 0x1 infolevel 0x2 debuglevel 0x4 warnlevel 0x8 errorlevel
         'protocol': "Raven"
@@ -47,7 +47,7 @@ def local(ctx):
         Print.error(e)
 
 @task
-def create(ctx, nodes=1):
+def create(ctx, nodes=3):
     ''' Create a testbed'''
     try:
         InstanceManager.make().create_instances(nodes)
@@ -112,11 +112,11 @@ def info(ctx):
 def remote(ctx):
     ''' Run benchmarks on AWS '''
     bench_params = {
-        'nodes': [4],
+        'nodes': [16],
         'node_instance': 1,               # the number of running instance for a node  (max = 4)
-        'duration': 100,
-        'rate': [12000,14000],                    # tx send rate  1000,2000,3000,4000,5000,6000
-        'batch_size': [1024],              # the max number of tx that can be hold 
+        'duration': 80,
+        'rate': [2000,3000,4000],                    # tx send rate  1000,2000,3000,4000,5000,6000
+        'batch_size': [2048],              # the max number of tx that can be hold 
         'log_level': 0b1111,              # 0x1 infolevel 0x2 debuglevel 0x4 warnlevel 0x8 errorlevel
         'protocol': "sMVBA",
         'runs': 1

@@ -1,0 +1,66 @@
+
+-----------------------------------------
+ SUMMARY:
+-----------------------------------------
+ + CONFIG:
+ Protocol: sMVBA 
+ DDOS attack: False 
+ Committee size: 16 nodes
+ Input rate: 4,000 tx/s
+ Transaction size: 128 B
+ Batch size: 1,024 tx/Batch
+ Faults: 0 nodes
+ Execution time: 33 s
+
+ + RESULTS:
+ Consensus TPS: 25,695 tx/s
+ Consensus latency: 1,086 ms
+
+ End-to-end TPS: 25,927 tx/s
+ End-to-end latency: 4,539 ms
+ The epoch count can not commit block: 0
+ The all epoch counts : 30
+ The all epoch count commit block: 838
+
+ + ROUND STATISTICS:
+Round Commit Statistics:
+========================
+Round 6: 29个epoch (96.7%)
+Round 9: 1个epoch (3.3%)
+
+Summary:
+Total distinct epochs with commit records: 30
+Average commit round: 6.10
+Minimum commit round: 6
+Maximum commit round: 9
+
+Distribution:
+  Round 6: 29 epochs
+  Round 9: 1 epochs
+-----------------------------------------
+FABA Statistics:
+================
+Epoch 4: 在第1个FABA输出结果之前调用了0个FABA
+Epoch 6: 在第1个FABA输出结果之前调用了0个FABA
+Epoch 9: 在第1个FABA输出结果之前调用了1个FABA
+Epoch 19: 在第1个FABA输出结果之前调用了1个FABA
+Epoch 29: 在第2个FABA输出结果之前调用了2个FABA
+
+Summary:
+Total epochs with FABA commits: 5
+Total FABA invoke counts: 4
+Average FABA invokes before commit: 0.80
+Round Commit Statistics:
+========================
+Round 6: 29个epoch (96.7%)
+Round 9: 1个epoch (3.3%)
+
+Summary:
+Total distinct epochs with commit records: 30
+Average commit round: 6.10
+Minimum commit round: 6
+Maximum commit round: 9
+
+Distribution:
+  Round 6: 29 epochs
+  Round 9: 1 epochs

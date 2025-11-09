@@ -47,6 +47,8 @@ type Core struct {
 
 	blockhashlock      sync.RWMutex
 	ConsensusBlockHash map[int64]map[core.NodeID]crypto.Digest //存储每个块的哈希值
+
+	skipCount map[int64]map[int]int //epoch-index-skipcount
 }
 
 func NewCore(
@@ -92,6 +94,7 @@ func NewCore(
 		preparedValue:               make(map[int64]map[core.NodeID][]int),
 		abaCallBack:                 make(chan *ABABack, 1000),
 		ConsensusBlockHash:          make(map[int64]map[core.NodeID]crypto.Digest),
+		skipCount:                   make(map[int64]map[int]int),
 	}
 
 	return c
@@ -487,6 +490,8 @@ func (c *Core) processLeader(epoch int64) error {
 		if check, value := c.hasFinish(epoch, leaderid); check {
 			//这个位置代表的是第一个
 			logger.Debug.Printf("Processing Leader for epoch %d and leader %d has finish and can commit\n", epoch, leaderid)
+			logger.Info.Printf("In Epoch %d,the invoke count of FABA is 0\n", epoch)
+
 			if b, err := c.getConsensusBlock(value); err != nil {
 				return err
 			} else if b != nil {
@@ -510,8 +515,8 @@ func (c *Core) processLeader(epoch int64) error {
 	}
 
 	//这里就打印了FABA的最大调用次数
-	logger.Debug.Printf("ParallelABA Processing Leader for epoch %d and index id  %d \n", epoch, index)
-	//处理并行ABA的部分
+	logger.Debug.Printf("ParallelABA Processing Leader for epoch %d and index id  %d \n", epoch, index+1)
+	//处理并行ABA的部分  index代表的是最后一个没确定的序列 4个节点的时候index的最大值是0
 	c.ParallelABAIndex[epoch] = index
 	for i := 0; i <= c.ParallelABAIndex[epoch]; i++ {
 		abaleader := c.Elector.GetLeader(epoch, i)
@@ -523,6 +528,18 @@ func (c *Core) processLeader(epoch int64) error {
 			}
 			c.SkipFlag[epoch][abaleader] = struct{}{}
 
+			//记录 skipcount//////////////////////////////////
+			_, okk := c.skipCount[epoch]
+			if !okk {
+				c.skipCount[epoch] = make(map[int]int)
+			}
+			if i > 0 {
+				c.skipCount[epoch][i] = c.skipCount[epoch][i-1] + 1
+			}
+			if i == 0 {
+				c.skipCount[epoch][i] = 1
+			}
+			///////////////////////////////////////////
 			if c.ParallelABAResult == nil {
 				c.ParallelABAResult = make(map[int64]map[int]uint8)
 			}
@@ -546,7 +563,11 @@ func (c *Core) processLeader(epoch int64) error {
 			c.Transimtor.Send(c.Name, core.NONE, skip)
 			c.Transimtor.RecvChannel() <- skip
 		} else {
-			logger.Info.Printf("In Epoch %d,invoke the %d FABA\n", epoch, i)
+			//这个%d代表的是第几个FABA，第0个FABA代表的意思也是至少要调用一次FABA
+			//这个地方epoch出现的次数就是不能skip的次数，必须运行FABA
+
+			//如果要计算实际执行的FABA实例的数量，需要找到最终commit的index，之后index-skip的数量
+			//logger.Info.Printf("In Epoch %d,invoke the %d FABA\n", epoch, i)
 			if c.LockSetMap[epoch][abaleader] {
 				//以1调用prepareABA
 				prepare, _ := NewPrepare(c.Name, abaleader, int64(i), epoch, uint8(1), c.SigService)
@@ -566,9 +587,14 @@ func (c *Core) processLeader(epoch int64) error {
 	}
 
 	//如果发现都已经skip掉了前一项，那么现在就可以直接提交finish的这一项
-	if check, counts := c.judgeCommit(epoch, index); check {
-		if check1, value1 := c.hasFinish(epoch, leaderid); check1 {
+	if check, counts := c.judgeCommit(epoch, index+1); check {
+		//这个地方的实现好像有点问题，刚刚修改完，看看结果对不对
+		aleaderid := c.Elector.GetLeader(epoch, index+1)
+		if check1, value1 := c.hasFinish(epoch, aleaderid); check1 {
 			logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", epoch, counts+6)
+			//如果前面全部skip掉了，就不需要调用FABA了,此时index代表的是最后一个没确定的值，发现前面全跳过了，所以根本不需要调用FABA
+			//logger.Info.Printf("ININ Epoch %d,final invoke 0 FABA\n", epoch)
+			logger.Info.Printf("In Epoch %d,the invoke count of FABA is %d\n", epoch, index+1-c.skipCount[epoch][index])
 			logger.Debug.Printf("Processing Leader for epoch %d and leader %d has finish and can commit\n", epoch, leaderid)
 			if b1, err1 := c.getConsensusBlock(value1); err1 != nil {
 				return err1
@@ -619,12 +645,12 @@ func (c *Core) handlePrepare(p *Prepare) error {
 	//额外广播 f+1的VAL消息
 	if flag == Prepare_LowThreshold {
 		c.ensurePreparedValue(p.Epoch, p.Leader)
-		if value == uint8(0) && c.preparedValue[p.Epoch][p.Leader][0] == 0 {
+		if value == uint8(0) && c.preparedValue[p.Epoch][p.Leader][0] == int(0) {
 			prepare, _ := NewPrepare(c.Name, p.Leader, p.Index, p.Epoch, value, c.SigService)
 			c.Transimtor.Send(c.Name, core.NONE, prepare)
 			c.Transimtor.RecvChannel() <- prepare
 		}
-		if value == uint8(1) && c.preparedValue[p.Epoch][p.Leader][0] == 1 {
+		if value == uint8(1) && c.preparedValue[p.Epoch][p.Leader][1] == int(0) {
 			prepare, _ := NewPrepare(c.Name, p.Leader, p.Index, p.Epoch, value, c.SigService)
 			c.Transimtor.Send(c.Name, core.NONE, prepare)
 			c.Transimtor.RecvChannel() <- prepare
@@ -795,9 +821,8 @@ func (c *Core) judgeCommit(epoch int64, index int) (bool, int64) {
 		allcount += c.ParallelABAResultRoundCount[epoch][i]
 	}
 	//说明在第几轮，真实提交是在第几次FABA
-	if index != 0 {
-		logger.Info.Printf("IN Epoch %d,actually commit the block in the %d FABA\n", epoch, index)
-	}
+	//logger.Info.Printf("In Epoch %d,actually commit the block in the %d FABA\n", epoch, index)
+	//logger.Info.Printf("IN Epoch %d,the invoke count of FABA is %d\n", epoch, index-c.skipCount[epoch][index-1])
 	return true, allcount
 }
 
@@ -811,8 +836,11 @@ func (c *Core) processABABack(back *ABABack) error {
 	} else if back.Typ == ABA_HALT {
 		if back.Flag == FLAG_NO { //next leader 选择下一个leader去判断
 			c.ParallelABAResult[back.Epoch][int(back.ExRound)] = uint8(0)
-			c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] = 3 * back.InRound
+			if c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] == int64(0) {
+				c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] = 3*(back.InRound+1) + 2
+			}
 			if check, counts := c.judgeCommit(back.Epoch, c.ParallelABAIndex[back.Epoch]+1); check {
+				logger.Info.Printf("In Epoch %d,the invoke count of FABA is %d\n", back.Epoch, c.ParallelABAIndex[back.Epoch]+1-c.skipCount[back.Epoch][c.ParallelABAIndex[back.Epoch]])
 				logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", back.Epoch, counts+6)
 				leader := c.Elector.GetLeader(back.Epoch, c.ParallelABAIndex[back.Epoch]+1)
 				blockHash, exist := c.GetConsensusBlockHash(back.Epoch, leader)
@@ -826,8 +854,10 @@ func (c *Core) processABABack(back *ABABack) error {
 			//return c.invokeNextLeader(back.Epoch, back.ExRound)
 		} else if back.Flag == FLAG_YES { //如果可以提交直接提交，//nextepoch
 			c.ParallelABAResult[back.Epoch][int(back.ExRound)] = uint8(1)
-			c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] = 3 * back.InRound
+			c.ParallelABAResultRoundCount[back.Epoch][int(back.ExRound)] = 3*(back.InRound+1) + 2
+			//这个地方是否需要加1呢 back.exround 原本是back.exround 不能加1
 			if check, counts := c.judgeCommit(back.Epoch, int(back.ExRound)); check {
+				logger.Info.Printf("In Epoch %d,the invoke count of FABA is %d\n", back.Epoch, int(back.ExRound)+1-c.skipCount[back.Epoch][int(back.ExRound)])
 				logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", back.Epoch, counts+6)
 				blockHash, exist := c.GetConsensusBlockHash(back.Epoch, back.Leader)
 				if !exist {
@@ -856,6 +886,7 @@ func (c *Core) handleHelpSkip(skip *HelpSkip) error {
 	//检查前面所有的值
 	if check, counts := c.judgeCommit(skip.Epoch, c.ParallelABAIndex[skip.Epoch]+1); check {
 		logger.Info.Printf("In Epoch %d,the block commit at the %d round\n", skip.Epoch, counts+6)
+		logger.Info.Printf("In Epoch %d,the invoke count of FABA is %d\n", skip.Epoch, c.ParallelABAIndex[skip.Epoch]+1-c.skipCount[skip.Epoch][int(c.ParallelABAIndex[skip.Epoch])])
 		leader := c.Elector.GetLeader(skip.Epoch, c.ParallelABAIndex[skip.Epoch]+1)
 		blockHash, exist := c.GetConsensusBlockHash(skip.Epoch, leader)
 		if !exist {
